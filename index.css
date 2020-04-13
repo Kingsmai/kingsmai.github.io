@@ -6,6 +6,7 @@ body {
     height: 64px;
     width: 100%;
     border: 1px solid red;
+    box-shadow: 5px 10px #888888;
 }
 
 .pageTitle {

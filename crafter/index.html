@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Crafter</title>
+</head>
+
+<body>
+    <div class="gamePanel">
+        <div id="craftTable">
+            <input id="input1" class="inputSlot" type="text" readonly onclick="ClearInput(this)">
+            <span style="font-size: 30px; color: white;"> + </span>
+            <input id="input2" class="inputSlot" type="text" readonly onclick="ClearInput(this)">
+            <input class="craftBtn" type="button" value="Craft" onclick="Craft()">
+            <div class="messageBox">
+                <b>Message:</b>
+                <i id="message">Welcome, select two element below to craft a new element!</i>
+            </div>
+        </div>
+        <div id="inventory">
+            <div id="Basic">
+                <b class="key">Basic Element</b><br>
+            </div>
+            <div id="Element">
+                <b class="key">Crafted Element</b><br>
+            </div>
+            <div id="Final">
+                <b class="key">Final Element</b><br>
+            </div>
+        </div>
+        <div id="infomation">© 2020 Xiaomai, Some right reserved.</div>
+    </div>
+    <script src="crafter.js"></script>
+</body>
+
+</html>

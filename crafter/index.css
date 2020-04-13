@@ -1,0 +1,109 @@
+body{
+    background-color: #404040;
+    /* filter: grayscale(); */
+}
+input{
+    outline: none;
+}
+.gamePanel{
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    margin: 30px auto;
+    /* padding: 16px; */
+    background-color: dimgray;
+    border: 1px solid black;
+    border-radius: 32px;
+}
+#craftTable{
+    height: 72px;
+    padding: 16px 16px 0 16px;
+    background-color: #333333;
+    border-bottom: 4px solid black;
+    border-radius: 32px 32px 0 0;
+}
+.inputSlot{
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 30px;
+    background-color: #232323;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: crosshair;
+}
+.craftBtn{
+    height: 40px;
+    width: 128px;
+    font-size: 30px;
+    margin-left: 16px;
+    border-radius: 10px;
+    cursor: cell;
+}
+.messageBox{
+    margin-top: 4px;
+    font-size: 20px;
+}
+.messageBox > b{
+    color: #00cc00;
+}
+.messageBox > i{
+    color: white;
+}
+#inventory{
+    width: 1334px;
+    height: 640px;
+    margin: 16px;
+    margin-top: 8px;
+    border-radius: 0 0 32px 32px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+#inventory div{
+    margin-top: 8px;
+    border-bottom: 2px dashed white;
+}
+#inventory div .key{
+    color: white;
+    margin-left: 16px;
+}
+.itemBtn{
+    width: 72px;
+    height: 50px;
+    margin-left: 8px;
+    margin-top: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#infomation{
+    position: absolute;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    bottom: -20px;
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+Alpha 1:
+ - Base Game Framework
+Alpha 1a:
+ - Added 15 Elements (Now Got Total 26 Elements)
+ - Minor improve to GUI
+ - Fixed Display Error
+ - Fixed "Steam" Recipe Incorrect
+Alpha 1b:
+ - Added 28 Elements (Now Got Total 50 Elements)
+ - Added basic category
+ - Now Got a Brand New Scrollbar
+ - Crafting Message Available
+ - Changed cursor
+
+Future Update:
+ - Category
+ - Item Image

@@ -3,13 +3,92 @@ body {
 }
 
 .topDiv {
-    height: 64px;
+    height: 72px;
     width: 100%;
-    border: 1px solid red;
-    border-radius: 10px;
+    background-color: #333333;
+    border-bottom: 4px solid #ff0000;
+    border-radius: 0 0 10px 10px;
     box-shadow: 5px 5px 5px #888888;
+}
+
+.topMiddle {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.topDiv .bannerLogo {
+    width: 70px;
+    height: 50px;
+    display: inline-block;
+    background-image: url("./images/YumeLogo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.topDiv .bannerSlogan {
+    width: 245px;
+    height: 50px;
+    display: inline-block;
+    background-image: url("./images/YumeBanner.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
 }
 
 .pageTitle {
     color: red;
+    font-family: Microsoft Yahei;
+    animation: wheelHueColor 10s infinite;
+}
+
+@keyframes wheelHueColor {
+
+    from,
+    to {
+        color: rgb(236, 100, 75);
+    }
+
+    10% {
+        color: rgb(219, 10, 91);
+    }
+
+    20% {
+        color: rgb(174, 168, 211);
+    }
+
+    30% {
+        color: rgb(89, 171, 227);
+    }
+
+    40% {
+        color: rgb(37, 116, 169);
+    }
+
+    50% {
+        color: rgb(3, 201, 169);
+    }
+
+    60% {
+        color: rgb(22, 160, 133);
+    }
+
+    70% {
+        color: rgb(233, 212, 96);
+    }
+
+    80% {
+        color: rgb(243, 156, 18);
+    }
+
+    90% {
+        color: rgb(236, 240, 241);
+    }
 }

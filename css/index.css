@@ -6,6 +6,11 @@ body {
     margin: 0;
 }
 
+.pageContent {
+    position: relative;
+    height: 1024px;
+}
+
 .topDiv {
     height: 72px;
     width: 100%;
@@ -97,12 +102,32 @@ body {
     }
 }
 
+.pageLink{
+    width: 248px;
+    height: 32px;
+    padding-left: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+    line-height: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-image: linear-gradient(to bottom, grey, black);
+    cursor: pointer;
+}
+
+.pageLink > a {
+    color: white;
+}
+
 .footer {
     position: absolute;
-    height: 100px;
+    height: 128px;
     width: 100%;
     bottom: 0;
-    border-top: #ff0000 1px solid;
+    background-color: #333333;
+    border-top: 4px solid #00ff00;
+    color: white;
+    border-radius: 10px 10px 0 0;
 }
 
 .footer .copyright {

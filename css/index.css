@@ -1,3 +1,7 @@
+* {
+    text-decoration: none;
+}
+
 body {
     margin: 0;
 }
@@ -99,6 +103,10 @@ body {
     width: 100%;
     bottom: 0;
     border-top: #ff0000 1px solid;
+}
+
+.footer .copyright {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 @media (max-width: 768px) {

@@ -11,7 +11,7 @@
     position: absolute;
     z-index: 1;
     width: 7200px;
-    height: 336px;
+    height: 100%;
 }
 
 #list img {
@@ -83,4 +83,8 @@
 
 #next {
     right: 20px;
+}
+
+@media (max-width: 768px){
+    /* 手机适配 */
 }

@@ -92,3 +92,10 @@ body {
         color: rgb(236, 240, 241);
     }
 }
+
+@media (max-width: 768px){
+    /* 手机适配 */
+    .pageTitle{
+        font-size: 1.5em;
+    }
+}

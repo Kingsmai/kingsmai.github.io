@@ -24,7 +24,7 @@ body {
     width: 70px;
     height: 50px;
     display: inline-block;
-    background-image: url("./images/YumeLogo.png");
+    background-image: url("../images/YumeLogo.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -33,7 +33,7 @@ body {
     width: 245px;
     height: 50px;
     display: inline-block;
-    background-image: url("./images/YumeBanner.png");
+    background-image: url("../images/YumeBanner.png");
     background-repeat: no-repeat;
     background-size: contain;
 }

@@ -93,9 +93,18 @@ body {
     }
 }
 
-@media (max-width: 768px){
+.footer {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    border-top: #ff0000 1px solid;
+}
+
+@media (max-width: 768px) {
+
     /* 手机适配 */
-    .pageTitle{
+    .pageTitle {
         font-size: 1.5em;
     }
 }

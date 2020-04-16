@@ -29,17 +29,59 @@
 <body>
     <div class="pageContent">
         <div class="topDiv">
-            <div class="middle">
+            <div class="topMiddle">
                 <div class="bannerLogo"></div>
                 <div class="bannerSlogan"></div>
             </div>
         </div>
-        <div class="middle" style="text-align: center;">
-            <h1 class="pageTitle">Temporarily Down</h1>
-            <p>页面维护中，请耐心等待，新版本即将上线！</p>
+        <div class="content">
+            <h1 class="pageTitle">Yume Project 优梦工作室</h1>
+            <!-- 轮播图 -->
+            <div id="container" style="margin: 0 auto;">
+                <div id="list" style="left: -600px;">
+                    <img src="./images/Carousel/010.jpg" alt="1">
+                    <!-- 实现无缝连接 -->
+                    <img src="./images/Carousel/001.jpg" alt="1">
+                    <img src="./images/Carousel/002.jpg" alt="2">
+                    <img src="./images/Carousel/003.jpg" alt="3">
+                    <img src="./images/Carousel/004.jpg" alt="4">
+                    <img src="./images/Carousel/005.jpg" alt="5">
+                    <img src="./images/Carousel/006.jpg" alt="6">
+                    <img src="./images/Carousel/007.jpg" alt="7">
+                    <img src="./images/Carousel/008.jpg" alt="8">
+                    <img src="./images/Carousel/009.jpg" alt="9">
+                    <img src="./images/Carousel/010.jpg" alt="10">
+                    <!-- 实现无缝连接 -->
+                    <img src="./images/Carousel/001.jpg" alt="5">
+                </div>
+                <div id="buttons">
+                    <span index="1" class="on">1</span>
+                    <span index="2">2</span>
+                    <span index="3">3</span>
+                    <span index="4">4</span>
+                    <span index="5">5</span>
+                    <span index="6">6</span>
+                    <span index="7">7</span>
+                    <span index="8">8</span>
+                    <span index="9">9</span>
+                    <span index="10">0</span>
+                </div>
+                <div id="prev" class="arrow">&lt;</div>
+                <div id="next" class="arrow">&gt;</div>
+            </div>
+            <a href="../YumeProject/">
+                <div class="pageLink">
+                    Goto testing pages
+                </div>
+            </a>
+            <a href="./crafter/index.html">
+                <div class="pageLink">
+                    Goto my game pages
+                </div>
+            </a>
         </div>
         <div class="footer">
-            <div class="middle">
+            <div class="content">
                 <blockquote>
                     <p>
                         "此网站目前仅供学习交流使用，代码原创，范例素材由网络上搜罗而来。侵权请告知，以便尽早撤回。"
@@ -51,6 +93,12 @@
             </div>
         </div>
     </div>
+    
+    <script lang="javascript">
+        setTimeout(function(){
+            location.href = "./pages/temp-down.html";
+        }, 1000);
+    </script>
 </body>
 
 </html>

@@ -12,13 +12,19 @@ body {
 }
 
 .topDiv {
-    display: flex;
     height: 72px;
     width: 100%;
     background-color: #333333;
     border-bottom: 4px solid #ff0000;
     border-radius: 0 0 10px 10px;
     box-shadow: 5px 5px 5px #888888;
+}
+
+.topMiddle {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
     justify-content: left;
     align-items: center;
 }
@@ -41,8 +47,8 @@ body {
     background-size: contain;
 }
 
-.middle {
-    width: 70%;
+.content {
+    width: 90%;
     margin: 0 auto;
 }
 

@@ -14,24 +14,25 @@
 目录  
 
 1. JavaScript
-   01. [JavaScript Experiment 1](#js-experiment1)
-   02. [JavaScript Experiment 2](#js-experiment2)
-   03. [JavaScript Experiment 3](#js-experiment3)
-   04. [JavaScript Experiment 4](#js-experiment4)
-   05. [JavaScript Experiment 5](#js-experiment5)
-   06. [JavaScript Experiment 6](#js-experiment6)
-   07. [JavaScript Experiment 7 [NEW!!!]](#js-experiment7 "NEW!!!")
-   08. [(WIP) Javascript Extra 1](#js-extra1 "Work in progress")
+   1. [JavaScript Experiment 1](#js-experiment1)
+   2. [JavaScript Experiment 2](#js-experiment2)
+   3. [JavaScript Experiment 3](#js-experiment3)
+   4. [JavaScript Experiment 4](#js-experiment4)
+   5. [JavaScript Experiment 5](#js-experiment5)
+   6. [JavaScript Experiment 6](#js-experiment6)
+   7. [JavaScript Experiment 7](#js-experiment7 "NEW!!!")
+   8. [Javascript Extra 1](#js-extra1 "NEW!!!")
+   9. [Javascript Extra 2](#js-extra1 "NEW!!!")
 2. C Language
-   01. [C Experiment 01](#c-experiment1)
-   02. [C Experiment 02](#c-experiment2)
-   03. [C Experiment 03](#c-experiment3)
-   04. [C Experiment 04](#c-experiment4)
-   05. [(WIP) C Experiment 05](#c-experiment5 "Work in progress")
-   06. [(WIP) C Experiment 06](#c-experiment6 "Work in progress")
-   07. [(WIP) C Experiment 07](#c-experiment7 "Work in progress")
-   08. [(WIP) C Experiment 08](#c-experiment8 "Work in progress")
-   09. [(WIP) C Experiment 09](#c-experiment9 "Work in progress")
+   1. [C Experiment 01](#c-experiment1)
+   2. [C Experiment 02](#c-experiment2)
+   3. [C Experiment 03](#c-experiment3)
+   4. [C Experiment 04](#c-experiment4)
+   5. [(WIP) C Experiment 05](#c-experiment5 "Work in progress")
+   6. [(WIP) C Experiment 06](#c-experiment6 "Work in progress")
+   7. [(WIP) C Experiment 07](#c-experiment7 "Work in progress")
+   8. [(WIP) C Experiment 08](#c-experiment8 "Work in progress")
+   9. [(WIP) C Experiment 09](#c-experiment9 "Work in progress")
    10. [(WIP) C Experiment 10](#c-experiment10 "Work in progress")
    11. [(WIP) C Experiment 11](#c-experiment11 "Work in progress")
    12. [(WIP) C Experiment 12](#c-experiment12 "Work in progress")
@@ -49,9 +50,7 @@
 3. 用js实现随机选取10~100之间的10个数字。用console.log打印出来。
    1. [index1-3-1.js](./js-experiment1/index1-3-1.js)
    2. [index1-3-2.js](./js-experiment1/index1-3-2.js)
-4. 读取学生的10门课的成绩分别为  
- 小花：90、小明：78、小李：50、小昭：56、关云：78、婷婷：42、海婷：70、小海：65、小红：75、张三：80。  
-   然后输出10门课成绩的最高分及姓名, 最低分及姓名, 总分, 平均分.
+4. 读取学生的10门课的成绩然后输出10门课成绩的最高分及姓名, 最低分及姓名, 总分, 平均分.
    1. [index1-4-1.js](./js-experiment1/index1-4-1.js)
    2. [index1-4-2.js](./js-experiment1/index1-4-2.js)
    3. [index1-4-3.js](./js-experiment1/index1-4-3.js)
@@ -106,9 +105,9 @@
 2. 用js实现随机选取10~100之间的10个数字，存入一个数组，并有小到大排序后输出。
    1. [index4-2-1.js](./js-experiment4/index4-2-1.js)
    2. [index4-2-2.js](./js-experiment4/index4-2-2.js)
-3. 移除数组 arr[3,4,2,6,7,3,8,9,2,3,7,2,6,2] 中的所有的数字2。不要直接修改数组 arr，结果返回新的数组。
+3. 移除数组 arr 中的所有的数字2。不要直接修改数组 arr，结果返回新的数组。
    1. [index4-3-1.js](./js-experiment4/index4-3-1.js)
-4. 有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。例如：原数组 [3,10,49,89,100] 插入一个数 15 新数组为 [3,10,15,49,89,100]。
+4. 有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。
    1. [index4-4-1.js](./js-experiment4/index4-4-1.js)
    2. [index4-4-2.js](./js-experiment4/index4-4-2.js)
    3. [index4-4-3.js](./js-experiment4/index4-4-3.js)
@@ -190,13 +189,44 @@
 
 [TOP](#repo-folder)
 
-```Work in progress```
+```Preparing```
+
+1. 封装函数: 把两个数组[1, 2, 3, "aaa", "hello", 999, -1]、[3, 78, "aaa", "bbb", 99, 1, -1, "hello"]共同的元素放入一个新的数组, 并返回新的数组提示: 传入两个数组, 返回值为新的数组
+2. 将数组[{age: 19,name: 'Jack'},{age: 5, name: 'Apple'},{age: 12,name: 'Lynn'},{age: 25,name: 'David'}]元素按 age 字段的值，从小到大排序。
+3. 现点击页面，显示单击的坐标。
+4. 请编写一个函数，求一个字符串的字节长度。（一个英文字符占用一个字节，一个中文字符占用两个字节。）
+5. 根据下拉框的选项来显示对应的图片。如下图所示：（用select里面的 onchange事件）
 
 ## js-extra1
 
 [TOP](#repo-folder)
 
-```Work in progress```
+1. 输出九九乘法表
+   1. [index1-1-1.js](./js-extra1/index1-1-1.js)
+2. 判断当前时间是凌晨（0-6）、上午（6-12）、下午（12-18）或是晚上（18-24），并弹出。
+   1. [index1-2-1.js](./js-extra1/index1-2-1.js)
+   2. [index1-2-2.js](./js-extra1/index1-2-2.js)
+
+## js-extra2
+
+[TOP](#repo-folder)
+
+1. 创建数组，获取101-200之间所有3和7的公倍数，并用 `for in` 输出数组中各个数值+1后的值
+   1. [index2-1-1.js](./js-extra2/index2-1-1.js)
+2. 现有数组arr,对该数组进行从小到大排序，并输出排序后的数组。
+   1. [index2-2-1.js](./js-extra2/index2-2-1.js)
+   2. [index2-2-2.js](./js-extra2/index2-2-2.js)
+   3. [index2-2-3.js](./js-extra2/index2-2-3.js)
+3. 学校运动会我们得到了一组参加比赛的人员数据，分别是姓名、性别、年龄和年级，利用JavaScript的知识挑出其中所有是大一的女生的的名字。
+   1. [index2-3-1.js](./js-extra2/index2-3-1.js)
+4. 写出一个javascript的函数，实现去重的功能。其中数组元素均为基本类性。
+   1. [index2-4-1.js](./js-extra2/index2-4-1.js)
+   2. [index2-4-2.js](./js-extra2/index2-4-2.js)
+5. 将数组 temp 中的元素随机排序，并输出。
+   1. [index2-5-1.js](./js-extra2/index2-5-1.js)
+   2. [index2-5-2.js](./js-extra2/index2-5-2.js)
+6. 数组 temp 要求从window获取一个整数 tempA，将数组 temp 中第 tempA (从 0 开始算)个元素取出来放到数组的开头显示。
+   1. [index2-6-1.js](./js-extra2/index2-6-1.js)
 
 ## c-experiment1
 

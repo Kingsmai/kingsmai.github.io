@@ -22,7 +22,9 @@
    6. [JavaScript Experiment 6](#js-experiment6)
    7. [JavaScript Experiment 7](#js-experiment7 "NEW!!!")
    8. [Javascript Extra 1](#js-extra1 "NEW!!!")
-   9. [Javascript Extra 2](#js-extra1 "NEW!!!")
+   9. [Javascript Extra 2](#js-extra2 "NEW!!!")
+   10. [Javascript Extra 3](#js-extra3 "NEW!!!")
+   11. [Javascript Extra 4](#js-extra4 "NEW!!!")
 2. C Language
    1. [C Experiment 01](#c-experiment1)
    2. [C Experiment 02](#c-experiment2)
@@ -40,7 +42,7 @@
 
 ## js-experiment1
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 1. 入职薪水10K，每年涨幅5%，50年后工资多少？（用alert弹出工资的值）
    1. [index1-1-1.js](./js-experiment1/index1-1-1.js)
@@ -59,7 +61,7 @@
 
 ## js-experiment2
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 1. 编写程序．通过用户输入的年龄判断是哪个年龄段的人，并在页面上输出判断结果。
    1. [index2-1-1.js](./js-experiment2/index2-1-1.js)
@@ -77,7 +79,7 @@
 
 ## js-experiment3
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 1. 通过输入框（调用prompt方法）输入购买的某件商品的单价和数量，通过三种方法（window.alert,console.log,document.write）将商品的相关信息和应付款项输出。
    1. [index3-3-1.js](./js-experiment3/index3-1-1.js)
@@ -97,7 +99,7 @@
 
 ## js-experiment4
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 1. 现有一个数组 arr = [4, 0, 7, 9, 0, 0, 2, 6, 0, 3, 1, 0];要求将数组中中重复的项去掉，生成新的数组。并用document.write输出到页面。
    1. [index4-1-1.js](./js-experiment4/index4-1-1.js)
@@ -122,7 +124,7 @@
 
 ## js-experiment5
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 1. 把用户输入的数据累加，直到输入零为止，输出累加的结果。
    1. [index5-1-1.js](./js-experiment5/index5-1-1.js)
@@ -143,7 +145,7 @@
 
 ## js-experiment6
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 1. 使用map函数，将用户输入的数组中的每一位数字都增加30%,数组元素也由用户输入，数组元素保留2位小数，并输出
    1. [index6-1-1.js](./js-experiment6/index6-1-1.js)
@@ -163,7 +165,7 @@
 
 ## js-experiment7
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 1. 一个大数组中包含了4个小数组，分别找到每个小数组中的最大值，然后把它们串联起来，形成一个新数组。
    1. [index7-1-1.js](./js-experiment7/index7-1-1.js)
@@ -187,7 +189,7 @@
 
 ## js-experiment8
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Preparing```
 
@@ -199,7 +201,9 @@
 
 ## js-extra1
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+[选择题与做答题（暂无）]()
 
 1. 输出九九乘法表
    1. [index1-1-1.js](./js-extra1/index1-1-1.js)
@@ -209,7 +213,9 @@
 
 ## js-extra2
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+[选择题与做答题（暂无）]()
 
 1. 创建数组，获取101-200之间所有3和7的公倍数，并用 `for in` 输出数组中各个数值+1后的值
    1. [index2-1-1.js](./js-extra2/index2-1-1.js)
@@ -228,9 +234,62 @@
 6. 数组 temp 要求从window获取一个整数 tempA，将数组 temp 中第 tempA (从 0 开始算)个元素取出来放到数组的开头显示。
    1. [index2-6-1.js](./js-extra2/index2-6-1.js)
 
+## js-extra3
+
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+[选择题与做答题（暂无）]()
+
+1. 要求用面向对象的方法记录从客户端获取三位工人的信息（包括姓名，年龄，性别），并以表格的形式输出。
+   1. [index3-1-1.js](./js-extra3/index3-1-1.js)
+2. 为数组 arr 中的每个初始元素求二次方。二次方各个结果添加在原数组后面显示
+   1. [index3-2-1.js](./js-extra3/index3-2-1.js)
+3. 实现一个打点计时器，要求  
+   a、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为1   
+   b、返回的对象中需要包含一个 cancel 方法，用于停止定时操作  
+   c、第一个数需要立即输出
+   1. [index3-3-1.js](./js-extra3/index3-3-1.js)
+4. 创建一个长度不小于三的数组arr,并显示，数组元素分别执行 ChangeT函数，返回值重新组成一个数组newArr显示,ChangeT()实现参数 num 与返回值的关系如下  
+   （1）如果 num 能同时被 3 和 4 整除，返回字符串 BlueGreen  
+   （2）如果 num 能被 3 整除，返回字符串 Blue  
+   （3）如果 num 能被 4 整除，返回字符串 Green  
+   （4）如果参数为空或者不是 Number 类型，返回 false  
+   （5）其余情况，返回参数 num
+   1. [index3-4-1.js](./js-extra3/index3-4-1.js)
+5. 实现在标题栏上动态显示当前时间的效果。
+   1. [index3-5-1.js](./js-extra3/index3-5-1.js)
+6. 移除数组 arr 中的所有值与 item 相等的元素，直接在给定的 arr 数组上进行操作，并将结果返回
+   1. [index3-6-1.js](./js-extra3/index3-6-1.js)
+7. 设置函数，统计数组 arr 中值等于 item 的元素出现的次数
+   1. [index3-7-1.js](./js-extra3/index3-7-1.js)
+
+## js-extra4
+
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+[选择题与做答题（暂无）]()
+
+1. 创建一个Lala水果店的商品列表（包括水果名称、单价、介绍、以及购买数量，购买数量为输入），当用户点击提交的时候，会显示一张购物清单的文本信息文本信息。最终价格四舍五入。
+   1. [index4-1-1.html](./js-extra4/index4-1-1.html)
+   2. [index4-1-1.js](./js-extra4/index4-1-1.js)
+2. 定义一个含有40个整型元素的数组Arr1，Arr1中元素按顺序分别赋予从2开始的偶数；然后按顺序每五个数求出一个平均值，平均值放在另一个数组Arr2中并输出。
+   1. [index4-2-1.js](./js-extra4/index4-2-1.js)
+3. 写一个函数，生成一个长度为 n 的随机字符串（n的值为用户输入），字符串字符的取值范围包括0到9，a到z，A到Z
+   1. [【搬运】随机概念.js](./js-extra4/index4-3-0.js)
+   2. [index4-3-1.js](./js-extra4/index4-3-1.js)
+4. 创建个人爱好复选框，（音乐、登山、游泳、阅读、打球、跑步），点击全选则全部选中，全部选则全部取消
+   1. [index4-4-1.html](./js-extra4/index4-4-1.html)
+   2. [index4-4-1.js](./js-extra4/index4-4-1.js)
+5. 审查登录信息，正确账号abc，密码123。此外填写提示账号/密码不能为空，账号密码不正确等相关信息
+   1. [index4-5-1.html](./js-extra4/index4-5-1.html)
+   2. [index4-5-1.js](./js-extra4/index4-5-1.js)
+6. 创建一个省份与城市关联的两个下拉框，城市随着省份的选择而改变（此题有点复杂，可供探索）
+   1. [index4-6-1.html](./js-extra4/index4-6-1.html)
+   2. [index4-6-1.js](./js-extra4/index4-6-1.js)
+
 ## c-experiment1
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```noCode
 1. 熟练掌握变量的定义及赋值方法
@@ -259,7 +318,7 @@
 
 ## c-experiment2
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```noCode
 1. 熟练掌握关系运算符的使用  
@@ -284,7 +343,7 @@
 
 ## c-experiment3
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```noCode
 1. 掌握多分支if结构程序的编写
@@ -329,7 +388,7 @@
 
 ## c-experiment4
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```noCode
 1．掌握循环结构程序设计方法；
@@ -369,54 +428,54 @@ F(n)=F(n-1)+F(n-2) (n>=3)
 
 ## c-experiment5
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```
 
 ## c-experiment6
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```
 
 ## c-experiment7
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```
 
 ## c-experiment8
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```
 
 ## c-experiment9
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```
 
 ## c-experiment10
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```
 
 ## c-experiment11
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```
 
 ## c-experiment12
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```
 
 ## c-experiment13
 
-[TOP](#repo-folder)
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
 ```Work in progress```

@@ -166,7 +166,31 @@
 
 [TOP](#repo-folder)
 
-这个是新的作业，所以 ~ 嘿嘿你懂的
+1. 一个大数组中包含了4个小数组，分别找到每个小数组中的最大值，然后把它们串联起来，形成一个新数组。
+   1. [index7-1-1.js](./js-experiment7/index7-1-1.js)
+2. 现有一句英文"I am the most handsome in Wuhan Business College"，在该句子中找到所以最长的单词，并计算它的长度。
+   1. [index7-2-1.js](./js-experiment7/index7-2-1.js)
+3. 有这样一个URL：`http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e`，请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，将其按key-value形式返回到一个json结构中，如{a:’1′, b:’2′, c:”, d:’xxx’, e:undefined}
+   1. [index7-3-1.js](./js-experiment7/index7-3-1.js)
+   2. [index7-3-2.js](./js-experiment7/index7-3-2.js)
+   3. [index7-3-3.js](./js-experiment7/index7-3-3.js)
+   4. [index7-3-4.js](./js-experiment7/index7-3-4.js)
+   5. [index7-3-5.js](./js-experiment7/index7-3-5.js)
+   6. [index7-3-6.js](./js-experiment7/index7-3-6.js)
+4. 现有两个有序数组 [1, 2, 5, 9, 10]、[3, 4, 6, 9, 10]，请通过js来寻找这两个有序数组最小相同元素。
+   1. [index7-4-1.js](./js-experiment7/index7-4-1.js)
+5. 求所有满足条件的四位数ABCD，它是13的倍数，且第3位数加上第2位数等于第4位数（即A=B+C）。
+   1. [index7-5-1.js](./js-experiment7/index7-5-1.js)
+6. 编写一个函数f(x)=4x2+3x+2,使用户通过提示对话框输入x的值，能得到相应的计算结果。
+   1. [index7-6-1.js](./js-experiment7/index7-6-1.js)
+7. 现有一个列表，用js实现以下功能：鼠标点击某一项列表时，改变该项的文字。
+   1. [index7-7-1.js](./js-experiment7/index7-7-1.js)
+
+## js-experiment8
+
+[TOP](#repo-folder)
+
+```Work in progress```
 
 ## js-extra1
 

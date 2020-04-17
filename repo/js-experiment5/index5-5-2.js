@@ -1,0 +1,11 @@
+var arr = [100, 12, 34, 67, 23, 16, 6, 9, 24, 79, 2, 90, 33, 69, 1, 34, -2, 0, 666, 1000];
+var m = arr.slice(0, 10);
+var n = arr.slice(10, 20);
+document.body.innerHTML += m + '<br>';
+document.body.innerHTML += n + '<br>';
+m.sort(function (a, b) { return a - b });
+n.sort(function (a, b) { return b - a });
+document.body.innerHTML += m + '<br>';
+document.body.innerHTML += n + '<br>';
+var z = m.concat(n);
+document.body.innerHTML += z;

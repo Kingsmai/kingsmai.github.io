@@ -16,7 +16,9 @@
    3. [JavaScript Experiment 3](#js-experiment3)
    4. [JavaScript Experiment 4](#js-experiment4)
    5. [JavaScript Experiment 5](#js-experiment5)
-   6. [(WIP) Javascript Extra 1](#js-extra1 "Work in progress")
+   6. [JavaScript Experiment 6](#js-experiment6)
+   7. [(WIP) JavaScript Experiment 7](#js-experiment7 "Work in progress")
+   8. [(WIP) Javascript Extra 1](#js-extra1 "Work in progress")
 2. C Language
    1. [(WIP) C Experiment 1](#c-experiment1 "Work in progress")
 
@@ -83,22 +85,22 @@
 
 [TOP](#repo-folder)
 
-1. 现有一个数组 arr = [4, 0, 7, 9, 0, 0, 2, 6, 0, 3, 1, 0];要求将数组中中重复的项去掉，生成新的数组。并用document.write输出到页面。（提示：使用push方法）
+1. 现有一个数组 arr = [4, 0, 7, 9, 0, 0, 2, 6, 0, 3, 1, 0];要求将数组中中重复的项去掉，生成新的数组。并用document.write输出到页面。
    1. [index4-1-1.js](./js-experiment4/index4-1-1.js)
    2. [index4-1-2.js](./js-experiment4/index4-1-2.js)
-2. 用js实现随机选取10~100之间的10个数字，存入一个数组，并有小到大排序后输出。（提示：random，sort函数，push）
+2. 用js实现随机选取10~100之间的10个数字，存入一个数组，并有小到大排序后输出。
    1. [index4-2-1.js](./js-experiment4/index4-2-1.js)
    2. [index4-2-2.js](./js-experiment4/index4-2-2.js)
 3. 移除数组 arr[3,4,2,6,7,3,8,9,2,3,7,2,6,2] 中的所有的数字2。不要直接修改数组 arr，结果返回新的数组。
    1. [index4-3-1.js](./js-experiment4/index4-3-1.js)
-4. 有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。例如：原数组  [3,10,49,89,100] 插入一个数 15 新数组为   [3,10,15,49,89,100]。（提示：splice）
+4. 有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。例如：原数组 [3,10,49,89,100] 插入一个数 15 新数组为 [3,10,15,49,89,100]。
    1. [index4-4-1.js](./js-experiment4/index4-4-1.js)
    2. [index4-4-2.js](./js-experiment4/index4-4-2.js)
    3. [index4-4-3.js](./js-experiment4/index4-4-3.js)
 5. 某个公司采用公用电话传递数据，数据是四位的整数，在传递过程中是加密的，加密规则如下：每位数字都加上5,然后用除以10的余数代替该数字，再将第一位和第四位交换，第二位和第三位交换，请编写一个函数，传入原文，输出密文。
    1. [index4-5-1.js](./js-experiment4/index4-5-1.js)
    2. [index4-5-2.js](./js-experiment4/index4-5-2.js)
-6. 将字符串按照单词进行逆序，空格作为划分单词的唯一条件。传入:”Welome to Wuhan”改为 “Wuhan to Welcome”。（提示：split方法）
+6. 将字符串按照单词进行逆序，空格作为划分单词的唯一条件。传入:”Welome to Wuhan”改为 “Wuhan to Welcome”。
    1. [index4-6-1.js](./js-experiment4/index4-6-1.js)
 7. 累加按钮，自加1。点击按钮后，数字自动加1
    1. [index4-7-1.js](./js-experiment4/index4-7-1.js)
@@ -121,9 +123,35 @@
    2. [index5-5-2.js](./js-experiment5/index5-5-2.js)
 6. 现有2个html页面，各个页面有一个按钮，信息分别为“跳转”和“返回”，点击“跳转”按钮后，跳转到另外一个页面，点击“返回”后，跳转到第一个页面。
    1. [index5-6-1.js](./js-experiment5/index5-6-1.js)
-7. 定义一个函数: 可以把数组中的下标为 3 的元素移到数组的开头. （提示: 传入一个数组，使用splice方法。）
+7. 定义一个函数: 可以把数组中的下标为 3 的元素移到数组的开头.
    1. [index5-7-1.js](./js-experiment5/index5-7-1.js)
    2. [index5-7-2.js](./js-experiment5/index5-7-2.js)
+
+## js-experiment6
+
+[TOP](#repo-folder)
+
+1. 使用map函数，将用户输入的数组中的每一位数字都增加30%,数组元素也由用户输入，数组元素保留2位小数，并输出
+   1. [index6-1-1.js](./js-experiment6/index6-1-1.js)
+2. 随机在（0,1000000）不包括1000000，生成一个整数，然后输出该数共有多少位，每位分别是什么？
+   1. [index6-2-1.js](./js-experiment6/index6-2-1.js)
+3. 有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，棋盘上放的所有芝麻的重量。
+   1. [index6-3-1.js](./js-experiment6/index6-3-1.js)
+4. 自己设计实现一个轮播图
+   1. [index6-4-1.html](./js-experiment6/index6-4-1.html)
+   1. [index6-4-1.css](./js-experiment6/index6-4-1.css)
+   1. [index6-4-1.js](./js-experiment6/index6-4-1.js)
+   1. [index6-4-2.html](./js-experiment6/index6-4-2.html)
+   1. [index6-4-2.css](./js-experiment6/index6-4-2.css)
+   1. [index6-4-2.js](./js-experiment6/index6-4-2.js)
+5. 现有一表格，分别输入数字后创建表格。
+   1. [index6-5-1.js](./js-experiment6/index6-5-1.js)
+
+## js-experiment7
+
+[TOP](#repo-folder)
+
+这个是新的作业，所以 ~ 嘿嘿你懂的
 
 ## js-extra1
 

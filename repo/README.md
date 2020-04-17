@@ -191,7 +191,7 @@
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
-```Preparing```
+> Preparing
 
 1. 封装函数: 把两个数组[1, 2, 3, "aaa", "hello", 999, -1]、[3, 78, "aaa", "bbb", 99, 1, -1, "hello"]共同的元素放入一个新的数组, 并返回新的数组提示: 传入两个数组, 返回值为新的数组
 2. 将数组[{age: 19,name: 'Jack'},{age: 5, name: 'Apple'},{age: 12,name: 'Lynn'},{age: 25,name: 'David'}]元素按 age 字段的值，从小到大排序。

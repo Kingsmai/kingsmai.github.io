@@ -6,21 +6,36 @@
 如果有解题有错的，也可以将您的代码 pull request 到这个库里，我审查之后会更新入库。
 
 文件命名方式为  
-> index 实验号 - 题号 - 作答方式
+
+```noCode
+实验号 - 题号 - 作答方式
+```
 
 目录  
 
 1. JavaScript
-   1. [JavaScript Experiment 1](#js-experiment1)
-   2. [JavaScript Experiment 2](#js-experiment2)
-   3. [JavaScript Experiment 3](#js-experiment3)
-   4. [JavaScript Experiment 4](#js-experiment4)
-   5. [JavaScript Experiment 5](#js-experiment5)
-   6. [JavaScript Experiment 6](#js-experiment6)
-   7. [(WIP) JavaScript Experiment 7](#js-experiment7 "Work in progress")
-   8. [(WIP) Javascript Extra 1](#js-extra1 "Work in progress")
+   01. [JavaScript Experiment 1](#js-experiment1)
+   02. [JavaScript Experiment 2](#js-experiment2)
+   03. [JavaScript Experiment 3](#js-experiment3)
+   04. [JavaScript Experiment 4](#js-experiment4)
+   05. [JavaScript Experiment 5](#js-experiment5)
+   06. [JavaScript Experiment 6](#js-experiment6)
+   07. [(WIP) JavaScript Experiment 7](#js-experiment7 "Work in progress")
+   08. [(WIP) Javascript Extra 1](#js-extra1 "Work in progress")
 2. C Language
-   1. [(WIP) C Experiment 1](#c-experiment1 "Work in progress")
+   01. [(WIP) C Experiment 01](#c-experiment1 "Work in progress")
+   02. [(WIP) C Experiment 02](#c-experiment2 "Work in progress")
+   03. [(WIP) C Experiment 03](#c-experiment3 "Work in progress")
+   04. [(WIP) C Experiment 04](#c-experiment4 "Work in progress")
+   05. [(WIP) C Experiment 05](#c-experiment5 "Work in progress")
+   06. [(WIP) C Experiment 06](#c-experiment6 "Work in progress")
+   07. [(WIP) C Experiment 07](#c-experiment7 "Work in progress")
+   08. [(WIP) C Experiment 08](#c-experiment8 "Work in progress")
+   09. [(WIP) C Experiment 09](#c-experiment9 "Work in progress")
+   10. [(WIP) C Experiment 10](#c-experiment10 "Work in progress")
+   11. [(WIP) C Experiment 11](#c-experiment11 "Work in progress")
+   12. [(WIP) C Experiment 12](#c-experiment12 "Work in progress")
+   13. [(WIP) C Experiment 13](#c-experiment13 "Work in progress")
 
 ## js-experiment1
 
@@ -163,4 +178,93 @@
 
 [TOP](#repo-folder)
 
-```Work in progress too!```
+1. 在屏幕上打印包含个人信息的内容
+   1. [1-1.c](c-experiment1/1-1.c)
+2. 在屏幕上输出包括下列选项的菜单
+   1. [1-2.c](c-experiment1/1-2.c)
+3. 现需完成模拟超市收银操作，输入购买的某件商品的单价和数量，输出应付的款项和相关信息。
+   1. [1-3.c](c-experiment1/1-3.c)
+4. 输入二个同学的信息，并按照一定的格式输出（需要输出表头，数据间需要合理的空格）。  
+输入的信息包括：学号，性别，语文分数，数学分数，英语分数；  
+输出的信息包括：学号，性别，语文分数，数学分数，英语分数，平均分，总分。
+   1. [1-4.c](c-experiment1/1-4.c)
+5. 输入一个四位数的整数，先求出每个位数上的数值，然后用每个位数上的数值组成和原数据逆序的一个新的整数。
+   1. [1-5.c](c-experiment1/1-5.c)
+6. 输入一个矩形的长和宽，求出周长及面积，并将结果小数点后保留2位输出。
+   1. [1-6.c](c-experiment1/1-6.c)
+7. 从键盘输入两个实数，求其和、差、积、商的结果，并将相关信息输出。（需要考虑：当求商时，若除数为0时，不能计算，并需给出提示）。
+   1. [1-7.c](c-experiment1/1-7.c)
+8. 现有ax+b=0的一元一次方程，其中a，b从键盘输入，求出该方程的根，并将根小数点第三位进行四舍五入，并将结果输出。
+   1. [1-8.c](c-experiment1/1-8.c)
+
+## c-experiment2
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment3
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment4
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment5
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment6
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment7
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment8
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment9
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment10
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment11
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment12
+
+[TOP](#repo-folder)
+
+```Work in progress```
+
+## c-experiment13
+
+[TOP](#repo-folder)
+
+```Work in progress```

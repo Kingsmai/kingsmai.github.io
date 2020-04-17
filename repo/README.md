@@ -20,7 +20,7 @@
    04. [JavaScript Experiment 4](#js-experiment4)
    05. [JavaScript Experiment 5](#js-experiment5)
    06. [JavaScript Experiment 6](#js-experiment6)
-   07. [(WIP) JavaScript Experiment 7](#js-experiment7 "Work in progress")
+   07. [JavaScript Experiment 7 [NEW!!!]](#js-experiment7 "NEW!!!")
    08. [(WIP) Javascript Extra 1](#js-extra1 "Work in progress")
 2. C Language
    01. [C Experiment 01](#c-experiment1)

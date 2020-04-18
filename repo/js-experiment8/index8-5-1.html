@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 8</title>
+    <style>
+        #container {
+            height: 200px;
+            width: 200px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #dropDown {
+            height: 32px;
+            width: 200px;
+            font-size: 20px;
+            font-family: Microsoft Yahei;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" style="background-image: url('./img/0408.png');"></div>
+    <select id="dropDown" onchange="SwitchImage(this)">
+        <option value="0408">莫莉</option>
+        <option value="0409">肖恩</option>
+        <option value="0410">邓肯</option>
+        <option value="0411">奈宝尼</option>
+        <option value="0412">安多</option>
+    </select>
+    <script src="index8-5-1.js"></script>
+</body>
+</html>

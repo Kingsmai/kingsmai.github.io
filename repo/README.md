@@ -193,11 +193,18 @@
 
 > Preparing
 
-1. 封装函数: 把两个数组[1, 2, 3, "aaa", "hello", 999, -1]、[3, 78, "aaa", "bbb", 99, 1, -1, "hello"]共同的元素放入一个新的数组, 并返回新的数组提示: 传入两个数组, 返回值为新的数组
-2. 将数组[{age: 19,name: 'Jack'},{age: 5, name: 'Apple'},{age: 12,name: 'Lynn'},{age: 25,name: 'David'}]元素按 age 字段的值，从小到大排序。
+1. 封装函数: 把两个数组共同的元素放入一个新的数组, 并返回新的数组提示: 传入两个数组, 返回值为新的数组
+   1. [index8-1-1.js](./js-experiment8/index8-1-1.js)
+2. 将数组元素按 age 字段的值，从小到大排序。
+   1. [index8-2-1.js](./js-experiment8/index8-2-1.js)
 3. 现点击页面，显示单击的坐标。
+   1. [index8-3-1.js](./js-experiment8/index8-3-1.js)
 4. 请编写一个函数，求一个字符串的字节长度。（一个英文字符占用一个字节，一个中文字符占用两个字节。）
-5. 根据下拉框的选项来显示对应的图片。如下图所示：（用select里面的 onchange事件）
+   1. [index8-4-1.js](./js-experiment8/index8-4-1.js)
+   2. [index8-4-2.js](./js-experiment8/index8-4-2.js)
+5. 根据下拉框的选项来显示对应的图片。（用select里面的 onchange事件）
+   1. [index8-5-1.html](./js-experiment8/index8-5-1.html)
+   2. [index8-5-1.js](./js-experiment8/index8-5-1.js)
 
 ## js-extra1
 

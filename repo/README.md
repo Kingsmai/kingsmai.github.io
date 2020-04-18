@@ -20,11 +20,12 @@
    4. [JavaScript Experiment 4](#js-experiment4)
    5. [JavaScript Experiment 5](#js-experiment5)
    6. [JavaScript Experiment 6](#js-experiment6)
-   7. [JavaScript Experiment 7](#js-experiment7 "NEW!!!")
-   8. [Javascript Extra 1](#js-extra1 "NEW!!!")
-   9. [Javascript Extra 2](#js-extra2 "NEW!!!")
-   10. [Javascript Extra 3](#js-extra3 "Now with answer!")
-   11. [Javascript Extra 4](#js-extra4 "NEW!!!")
+   7. [JavaScript Experiment 7](#js-experiment7)
+   8. [JavaScript Experiment 8](#js-experiment8 "NEW!!!")
+   9. [Javascript Extra 1](#js-extra1 "NEW!!!")
+   10. [Javascript Extra 2](#js-extra2 "NEW!!!")
+   11. [Javascript Extra 3](#js-extra3 "Now with answer!")
+   12. [Javascript Extra 4](#js-extra4 "NEW!!!")
 2. C Language
    1. [C Experiment 01](#c-experiment1)
    2. [C Experiment 02](#c-experiment2)
@@ -171,7 +172,7 @@
    1. [index7-1-1.js](./js-experiment7/index7-1-1.js)
 2. 现有一句英文"I am the most handsome in Wuhan Business College"，在该句子中找到所以最长的单词，并计算它的长度。
    1. [index7-2-1.js](./js-experiment7/index7-2-1.js)
-3. 有这样一个URL：`http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e`，请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，将其按key-value形式返回到一个json结构中，如{a:’1′, b:’2′, c:”, d:’xxx’, e:undefined}
+3. 有这样一个URL：```http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e```，请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，将其按key-value形式返回到一个json结构中，如{a:’1′, b:’2′, c:”, d:’xxx’, e:undefined}
    1. [index7-3-1.js](./js-experiment7/index7-3-1.js)
    2. [index7-3-2.js](./js-experiment7/index7-3-2.js)
    3. [index7-3-3.js](./js-experiment7/index7-3-3.js)
@@ -190,8 +191,6 @@
 ## js-experiment8
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
-
-> Preparing
 
 1. 封装函数: 把两个数组共同的元素放入一个新的数组, 并返回新的数组提示: 传入两个数组, 返回值为新的数组
    1. [index8-1-1.js](./js-experiment8/index8-1-1.js)

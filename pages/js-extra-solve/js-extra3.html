@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163728140-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163728140-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        .correct {
+            color: red;
+        }
+
+        .choice {
+            list-style-type: upper-alpha;
+        }
+
+        u {
+            color: red;
+        }
+    </style>
+    <title>Xiaomai's Blog | JS-extra-1</title>
+</head>
+
+<body>
+    <div class="pageContent" style="position: relative; height: auto;">
+        <div class="topDiv">
+            <div class="middle">
+                <a href="../../">
+                    <div class="bannerLogo"></div>
+                    <div class="bannerSlogan"></div>
+                </a>
+            </div>
+        </div>
+        <div class="middle">
+            <h1 class="pageTitle">JS Extra 3</h1>
+            <div>
+                <span>选择题</span>
+                <ol>
+                    <li>
+                        HTML 表单的首要标记是&lt;form&gt;，&lt;form&gt;标记的参数method表示表单发送的方法，可能为get或post，下列关于get和post的描述正确的是()
+                        <ol class="choice">
+                            <li class="correct">post方法传递的数据对客户端是不可见的</li>
+                            <li>get请求信息以查询字符串的形式发送，查询字符串长度没有大小限制</li>
+                            <li>post方法对发送数据的数量限制在255个字符之内</li>
+                            <li>get方法传递的数据对客户端是不可见的</li>
+                        </ol>
+                        <pre>参考资料：
+    关于 GET 的注释：
+        将表单数据以名称/值对的形式附加到 URL 中
+        URL 的长度是有限的（大约 3000 字符）
+        绝不要使用 GET 来发送敏感数据！（在 URL 中是可见的）
+        对于用户希望加入书签的表单提交很有用
+        GET 更适用于非安全数据，比如在 Google 中查询字符串
+
+    关于 POST 的注释：
+        将表单数据附加到 HTTP 请求的 body 内（数据不显示在 URL 中）
+        没有长度限制
+        通过 POST 提交的表单不能加入书签</pre>
+                    </li>
+                    <li>
+                        foo对象有att属性，那么获取att属性的值，以下哪些做法是可以的（）
+                        <ol class="choice">
+                            <li class="correct">foo["a"+"t"+"t"]</li>
+                            <li class="correct">foo.att</li>
+                            <li class="correct">foo["att"]</li>
+                            <li>foo{"att"}</li>
+                            <li>foo("att")</li>
+                        </ol>
+                        <pre>解释：
+foo = {"att": "An Object"}
+try {console.log(foo["a"+"t"+"t"]);} catch {}
+try {console.log(foo.att);} catch {}
+try {console.log(foo["att"]);} catch {}
+try {
+    // console.log(foo{"att"}); // 报错
+} catch {}
+try {
+    console.log(foo("att")); // 函数调用
+} catch {}</pre>
+                    </li>
+                    <li>
+                        Javascript中,以下代码运行后变量y的值是（）
+                        <pre>var x = ['abcdef', 12345];
+var y = typeof(typeof(x));</pre>
+                        <ol class="choice">
+                            <li>"number"</li>
+                            <li class="correct">"string"</li>
+                            <li>"undefined"</li>
+                            <li>"object"</li>
+                        </ol>
+                        <pre>解释：typeof(x) == "object"; typeof("object") == "string"</pre>
+                    </li>
+                    <li>
+                        <span style="color: red; font-weight: bold;">这题貌似有问题</span>
+                        Javascript中,以下代码运行后变量y的值是（）
+                        <pre>(function () {
+    return typeof arguments;
+})();</pre>
+                        <ol class="choice">
+                            <li>"number"</li>
+                            <li>"string"</li>
+                            <li>"undefined"</li>
+                            <li>"object"</li>
+                        </ol>
+                    </li>
+                </ol>
+                <br>
+                <span>填空题</span>
+                <ol>
+                    <li>
+                        以下代码执行的结果是：<u> 弹出提示框，17 </u>
+                        <pre>var total = 16.5;
+var number = sum(5.50, 5.01, 5.99);
+alert(total);
+function sum(n1, n2, n3) {
+    total = Math.round(n1) + Math.round(n2) + Math.round(n3);
+    return total;
+}</pre>
+                    </li>
+                    <span style="color: red; font-weight: bold;">2, 3, 4 不确定</span>
+                    <li>JavaScript有两种特殊数据类型：<u> undefined </u>、<u> null </u></li>
+                    <li>JavaScript有两种引用数据类型：<u> 对象 </u>、<u> 数组 </u>、<u> 函数 </u></li>
+                    <li>JavaScript有两种复合数据类型：<u> Object </u></li>
+                    <li>Javascript弹出对话框的三个命令：<u> alert() </u>、<u> comfirm() </u>、<u> prompt() </u></li>
+                    <li>Java和JavaScript是两种不同的语言，Java是面向对象的程序设计语言，而JavaScript是<u>脚本语言</u>，JavaScript可以在<u>客户端</u>和<u>浏览器</u>脚本中使用。</li>
+                    <li>JavaScript内置函数parseInt（）将字符型的值显示转换为<u>整数型</u>。</li>
+                    <li>JavaScript中若是已知元素id，则可以通过<u>document.getElementById();</u>可以获得一个元素</li>
+                    <li>JavaScript中<u>Math.round()</u>把 7.25 四舍五入为最接近的整数；<u>Math.ceil()</u>把 7.25 向上取整；<u>Math.Floor()</u>把 7.25 向下取整。</li>
+                    <li>
+                        填写代码使得
+                        <pre>var str = "xxx yyy zzz";
+var newStr = ______________;</pre>
+                        最终newStr的结果为xxxyyyzzz。<br>
+                        答案：<u>str.split(" ")</u>
+                    </li>
+                    <li>JavaScript中，string对象通过<u>indexOf()</u>方法获取第一次出现子字符串的字符位置</li>
+                </ol>
+                <br>
+                <a href="../../repo/#js-extra3">编程题</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="middle">
+                <blockquote>
+                    <p>
+                        "此网站目前仅供学习交流使用，代码原创，范例素材由网络上搜罗而来。侵权请告知，以便尽早撤回。"
+                    </p>
+                    <p class="copyright">
+                        © 2020 Xiaomai, All right reserved.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

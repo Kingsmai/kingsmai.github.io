@@ -23,7 +23,7 @@
    7. [JavaScript Experiment 7](#js-experiment7 "NEW!!!")
    8. [Javascript Extra 1](#js-extra1 "NEW!!!")
    9. [Javascript Extra 2](#js-extra2 "NEW!!!")
-   10. [Javascript Extra 3](#js-extra3 "NEW!!!")
+   10. [Javascript Extra 3](#js-extra3 "Now with answer!")
    11. [Javascript Extra 4](#js-extra4 "NEW!!!")
 2. C Language
    1. [C Experiment 01](#c-experiment1)
@@ -238,7 +238,7 @@
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
-[选择题与做答题（暂无）]()
+[选择题与做答题](../pages/js-extra-solve/js-extra3.html)
 
 1. 要求用面向对象的方法记录从客户端获取三位工人的信息（包括姓名，年龄，性别），并以表格的形式输出。
    1. [index3-1-1.js](./js-extra3/index3-1-1.js)

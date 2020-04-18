@@ -1,0 +1,66 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: Microsoft Yahei;
+}
+
+.topDiv {
+    display: flex;
+    height: 72px;
+    width: 100%;
+    background-color: #333333;
+    border-bottom: 4px solid #ff0000;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 5px 5px 5px #888888;
+    justify-content: left;
+    align-items: center;
+}
+
+.topDiv .bannerLogo {
+    width: 70px;
+    height: 50px;
+    display: inline-block;
+    background-image: url("../images/YumeLogo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.topDiv .bannerSlogan {
+    width: 245px;
+    height: 50px;
+    display: inline-block;
+    background-image: url("../images/YumeBanner.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.middle {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.footer {
+    position: absolute;
+    height: 128px;
+    width: 100%;
+    bottom: -512px;
+    background-color: #333333;
+    border-top: 4px solid #00ff00;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer .copyright {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 768px) {
+
+    /* 手机适配 */
+    .pageTitle {
+        font-size: 1.5em;
+    }
+}

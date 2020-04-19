@@ -2,9 +2,9 @@
 // 点击“跳转”按钮后，跳转到另外一个页面，点击“返回”后，跳转到第一个页面。
 
 function Go(){
-    location.href = "index2.html";
+    location.href = "index5-6-1-2.html";
 }
 
 function Home(){
-    location.href = "index.html";
+    location.href = "index5-6-1.html";
 }

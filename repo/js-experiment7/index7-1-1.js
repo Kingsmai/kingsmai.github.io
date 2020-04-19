@@ -7,9 +7,7 @@ var arr = [
 ];
 
 function CombineLargest(attr = []) {
-    // var newArr = []; // 10
     var newArr = new Array();
-    // for(let i = 0; i < attr.length; i++){} // 12
     for (let i in attr) {
         newArr.push(attr[i].sort(function (a, b) {
             return b - a;

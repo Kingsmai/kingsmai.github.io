@@ -87,6 +87,7 @@
 2. 查询飞机航班
    1. [index3-2-1.html](./js-experiment3/index3-2-1.html)
    2. [index3-2-1.js](./js-experiment3/index3-2-1.js)
+   3. [index3-2-2.js](./js-experiment3/index3-2-2.js)
 3. 获取系统的当前日期和时间，并在页面上输出。输出格式为：2019年3月1日  13:24:45
    1. [index3-3-1.js](./js-experiment3/index3-3-1.js)
 4. 现有三名同学，分别需要保存其姓名，分数，且相关信息由用户输入，完成输入后，将三名同学的信息在页面输出
@@ -97,6 +98,8 @@
 6. 定义5个按钮，分别点击后实现其功能，分别是使div标签进行相应设置
    1. [index3-6-1.html](./js-experiment3/index3-6-1.html)
    2. [index3-6-1.js](./js-experiment3/index3-6-1.js)
+   3. [index3-6-2.html](./js-experiment3/index3-6-2.html)
+   4. [index3-6-2.js](./js-experiment3/index3-6-2.js)
 
 ## js-experiment4
 
@@ -186,7 +189,8 @@
 6. 编写一个函数f(x)=4x2+3x+2,使用户通过提示对话框输入x的值，能得到相应的计算结果。
    1. [index7-6-1.js](./js-experiment7/index7-6-1.js)
 7. 现有一个列表，用js实现以下功能：鼠标点击某一项列表时，改变该项的文字。
-   1. [index7-7-1.js](./js-experiment7/index7-7-1.js)
+   1. [index7-7-1.html](./js-experiment7/index7-7-1.html)
+   2. [index7-7-1.js](./js-experiment7/index7-7-1.js)
 
 ## js-experiment8
 

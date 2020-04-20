@@ -198,6 +198,7 @@
 
 1. 封装函数: 把两个数组共同的元素放入一个新的数组, 并返回新的数组提示: 传入两个数组, 返回值为新的数组
    1. [index8-1-1.js](./js-experiment8/index8-1-1.js)
+   2. [index8-1-2.js](./js-experiment8/index8-1-2.js)
 2. 将数组元素按 age 字段的值，从小到大排序。
    1. [index8-2-1.js](./js-experiment8/index8-2-1.js)
 3. 现点击页面，显示单击的坐标。

@@ -21,11 +21,11 @@
    5. [JavaScript Experiment 5](#js-experiment5)
    6. [JavaScript Experiment 6](#js-experiment6)
    7. [JavaScript Experiment 7](#js-experiment7)
-   8. [JavaScript Experiment 8](#js-experiment8 "NEW!!!")
-   9. [Javascript Extra 1](#js-extra1 "NEW!!!")
-   10. [Javascript Extra 2](#js-extra2 "NEW!!!")
+   8. [JavaScript Experiment 8](#js-experiment8)
+   9. [Javascript Extra 1](#js-extra1)
+   10. [Javascript Extra 2](#js-extra2)
    11. [Javascript Extra 3](#js-extra3 "Now with answer!")
-   12. [Javascript Extra 4](#js-extra4 "NEW!!!")
+   12. [Javascript Extra 4](#js-extra4 "Now with answer!")
 2. C Language
    1. [C Experiment 01](#c-experiment1)
    2. [C Experiment 02](#c-experiment2)
@@ -280,7 +280,7 @@
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
-[选择题与做答题（暂无）](#js-extra4)
+[选择题与做答题](../pages/js-extra-solve/js-extra4.html)
 
 1. 创建一个Lala水果店的商品列表（包括水果名称、单价、介绍、以及购买数量，购买数量为输入），当用户点击提交的时候，会显示一张购物清单的文本信息文本信息。最终价格四舍五入。
    1. [index4-1-1.html](./js-extra4/index4-1-1.html)

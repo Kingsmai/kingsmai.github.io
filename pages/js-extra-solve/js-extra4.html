@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163728140-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163728140-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        .correct {
+            color: red;
+        }
+
+        .choice {
+            list-style-type: upper-alpha;
+        }
+
+        u {
+            color: red;
+        }
+    </style>
+    <title>Xiaomai's Blog | JS-extra-4</title>
+</head>
+
+<body>
+    <div class="pageContent" style="position: relative; height: auto;">
+        <div class="topDiv">
+            <div class="middle">
+                <a href="../../">
+                    <div class="bannerLogo"></div>
+                    <div class="bannerSlogan"></div>
+                </a>
+            </div>
+        </div>
+        <div class="middle">
+            <h1 class="pageTitle">JS Extra 4</h1>
+            <div>
+                <span>选择题</span>
+                <ol>
+                    <li>
+                        将字串s中的所有字母变为小写字母的方法是()。
+                        <ol class="choice">
+                            <li>s.toSmallCase()</li>
+                            <li class="correct">s.toLowerCase()</li>
+                            <li>s.toUpperCase()</li>
+                            <li>s.toUpperChars()</li>
+                        </ol>
+                        <pre>参考资料：
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">String.prototype.toLowerCase()</a>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">String.prototype.toUpperCase()</a></pre>
+                    </li>
+                    <li>
+                        以下()表达式产生一个0~7之间(含0,7)的随机整数。
+                        <ol class="choice">
+                            <li>Math.ceil(Math.random()*8)</li>
+                            <li class="correct">Math.floor(Math.random()*8)</li>
+                            <li>Math.floor(Math.random()*7)</li>
+                            <li>Math.floor(Math.random()*6)</li>
+                        </ol>
+                        <pre>参考资料：
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">Math.ceil()</a>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></pre>
+                    </li>
+                    <li>
+                        某网页中有一个窗体对象，其名称是mainForm，该窗体对象的第一个元素是按钮，其名称是myButton，表述该按钮对象的方法是（）。
+                        <ol class="choice">
+                            <li>document.forms.myButton</li>
+                            <li>document.mainForm.myButton</li>
+                            <li>document.forms[0].element[0]</li>
+                            <li>以上都可以</li>
+                        </ol>
+                        <pre>参考资料：</pre>
+                    </li>
+                    <li>
+                        在Javascript中要改变页面文档的背景色,需要修改document对象的(  )属性。
+                        <ol class="choice">
+                            <li>BackgroundColor</li>
+                            <li>BackgroundColor</li>
+                            <li class="correct">BgColor</li>
+                            <li>Background</li>
+                        </ol>
+                        <pre>参考资料：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/bgColor">Document.BgColor - MDN web doc</a></pre>
+                    </li>
+                    <li>
+                        预测以下代码片段的输出结果（）。
+                        <pre>var str
+alert(typeof(str));</pre>
+                        <ol class="choice">
+                            <li>A.string</li>
+                            <li class="correct">B.undefined</li>
+                            <li>C.object</li>
+                            <li>D.String</li>
+                        </ol>
+                        <pre>参考资料：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></pre>
+                    </li>
+                    <li>
+                        下列说法有误的是（）。
+                        <ol class="choice">
+                            <li>event是window对象的一个属性，所以可以直接引用event对象</li>
+                            <li>不同的浏览器事件处理的方式可能不同</li>
+                            <li class="correct">对于同一事件，子对象的事件处理函数会覆盖父对象的事件处理函数</li>
+                            <li>事件可以增强用户与页面的交互</li>   
+                        </ol>
+                        <pre>参考资料：</pre>
+                    </li>
+                    <li>
+                        关于Javascript中数组的说法中，不正确的是：（  ）。
+                        <ol class="choice">
+                            <li class="correct">数组的长度必须在创建时给定，之后便不能改变 </li>
+                            <li>由于数组是对象，因此创建数组需要使用new运算符</li>
+                            <li>数组内元素的类型可以不同</li>
+                            <li>数组可以在声明的同时进行初始化</li>
+                        </ol>
+                        <pre>参考资料：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array - MDN web doc</a></pre>
+                    </li>
+                </ol>
+                <br>
+                <a href="../../repo/#js-extra4">编程题</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="middle">
+                <blockquote>
+                    <p>
+                        "此网站目前仅供学习交流使用，代码原创，范例素材由网络上搜罗而来。侵权请告知，以便尽早撤回。"
+                    </p>
+                    <p class="copyright">
+                        © 2020 Xiaomai, All right reserved.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

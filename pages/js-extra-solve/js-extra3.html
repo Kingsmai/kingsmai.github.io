@@ -107,14 +107,20 @@ var y = typeof(typeof(x));</pre>
                         <span></span>
                         Javascript中,函数的返回值是什么？
                         <pre>(function () {
-    return typeof arguments;
+    return typeof(arguments);
 })();</pre>
                         <ol class="choice">
                             <li>"number"</li>
                             <li>"string"</li>
                             <li>"undefined"</li>
-                            <li>"object"</li>
+                            <li class="correct">"object"</li>
                         </ol>
+                        <pre>arguments对象是所有（非箭头）函数中都可用的局部变量。你可以使用arguments对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引0处
+arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性，但是它可以被转换为一个真正的Array。
+
+typeof参数返回 'object'。
+                        </pre>
+                        <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">参考资料：MDN web docs - Arguments 对象</a>
                     </li>
                 </ol>
                 <br>
@@ -130,12 +136,11 @@ function sum(n1, n2, n3) {
     return total;
 }</pre>
                     </li>
-                    <span style="color: red; font-weight: bold;">2, 3, 4, 6 不确定 (为了给予正确答案，待站长搜索资料后再下定论)</span>
-                    <li>JavaScript有两种特殊数据类型：<u>&emsp;&emsp;</u>、<u>&emsp;&emsp;</u></li>
-                    <li>JavaScript有两种引用数据类型：<u>&emsp;&emsp;</u>、<u>&emsp;&emsp;</u></li>
-                    <li>JavaScript有两种复合数据类型：<u>&emsp;&emsp;</u>、<u>&emsp;&emsp;</u></li>
+                    <li>JavaScript有两种特殊数据类型：<u>undefined</u>、<u>null</u></li>
+                    <li>JavaScript有两种引用数据类型：<u>对象</u>、<u>数组</u></li>
+                    <li>JavaScript有三种复合数据类型：<u>对象(Object)</u>、<u>数组(Array)</u>、<u>函数(Function)</u></li>
                     <li>Javascript弹出对话框的三个命令：<u> alert() </u>、<u> comfirm() </u>、<u> prompt() </u></li>
-                    <li>Java和JavaScript是两种不同的语言，Java是面向对象的程序设计语言，而JavaScript是<u>&emsp;&emsp;</u>脚本语言，JavaScript可以在<u>&emsp;&emsp;</u>和<u>&emsp;&emsp;&emsp;</u>脚本中使用。</li>
+                    <li>Java和JavaScript是两种不同的语言，Java是面向对象的程序设计语言，而JavaScript是<u>面向对象</u>脚本语言，JavaScript可以在<u>客户端</u>和<u>服务器端</u>脚本中使用。</li>
                     <li>JavaScript内置函数parseInt（）将字符型的值显示转换为<u>整数型</u>。</li>
                     <li>JavaScript中若是已知元素id，则可以通过<u>document.getElementById();</u>可以获得一个元素</li>
                     <li>JavaScript中<u>Math.round()</u>把 7.25 四舍五入为最接近的整数；<u>Math.ceil()</u>把 7.25 向上取整；<u>Math.Floor()</u>把 7.25 向下取整。</li>
@@ -144,7 +149,7 @@ function sum(n1, n2, n3) {
                         <pre>var str = "xxx yyy zzz";
 var newStr = ______________;</pre>
                         最终newStr的结果为xxxyyyzzz。<br>
-                        答案：<u>str.split(" ")</u>
+                        答案：<u>str.replace(/\s+/g, "");</u>
                     </li>
                     <li>JavaScript中，string对象通过<u>indexOf()</u>方法获取第一次出现子字符串的字符位置</li>
                 </ol>

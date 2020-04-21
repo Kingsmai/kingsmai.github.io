@@ -214,7 +214,7 @@
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
-[选择题与做答题（暂无）]()
+[选择题与做答题（暂无）](#js-extra1)
 
 1. 输出九九乘法表
    1. [index1-1-1.js](./js-extra1/index1-1-1.js)
@@ -226,7 +226,7 @@
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
-[选择题与做答题（暂无）]()
+[选择题与做答题（暂无）](#js-extra2)
 
 1. 创建数组，获取101-200之间所有3和7的公倍数，并用 `for in` 输出数组中各个数值+1后的值
    1. [index2-1-1.js](./js-extra2/index2-1-1.js)
@@ -253,6 +253,7 @@
 
 1. 要求用面向对象的方法记录从客户端获取三位工人的信息（包括姓名，年龄，性别），并以表格的形式输出。
    1. [index3-1-1.js](./js-extra3/index3-1-1.js)
+   2. [index3-1-2.js](./js-extra3/index3-1-2.js)
 2. 为数组 arr 中的每个初始元素求二次方。二次方各个结果添加在原数组后面显示
    1. [index3-2-1.js](./js-extra3/index3-2-1.js)
 3. 实现一个打点计时器，要求  
@@ -260,6 +261,7 @@
    b、返回的对象中需要包含一个 cancel 方法，用于停止定时操作  
    c、第一个数需要立即输出
    1. [index3-3-1.js](./js-extra3/index3-3-1.js)
+   2. [index3-3-2.js](./js-extra3/index3-3-2.js)
 4. 创建一个长度不小于三的数组arr,并显示，数组元素分别执行 ChangeT函数，返回值重新组成一个数组newArr显示,ChangeT()实现参数 num 与返回值的关系如下  
    （1）如果 num 能同时被 3 和 4 整除，返回字符串 BlueGreen  
    （2）如果 num 能被 3 整除，返回字符串 Blue  
@@ -278,7 +280,7 @@
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
 
-[选择题与做答题（暂无）]()
+[选择题与做答题（暂无）](#js-extra4)
 
 1. 创建一个Lala水果店的商品列表（包括水果名称、单价、介绍、以及购买数量，购买数量为输入），当用户点击提交的时候，会显示一张购物清单的文本信息文本信息。最终价格四舍五入。
    1. [index4-1-1.html](./js-extra4/index4-1-1.html)

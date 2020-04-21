@@ -3,4 +3,5 @@ document.addEventListener("click", function(event) {
     console.log(`offset: ${event.offsetX}, ${event.offsetY}`);
     console.log(`page: ${event.pageX}, ${event.pageY}`);
     console.log(`client: ${event.clientX}, ${event.clientY}`);
+    console.log(`screen: ${event.screenX}, ${event.screenY}`);
 }, false);

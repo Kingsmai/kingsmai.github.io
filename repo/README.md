@@ -203,6 +203,7 @@
    1. [index8-2-1.js](./js-experiment8/index8-2-1.js)
 3. 现点击页面，显示单击的坐标。
    1. [index8-3-1.js](./js-experiment8/index8-3-1.js)
+   1. [index8-3-2.js](./js-experiment8/index8-3-2.js)
 4. 请编写一个函数，求一个字符串的字节长度。（一个英文字符占用一个字节，一个中文字符占用两个字节。）
    1. [index8-4-1.js](./js-experiment8/index8-4-1.js)
    2. [index8-4-2.js](./js-experiment8/index8-4-2.js)
@@ -254,8 +255,10 @@
 1. 要求用面向对象的方法记录从客户端获取三位工人的信息（包括姓名，年龄，性别），并以表格的形式输出。
    1. [index3-1-1.js](./js-extra3/index3-1-1.js)
    2. [index3-1-2.js](./js-extra3/index3-1-2.js)
+   3. [index3-1-3.js](./js-extra3/index3-1-3.js)
 2. 为数组 arr 中的每个初始元素求二次方。二次方各个结果添加在原数组后面显示
    1. [index3-2-1.js](./js-extra3/index3-2-1.js)
+   2. [index3-2-2.js](./js-extra3/index3-2-2.js)
 3. 实现一个打点计时器，要求  
    a、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为1   
    b、返回的对象中需要包含一个 cancel 方法，用于停止定时操作  
@@ -269,8 +272,10 @@
    （4）如果参数为空或者不是 Number 类型，返回 false  
    （5）其余情况，返回参数 num
    1. [index3-4-1.js](./js-extra3/index3-4-1.js)
+   1. [index3-4-2.js](./js-extra3/index3-4-2.js)
 5. 实现在标题栏上动态显示当前时间的效果。
    1. [index3-5-1.js](./js-extra3/index3-5-1.js)
+   1. [index3-5-2.js](./js-extra3/index3-5-2.js)
 6. 移除数组 arr 中的所有值与 item 相等的元素，直接在给定的 arr 数组上进行操作，并将结果返回
    1. [index3-6-1.js](./js-extra3/index3-6-1.js)
 7. 设置函数，统计数组 arr 中值等于 item 的元素出现的次数

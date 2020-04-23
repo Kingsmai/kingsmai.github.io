@@ -5,8 +5,12 @@ var list = document.querySelector("#list");
 for (i = 0; i < list.children.length; i++) {
     // list.children[i] 是 #list 列表的 i 项
     list.children[i].onclick = function () {
-        // 点击的时候 this 指向的是列表项
-        // 改变列表项的 innerHTML 为切换后的字符串
-        this.innerHTML = "被点击后的" + this.innerHTML;
+        var str = this.innerHTML;
+        // 判断是否被点击过了
+        if (str.indexOf("被点击后的") == -1) {
+            // 点击的时候 this 指向的是列表项
+            // 改变列表项的 innerHTML 为切换后的字符串
+            this.innerHTML = "被点击后的" + this.innerHTML;
+        }
     }
 }

@@ -22,6 +22,7 @@
    6. [JavaScript Experiment 6](#js-experiment6)
    7. [JavaScript Experiment 7](#js-experiment7)
    8. [JavaScript Experiment 8](#js-experiment8)
+   8. [JavaScript Experiment 9](#js-experiment9)
    9. [Javascript Extra 1](#js-extra1)
    10. [Javascript Extra 2](#js-extra2)
    11. [Javascript Extra 3](#js-extra3 "Now with answer!")
@@ -210,6 +211,20 @@
 5. 根据下拉框的选项来显示对应的图片。（用select里面的 onchange事件）
    1. [index8-5-1.html](./js-experiment8/index8-5-1.html)
    2. [index8-5-1.js](./js-experiment8/index8-5-1.js)
+
+## js-experiment9
+
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+1. 编写一个函数对传入的字符串str重新按字母由小到大进行排序。
+   1. [index9-1-1.js](./js-experiment9/index9-1-1.js)
+2. 编写一个函数，使用递归的方法，计算一个正整数的阶乘并输出
+   1. [index9-2-1.js](./js-experiment9/index9-2-1.js)
+3. 封装一个函数PrimeNumber， 判断键盘输入的某个正整数是否为素数
+   1. [index9-3-1.js](./js-experiment9/index9-3-1.js)
+4. 窗体上点击“抽奖”按钮，调用所定义的函数进行抽奖。抽奖函数为：用变量和函数，设计模拟幸运数字机游戏。
+   1. [index9-4-1.html](./js-experiment9/index9-4-1.html)
+   1. [index9-4-1.js](./js-experiment9/index9-4-1.js)
 
 ## js-extra1
 

@@ -19,6 +19,7 @@
    3. [JavaScript Experiment 3](#js-experiment3)
    4. [JavaScript Experiment 4](#js-experiment4)
    5. [JavaScript Experiment 5](#js-experiment5)
+   5. [JavaScript Experiment 5-ex](#js-experiment5-ex)
    6. [JavaScript Experiment 6](#js-experiment6)
    7. [JavaScript Experiment 7](#js-experiment7)
    8. [JavaScript Experiment 8](#js-experiment8)
@@ -148,6 +149,28 @@
    1. [index5-7-1.js](./js-experiment5/index5-7-1.js)
    2. [index5-7-2.js](./js-experiment5/index5-7-2.js)
 
+## js-experiment5-ex
+
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+1. 随机生成6位数的验证码，包含数字或大小写字母，并将验证码显示在文本框中。
+   1. [index5ex-1-1.html](./js-experiment5-ex/index5ex-1-1.html)
+   1. [index5ex-1-1.js](./js-experiment5-ex/index5ex-1-1.js)
+2. 现有5名同学，包含姓名和性别，现编写一个随机点名程序，当点击“随机点名”按钮后，第一个按钮随机显示姓名。
+   1. [index5ex-2-1.html](./js-experiment5-ex/index5ex-2-1.html)
+   1. [index5ex-2-1.js](./js-experiment5-ex/index5ex-2-1.js)
+3. 编写一个函数，该函数功能是求一个数组中最大的数，并将结果输出。数组的值由用户动态输入。
+   1. [index5ex-3-1.js](./js-experiment5-ex/index5ex-3-1.js)
+4. 创建文本域，在文本域下方使用div显示已输入的字符个数。如果输入的字符个数大于20个，则输入的所有字符及表示字符个数的数字变为红色，否则为蓝色。
+   1. [index5ex-4-1.html](./js-experiment5-ex/index5ex-4-1.html)
+   1. [index5ex-4-1.js](./js-experiment5-ex/index5ex-4-1.js)
+5. 现有密码登录页面，点击“提交”后判断输入框里面字段不能为空
+   1. [index5ex-5-1.html](./js-experiment5-ex/index5ex-5-1.html)
+   1. [index5ex-5-1.js](./js-experiment5-ex/index5ex-5-1.js)
+6. 通过函数传参，改变任意div的属性。其效果如图：在两个输入框里面输入相应的正确的属性及属性值，下面方块就会变换成相应的效果。
+   1. [index5ex-6-1.html](./js-experiment5-ex/index5ex-6-1.html)
+   1. [index5ex-6-1.js](./js-experiment5-ex/index5ex-6-1.js)
+
 ## js-experiment6
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
@@ -252,6 +275,7 @@
    3. [index2-2-3.js](./js-extra2/index2-2-3.js)
 3. 学校运动会我们得到了一组参加比赛的人员数据，分别是姓名、性别、年龄和年级，利用JavaScript的知识挑出其中所有是大一的女生的的名字。
    1. [index2-3-1.js](./js-extra2/index2-3-1.js)
+   1. [index2-3-2.js](./js-extra2/index2-3-2.js)
 4. 写出一个javascript的函数，实现去重的功能。其中数组元素均为基本类性。
    1. [index2-4-1.js](./js-extra2/index2-4-1.js)
    2. [index2-4-2.js](./js-extra2/index2-4-2.js)

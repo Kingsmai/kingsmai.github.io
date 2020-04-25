@@ -6,8 +6,14 @@
 </head>
 
 <body>
-    <input id="verifyCode" type="text">
-    <script src="index.js"></script>
+    <input id="verifyCode" type="text" disabled>
+    <input type="button" value="生成验证码" onclick="GenCode()">
+    <br>
+    <input id="userInput" type="text">
+    <input type="button" value="验证" onclick="Verify()">
+    <br>
+    <div id="result"></div>
+    <script src="index5ex-1-1.js"></script>
 </body>
 
 </html>

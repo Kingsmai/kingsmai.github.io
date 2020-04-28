@@ -24,6 +24,7 @@
    7. [JavaScript Experiment 7](#js-experiment7)
    8. [JavaScript Experiment 8](#js-experiment8)
    8. [JavaScript Experiment 9](#js-experiment9)
+   8. [JavaScript Experiment 10](#js-experiment10)
    9. [Javascript Extra 1](#js-extra1)
    10. [Javascript Extra 2](#js-extra2)
    11. [Javascript Extra 3](#js-extra3 "Now with answer!")
@@ -249,6 +250,24 @@
    1. [index9-4-1.html](./js-experiment9/index9-4-1.html)
    1. [index9-4-1.js](./js-experiment9/index9-4-1.js)
 
+## js-experiment10
+
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+1. 假设某人有 100,000 现金。 每经过一次路口需要进行一次交费。交费规则为当他现金大于50,000 时每次需要交 5%，如果现金小于等于 50,000 时每次交 5,000。请写一程序计算此人可以经过多少次这个路口。
+   1. [index10-1-1.js](./js-experiment10/index10-1-1.js)
+2. 实现表格中鼠标滑过改变背景色。
+   1. [index10-2-1.html](./js-experiment10/index10-2-1.html)
+   1. [index10-2-1.css](./js-experiment10/index10-2-1.css)
+   1. [index10-2-1.js](./js-experiment10/index10-2-1.js)
+3. 做一个百分比进度条。点击“点击”按钮，进度条每次自动增加10%
+   1. [index10-3-1.html](./js-experiment10/index10-3-1.html)
+   1. [index10-3-1.css](./js-experiment10/index10-3-1.css)
+   1. [index10-3-1.js](./js-experiment10/index10-3-1.js)
+4. 做一个弹窗广告。让广告弹窗缓慢从底部弹出，点击“X”后，改广告消失。
+   1. [index10-4-1.html](./js-experiment10/index10-4-1.html)
+   2. [index10-4-1.css](./js-experiment10/index10-4-1.css)
+   3. [index10-4-1.js](./js-experiment10/index10-4-1.js)
 ## js-extra1
 
 <div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>

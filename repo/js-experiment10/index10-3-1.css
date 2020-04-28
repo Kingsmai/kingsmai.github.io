@@ -1,0 +1,21 @@
+#progressBg {
+    margin-top: 32px;
+    width: 100%;
+    height: 32px;
+    background-color: grey;
+}
+
+#progressBg #progress {
+    width: 0%;
+    height: 32px;
+    background-color: green;
+    text-align: center;
+    line-height: 32px;
+    color: white;
+}
+
+#clickBtn {
+    position: absolute;
+    margin: 16px auto;
+    left: 50%;
+}

@@ -1,0 +1,18 @@
+table {
+    width: 512px;
+    text-align: center;
+    font-family: Microsoft Yahei;
+}
+
+thead {
+    background-color: #09c;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #aaa;
+}

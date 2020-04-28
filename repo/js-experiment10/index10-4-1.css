@@ -1,0 +1,25 @@
+#ads {
+    width: 512px;
+    height: 288px;
+    background-image: url(ads.jpg);
+    background-size: cover;
+    position: fixed;
+    bottom: -288px;
+    right: 0;
+}
+
+#ads #close {
+    width: 32px;
+    height: 16px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+#ads #close:hover {
+    color: red;
+}

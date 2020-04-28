@@ -1,0 +1,15 @@
+#outer {
+    width: 100%;
+    height: 30px;
+    border: 1px solid red;
+    background-color: gainsboro;
+}
+
+#progressBar {
+    height: 30px;
+    width: 0%;
+    background-color: greenyellow;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}

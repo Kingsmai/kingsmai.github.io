@@ -1,5 +1,5 @@
 var width = 0;
-function dian() {
+function btnClick() {
     if (width >= 100) {
         return;
     }

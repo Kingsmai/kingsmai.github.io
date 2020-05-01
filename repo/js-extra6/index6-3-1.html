@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="index6-3-1.css">
+    <script src="index6-3-1.js"></script>
+</head>
+
+<body>
+    <label>数量</label>
+    <input class="modBtn disabled" type="button" value="-" onclick="modSub(this)">
+    <input id="inputCount" type="text" value="1" onblur="InputMod(this)">
+    <input class="modBtn" type="button" value="+" onclick="modAdd()">
+    <label>价格：</label>
+    <label id="price">0</label>
+    <label>总价：</label>
+    <label id="total">0</label>
+</body>
+
+</html>

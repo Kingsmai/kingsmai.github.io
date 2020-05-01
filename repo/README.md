@@ -16,24 +16,26 @@
 1. JavaScript
    1. JavaScript Experiment
       1. [JavaScript Experiment 1](#js-experiment1)
-      2. [JavaScript Experiment 2](#js-experiment2)
-      3. [JavaScript Experiment 3](#js-experiment3)
-      4. [JavaScript Experiment 4](#js-experiment4)
-      5. [JavaScript Experiment 5](#js-experiment5)
-      6. [JavaScript Experiment 5-ex](#js-experiment5-ex)
-      7. [JavaScript Experiment 6](#js-experiment6)
-      8. [JavaScript Experiment 7](#js-experiment7)
-      9.  [JavaScript Experiment 8](#js-experiment8)
-      10. [JavaScript Experiment 9](#js-experiment9)
-      11. [JavaScript Experiment 10](#js-experiment10)
-   2.  JavaScript Extra Exercise
-      1.  [Javascript Extra 1](#js-extra1)
-      2.  [Javascript Extra 2](#js-extra2)
-      3.  [Javascript Extra 3](#js-extra3 "Now with answer!")
-      4.  [Javascript Extra 4](#js-extra4 "Now with answer!")
+      1. [JavaScript Experiment 2](#js-experiment2)
+      1. [JavaScript Experiment 3](#js-experiment3)
+      1. [JavaScript Experiment 4](#js-experiment4)
+      1. [JavaScript Experiment 5](#js-experiment5)
+      1. [JavaScript Experiment 5-ex](#js-experiment5-ex)
+      1. [JavaScript Experiment 6](#js-experiment6)
+      1. [JavaScript Experiment 7](#js-experiment7)
+      1. [JavaScript Experiment 8](#js-experiment8)
+      1. [JavaScript Experiment 9](#js-experiment9)
+      1. [JavaScript Experiment 10](#js-experiment10)
+   2. JavaScript Extra Exercise
+      1. [Javascript Extra 1](#js-extra1)
+      1. [Javascript Extra 2](#js-extra2)
+      1. [Javascript Extra 3](#js-extra3 "Now with answer!")
+      1. [Javascript Extra 4](#js-extra4 "Now with answer!")
+      1. [Javascript Extra 5](#js-extra5)
+      1. [Javascript Extra 6](#js-extra6)
    3. JavaScript Exam
       1. [JavaScript Exam 1](#js-exam1)暂无
-      2. [JavaScript Exam 2](#js-exam2)暂无
+      1. [JavaScript Exam 2](#js-exam2)暂无
 2. C Language
    1. [C Experiment 01](#c-experiment1)
    2. [C Experiment 02](#c-experiment2)
@@ -373,6 +375,49 @@
 6. 创建一个省份与城市关联的两个下拉框，城市随着省份的选择而改变（此题有点复杂，可供探索）
    1. [index4-6-1.html](./js-extra4/index4-6-1.html)
    2. [index4-6-1.js](./js-extra4/index4-6-1.js)
+
+## js-extra5
+
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+[选择题与做答题（暂无）](#js-extra5)
+
+1. 统计字符串str =“asfesWsdA”;中每个字符的个数
+2. 定义一个函数: 可以把数组中的下标为 3 的元素移到数组的开头
+3. 传入任意字符串，统计字符串中的大写字母个数、小写字母个数、数字个数、其他字符个数
+4. 一个数组中有20个元素，对前10个元素使用升序，后10个元素使用降序。元素都是整数。  
+    arr =[100,12,34,67,23,16,6,9,24,79,2,90,33,69,1,34,-2,0,666,1000]
+5. 通过循环按行顺序为一个5×5的二维数组a赋1到25的自然数，然后输出该数组其中左下半三角为红色字体。试编程
+6. 建立字符串处理函数，将字符串的大写字母转换为小写字母（第一个字母元素除外），并在其前面加上空格。例如：HelloMyworld  
+    Hello my world
+7. 创建菜单导航栏，允许用户点击选择
+
+## js-extra6
+
+<div style="text-align: right; font-size: 20px"><b><a href="#repo-folder">TOP</a></b></div>
+
+[选择题与做答题（暂无）](#js-extra6)
+
+1. 打开新窗口并输出内容。如图点击打开，跳转到一个新的页面
+   1. [index6-1-1.html](./js-extra6/index6-1-1.html)
+   1. [index6-1-2.js](./js-extra6/index6-1-2.js)
+2. 一个游戏，前20关是每一关自身的分数，  
+   //21-30关每一关是10分  
+   //31-40关，每一关是20分  
+   //41-49关，每一关是30分  
+   //50关，是100分  
+   //输入你现在闯到的关卡数，求你现在拥有的分数 
+   1. [index6-2-1.html](./js-extra6/index6-2-1.html)
+   2. [index6-2-1.js](./js-extra6/index6-2-1.js)
+3. // 编写程序，原型如下图，  
+   // 点击“-”按钮，可以实现输入框的值--（输入框的值>=1，当输入框的值为1的时候不允许用户再次点击，且按钮opacity：0.6；cursor：defalut;当值>1得时候显示正常）  
+   // 点击“+”按钮，输入框的值自动+1  
+   // 用户也可以直接修改输入框的值(当输入的值小于1的时候自动改成1，比如输入的12as自动改为12显示)  
+   // 价格通过客户端直接获取  
+   // 总价 = 数量 * 价格（总价要求实时更新，即数量改变的之后，总价也要跟着改变）。提示输入框监听事件oninput;强制转换parseInt()
+   1. [index6-3-1.html](./js-extra6/index6-3-1.html)
+   1. [index6-3-1.css](./js-extra6/index6-3-1.css)
+   1. [index6-3-1.js](./js-extra6/index6-3-1.js)
 
 ## c-experiment1
 

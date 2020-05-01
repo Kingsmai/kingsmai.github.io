@@ -1,0 +1,49 @@
+/* .add {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 30px;
+    height: 34px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #bbb
+}
+
+.inputCount {
+    width: 40px;
+    height: 30px;
+    padding-left: 3px;
+} */
+
+.count {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    margin: auto 5px;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
+.modBtn {
+    display: inline-block;
+    width: 30px;
+    height: 34px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #bbb;
+    text-align: center;
+    line-height: 34px;
+    margin: 0;
+}
+
+.inputCount {
+    width: 40px;
+    height: 30px;
+    padding-left: 3px;
+    margin: 0;
+    padding: 3px;
+}

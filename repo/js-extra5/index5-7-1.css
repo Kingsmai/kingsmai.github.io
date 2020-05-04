@@ -1,0 +1,10 @@
+.btn {
+    float: left;
+    margin-right: 10px;
+    padding: 5px;
+    background: #101010;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}

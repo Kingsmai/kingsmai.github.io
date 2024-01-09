@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>麦甜怪圈 Xiaomai Circle</title>
+  <icon>https://kingsmai.github.io/icon.png</icon>
+  <subtitle>一个每天都在学习的程序员</subtitle>
+  <link href="https://kingsmai.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://kingsmai.github.io/"/>
+  <updated>2024-01-09T10:11:09.999Z</updated>
+  <id>https://kingsmai.github.io/</id>
+  
+  <author>
+    <name>小麦 Andrew Xiaomai</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leo 语言 Hello World 的学习心得</title>
+    <link href="https://kingsmai.github.io/2024/d4d355b7.html"/>
+    <id>https://kingsmai.github.io/2024/d4d355b7.html</id>
+    <published>2024-01-09T08:16:27.000Z</published>
+    <updated>2024-01-09T10:11:09.999Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="区块链" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    <category term="区块链开发笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Leo" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Leo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学网页设计 3 让网页变成响应式页面</title>
+    <link href="https://kingsmai.github.io/2024/2d85c0dd.html"/>
+    <id>https://kingsmai.github.io/2024/2d85c0dd.html</id>
+    <published>2024-01-05T07:47:36.000Z</published>
+    <updated>2024-01-05T10:10:38.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是 Sololearn 响应式页面设计自学心得：《让网页变成响应式页面》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Sololearn 自学网页设计" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="HTML, CSS, JS" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML-CSS-JS/"/>
+    
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【话题】编程语言的未来 一个以自然语言作为编程语言的构思</title>
+    <link href="https://kingsmai.github.io/2024/f1de6892.html"/>
+    <id>https://kingsmai.github.io/2024/f1de6892.html</id>
+    <published>2024-01-03T17:32:51.000Z</published>
+    <updated>2024-01-04T12:28:26.000Z</updated>
+    
+    
+    <summary type="html">随着科技的飞速发展，编程语言在计算机领域中扮演着至关重要的角色。它们是软件开发的核心，为程序员提供了与机器沟通的桥梁。那么，在技术不断进步的未来，编程语言的走向又将如何呢</summary>
+    
+    
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="话题" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E8%AF%9D%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>为什么二进制文件内容是乱码</title>
+    <link href="https://kingsmai.github.io/2024/9aed2ce9.html"/>
+    <id>https://kingsmai.github.io/2024/9aed2ce9.html</id>
+    <published>2024-01-02T22:02:39.000Z</published>
+    <updated>2024-01-03T09:53:24.000Z</updated>
+    
+    
+    <summary type="html">不知道大家有会不会好奇想打开二进制文件一探究竟。结果打开一看都是乱码。那么这篇文章将会满足你的好奇心，并附上正确开启方式哦！</summary>
+    
+    
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="思考" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%80%9D%E8%80%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学机器学习 16 K-Fold 交叉验证</title>
+    <link href="https://kingsmai.github.io/2024/4137e8ad.html"/>
+    <id>https://kingsmai.github.io/2024/4137e8ad.html</id>
+    <published>2024-01-02T05:04:46.000Z</published>
+    <updated>2024-01-02T21:33:04.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《K-Fold 交叉验证》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C 语言笔记复盘 2 C 语言的特点</title>
+    <link href="https://kingsmai.github.io/2024/c895ec1a.html"/>
+    <id>https://kingsmai.github.io/2024/c895ec1a.html</id>
+    <published>2024-01-01T02:30:13.000Z</published>
+    <updated>2024-01-04T12:29:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;上一篇文章呢，我们介绍了 C 语言的由来。是怎么从机器语言一直转变到 C</summary>
+        
+      
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="C" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/"/>
+    
+    <category term="C 语言笔记复盘" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C 语言笔记复盘 1 初识 C 语言</title>
+    <link href="https://kingsmai.github.io/2023/9e7729ba.html"/>
+    <id>https://kingsmai.github.io/2023/9e7729ba.html</id>
+    <published>2023-12-30T18:35:56.000Z</published>
+    <updated>2024-01-04T12:29:40.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;这几天在学机器学习，可能太浮躁了，学到 k-fold</summary>
+        
+      
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="C" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/"/>
+    
+    <category term="C 语言笔记复盘" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学网页设计 2 使用 HTML 和 CSS 构建页面</title>
+    <link href="https://kingsmai.github.io/2023/cdbf2aa6.html"/>
+    <id>https://kingsmai.github.io/2023/cdbf2aa6.html</id>
+    <published>2023-12-30T15:07:25.000Z</published>
+    <updated>2023-12-30T16:23:54.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是 Sololearn 响应式页面设计自学心得：《使用 HTML 和 CSS 构建页面》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Sololearn 自学网页设计" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="HTML, CSS, JS" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML-CSS-JS/"/>
+    
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学网页设计 1 响应式页面设计</title>
+    <link href="https://kingsmai.github.io/2023/7bb5faec.html"/>
+    <id>https://kingsmai.github.io/2023/7bb5faec.html</id>
+    <published>2023-12-30T14:01:49.000Z</published>
+    <updated>2023-12-30T16:18:54.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是 Sololearn 响应式页面设计自学心得：《响应式页面设计》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Sololearn 自学网页设计" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="HTML, CSS, JS" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML-CSS-JS/"/>
+    
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快速开发十款游戏系列（1）：飞机大战 策划篇</title>
+    <link href="https://kingsmai.github.io/2023/215fd6fd.html"/>
+    <id>https://kingsmai.github.io/2023/215fd6fd.html</id>
+    <published>2023-12-30T03:43:46.000Z</published>
+    <updated>2023-12-30T06:21:36.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="快速开发十款游戏" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E5%8D%81%E6%AC%BE%E6%B8%B8%E6%88%8F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学机器学习 15 ROC 曲线</title>
+    <link href="https://kingsmai.github.io/2023/787a0c90.html"/>
+    <id>https://kingsmai.github.io/2023/787a0c90.html</id>
+    <published>2023-12-29T14:05:19.000Z</published>
+    <updated>2023-12-30T06:19:26.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《15 ROC 曲线》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈编程中的学习路线 - 我的学习经历</title>
+    <link href="https://kingsmai.github.io/2023/8855a9f7.html"/>
+    <id>https://kingsmai.github.io/2023/8855a9f7.html</id>
+    <published>2023-12-29T08:46:55.000Z</published>
+    <updated>2023-12-29T09:44:10.000Z</updated>
+    
+    
+    <summary type="html">今天看到一个很有意思的提问：编程有没有学习路线？这篇文章就是以我从小学初识编程，一直到大学入门，并获得各种成就的经历。故事很长，满满干货！希望大家多多分享哟~</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2023 年度总结</title>
+    <link href="https://kingsmai.github.io/2023/ccc2b0d8.html"/>
+    <id>https://kingsmai.github.io/2023/ccc2b0d8.html</id>
+    <published>2023-12-29T03:38:11.000Z</published>
+    <updated>2023-12-29T09:40:34.000Z</updated>
+    
+    
+    <summary type="html">本文记录了我这一年的反省，由于博主还没有反省完，所以各位看官需要密码才能阅读~</summary>
+    
+    
+    
+    <category term="灵感笔记" scheme="https://kingsmai.github.io/categories/%E7%81%B5%E6%84%9F%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="年度总结" scheme="https://kingsmai.github.io/categories/%E7%81%B5%E6%84%9F%E7%AC%94%E8%AE%B0/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学机器学习 14 ROC 曲线的基础知识</title>
+    <link href="https://kingsmai.github.io/2023/e08309be.html"/>
+    <id>https://kingsmai.github.io/2023/e08309be.html</id>
+    <published>2023-12-27T16:09:55.000Z</published>
+    <updated>2023-12-30T06:19:26.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《ROC 曲线的基础知识》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学机器学习 13 训练与测试</title>
+    <link href="https://kingsmai.github.io/2023/d24f091e.html"/>
+    <id>https://kingsmai.github.io/2023/d24f091e.html</id>
+    <published>2023-12-27T11:58:56.000Z</published>
+    <updated>2023-12-30T06:19:26.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《训练（Training）与测试（Testing）》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【作业向】某电商网站用户交易记录分析</title>
+    <link href="https://kingsmai.github.io/2023/b38e8e7c.html"/>
+    <id>https://kingsmai.github.io/2023/b38e8e7c.html</id>
+    <published>2023-12-27T04:19:30.000Z</published>
+    <updated>2023-12-27T06:09:54.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;前几天老师发下来一个任务，需要模仿 《CDNow</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学机器学习 12 使用 Scikit-Learn 计算各种指标</title>
+    <link href="https://kingsmai.github.io/2023/5985afb6.html"/>
+    <id>https://kingsmai.github.io/2023/5985afb6.html</id>
+    <published>2023-12-26T02:46:18.000Z</published>
+    <updated>2023-12-30T06:19:24.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《使用 Scikit-Learn 计算各种指标》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学机器学习 11 精确度和召回率</title>
+    <link href="https://kingsmai.github.io/2023/a865dfe2.html"/>
+    <id>https://kingsmai.github.io/2023/a865dfe2.html</id>
+    <published>2023-12-24T08:08:25.000Z</published>
+    <updated>2023-12-30T06:19:24.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《精确度（Precision）和召回率（Recall）》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学机器学习（10）模型评估</title>
+    <link href="https://kingsmai.github.io/2023/7d2579fa.html"/>
+    <id>https://kingsmai.github.io/2023/7d2579fa.html</id>
+    <published>2023-12-23T13:08:56.000Z</published>
+    <updated>2023-12-30T06:19:24.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《模型评估》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+    <category term="混淆矩阵" scheme="https://kingsmai.github.io/tags/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sololearn 自学机器学习 Code Project 2 Bob the Builder</title>
+    <link href="https://kingsmai.github.io/2023/665f82e5.html"/>
+    <id>https://kingsmai.github.io/2023/665f82e5.html</id>
+    <published>2023-12-22T17:40:02.000Z</published>
+    <updated>2023-12-30T06:19:28.000Z</updated>
+    
+    
+    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《Code Project 2 Bob the Builder》 篇</summary>
+    
+    
+    
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+    
+    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    
+    <category term="Code Project" scheme="https://kingsmai.github.io/tags/Code-Project/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,365 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Sololearn 自学机器学习 16 K-Fold 交叉验证 | 麦甜怪圈 Xiaomai Circle</title><meta name="author" content="小麦 Andrew Xiaomai"><meta name="copyright" content="小麦 Andrew Xiaomai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="本篇笔记是从 Sololearn 自学而来的心得：《K-Fold 交叉验证》 篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sololearn 自学机器学习 16 K-Fold 交叉验证">
+<meta property="og:url" content="https://kingsmai.github.io/2024/4137e8ad.html">
+<meta property="og:site_name" content="麦甜怪圈 Xiaomai Circle">
+<meta property="og:description" content="本篇笔记是从 Sololearn 自学而来的心得：《K-Fold 交叉验证》 篇">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kingsmai.github.io/Gallery/covers/k-fold-cross-validation-1.jpeg">
+<meta property="article:published_time" content="2024-01-02T05:04:46.000Z">
+<meta property="article:modified_time" content="2024-01-02T21:33:04.000Z">
+<meta property="article:author" content="小麦 Andrew Xiaomai">
+<meta property="article:tag" content="人工智能">
+<meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="Sololearn">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kingsmai.github.io/Gallery/covers/k-fold-cross-validation-1.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kingsmai.github.io/2024/4137e8ad.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经","messageNext":"天未被更新了，可能里边的内容已经过时，请注意斟酌。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 小麦 Andrew Xiaomai","link":"链接: ","source":"来源: 麦甜怪圈 Xiaomai Circle","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Sololearn 自学机器学习 16 K-Fold 交叉验证',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-03 05:33:04'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4366094_hx3hbrje2st.css"><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="麦甜怪圈 Xiaomai Circle" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="麦甜怪圈 Xiaomai Circle" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">41</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/Gallery/covers/k-fold-cross-validation-1.jpeg')"><nav id="nav"><span id="blog-info"><a href="/" title="麦甜怪圈 Xiaomai Circle"><img class="site-icon" src="/Gallery/logos/Logo-11.jpg"/><span class="site-name">麦甜怪圈 Xiaomai Circle</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Sololearn 自学机器学习 16 K-Fold 交叉验证</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-02T05:04:46.000Z" title="发表于 2024-01-02 13:04:46">2024-01-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-02T21:33:04.000Z" title="更新于 2024-01-03 05:33:04">2024-01-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%B3%BB%E5%88%97/">系列</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/">Python</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Sololearn 自学机器学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Sololearn 自学机器学习 16 K-Fold 交叉验证"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet external nofollow noreferrer" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>k-fold 交叉验证是一种评估机器学习模型性能的方法。在训练和验证过程中，数据集被分成 k 个折叠，模型 k 次训练和验证，每次使用不同的折叠作为验证集，其余作为训练集。这有助于更准确地评估模型的性能。</p>
+<h1 id="关于训练集和测试集的担忧"><a href="#关于训练集和测试集的担忧" class="headerlink" title="关于训练集和测试集的担忧"></a>关于训练集和测试集的担忧</h1><p>我们进行评估是因为我们想要准确地衡量模型的性能。如果我们的数据集很小，那么我们的测试集就会很小。因此，它可能不是数据点的良好随机分配，并且由于随机原因最终在我们的评估集中得到易于或难以处理的数据点。</p>
+<p>由于我们的目标是获得我们度量指标（准确度 Accuracy、精确度 Precision、召回率 Recall 和 F1 分数）的最佳度量，我们可以比单一训练和测试集做得更好一些。</p>
+<p>回顾一下我们的训练和测试集拆分如下。</p>
+<p><img src="/uploads/sololearn/machine-learning/training%20and%20testing%20split%20datasets.png" alt="Train Test Split"></p>
+<p>正如我们所见，训练集中的所有值都没有用于评估。使用训练集构建模型然后用训练集进行评估是不公平的，因为这样我们无法得到模型性能的完整图片。</p>
+<p>为了从经验上看到这一点，让我们尝试运行 <a href="/2023/d24f091e.html" title="Sololearn 自学机器学习 13 训练与测试">13 训练与测试</a> 中执行训练/测试拆分的代码。我们将重新运行它几次并查看结果。每一行都是不同的随机训练/测试拆分的结果。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Rum times</th>
+<th>Accuracy</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1 Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.83</td>
+<td>0.79</td>
+<td>0.75</td>
+<td>0.77</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.79</td>
+<td>0.80</td>
+<td>0.63</td>
+<td>0.71</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.68</td>
+<td>0.73</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.84</td>
+<td>0.75</td>
+<td>0.73</td>
+<td>0.74</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.80</td>
+<td>0.81</td>
+<td>0.60</td>
+<td>0.69</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>您可以看到每次运行时，我们得到的度量值都不同。准确度从 0.79 到 0.84，精确度从 0.75 到 0.81，召回率从 0.63 到 0.75。这些是广泛范围的值，仅取决于测试集中最终包含哪些数据点是幸运还是不幸运。</p>
+<p>如果您想自己运行并查看指标的变化值，以下是代码。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> accuracy_score, precision_score, recall_score, f1_score</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;https://sololearn.com/uploads/files/titanic.csv&#x27;</span>)</span><br><span class="line">df[<span class="string">&#x27;male&#x27;</span>] = df[<span class="string">&#x27;Sex&#x27;</span>] == <span class="string">&#x27;male&#x27;</span></span><br><span class="line">X = df[[<span class="string">&#x27;Pclass&#x27;</span>, <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Siblings/Spouses&#x27;</span>, <span class="string">&#x27;Parents/Children&#x27;</span>, <span class="string">&#x27;Fare&#x27;</span>]].values</span><br><span class="line">y = df[<span class="string">&#x27;Survived&#x27;</span>].values</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进行多次训练/测试拆分</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">    X_train, X_test, y_train, y_test = train_test_split(X, y)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 构建模型</span></span><br><span class="line">    model = LogisticRegression()</span><br><span class="line">    model.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 评估模型</span></span><br><span class="line">    y_pred = model.predict(X_test)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot; accuracy: &#123;0:.5f&#125;&quot;</span>.<span class="built_in">format</span>(accuracy_score(y_test, y_pred)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;precision: &#123;0:.5f&#125;&quot;</span>.<span class="built_in">format</span>(precision_score(y_test, y_pred)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;   recall: &#123;0:.5f&#125;&quot;</span>.<span class="built_in">format</span>(recall_score(y_test, y_pred)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot; f1 score: &#123;0:.5f&#125;&quot;</span>.<span class="built_in">format</span>(f1_score(y_test, y_pred)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;------------&quot;</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>&#123;0: .5f&#125;</code> 是使用 Python 的字符串格式的占位符。Python将使用 <code>.format(*args)</code> 的参数从提交的值替换这些占位符，其中：</p>
+<ul>
+<li><code>0</code> 表示将此占位符替换为第一个参数。从 Python 3.1 开始，您无需包括此 0，但如果要在字符串中多次使用相同的参数，则这些是必需的。</li>
+<li><code>:</code> 将替换字段名称与格式规范分隔开。</li>
+<li><code>.5</code> 表示将小数部分四舍五入到5位数字，</li>
+<li><code>f</code> 表示我们正在处理浮点数。</li>
+</ul>
+<p>在大多数情况下，Python 最新的 f-strings 是更好的字符串格式选择。以下是相同行的 f-string 格式：<code>print(f&quot;precision: &#123;precision_score(y_test, y_pred):.5f&#125;&quot;)</code></p>
+<p>有关字符串格式的更多信息：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://realpython.com/python-formatted-output/">https://realpython.com/python-formatted-output/</a></p>
+</blockquote>
+<div class="note info flat"><p>与单一训练 / 测试拆分不同，我们将数据多次拆分为训练集和测试集。</p>
+</div>
+<h1 id="多个训练和测试集"><a href="#多个训练和测试集" class="headerlink" title="多个训练和测试集"></a>多个训练和测试集</h1><p>我们在前面的部分学到，根据我们的测试集，我们可以得到评估指标的不同值。我们希望获得对我们的模型整体表现的度量，而不仅仅是在一个特定的测试集上表现如何的度量。</p>
+<p>与其只将数据的一部分作为测试集，不如将我们的数据集分成5个部分。假设我们的数据集中有200个数据点。</p>
+<p><img src="/uploads/sololearn/machine-learning/dataset-split-into-5-parts.png" alt="Dataset split into 5 parts"></p>
+<p>这5个部分中的每一个都将作为一个测试集。当第1个部分是测试集时，我们将剩下的4个部分作为训练集。因此，我们有5个训练和测试集，如下所示。</p>
+<p><img src="/uploads/sololearn/machine-learning/test-set-in-5-datasets.png" alt="Test Set in 5 datasets"></p>
+<p>每一次我们都有一个20%的测试集（40个数据点）和一个80%的训练集（160个数据点）。</p>
+<div class="note info flat"><p>每个数据点都恰好在一个测试集中。</p>
+</div>
+<h1 id="建立和评估多个训练和测试集"><a href="#建立和评估多个训练和测试集" class="headerlink" title="建立和评估多个训练和测试集"></a>建立和评估多个训练和测试集</h1><p>在前一部分，我们看到如何创建5个不同训练集的测试集。</p>
+<p>现在，对于每个训练集，我们构建一个模型并使用相关的测试集进行评估。因此，我们构建5个模型并计算5个分数。</p>
+<p>假设我们正在尝试计算模型的准确度分数。</p>
+<p><img src="/uploads/sololearn/machine-learning/accuracy-of-5-datasets.png" alt="Accuracy of 5 datasets"></p>
+<p>我们将准确度报告为这5个值的平均值：</p>
+<script type="math/tex; mode=display">
+(0.83 + 0.79 + 0.78 + 0.80 + 0.75) / 5 = 0.79</script><p>如果我们只进行了单一的训练和测试集，并且随机选择了第一个，我们将报告准确度为0.83。如果我们随机选择了最后一个，我们将报告准确度为0.75。对所有这些可能的值取平均有助于消除数据点落入哪个测试集的影响。</p>
+<blockquote>
+<p>只有在数据集较小的情况下，您才会看到这么大的差异。对于较大的数据集，我们通常只是简单地进行训练和测试集的划分。</p>
+</blockquote>
+<p>创建多个训练和测试集的这个过程称为 k 折交叉验证 (k-fold cross validation) 。k 是我们将数据集分成的块数。标准数是 5，就像我们在上面的示例中所做的那样。</p>
+<div class="note info flat"><p>我们在交叉验证中的目标是获得我们度量指标（准确度、精确度、召回率）的准确度量。我们构建额外的模型，以便对我们计算和报告的数字感到有信心。</p>
+</div>
+<h1 id="在k折交叉验证中的最终模型选择"><a href="#在k折交叉验证中的最终模型选择" class="headerlink" title="在k折交叉验证中的最终模型选择"></a>在k折交叉验证中的最终模型选择</h1><p>现在我们建立了 5 个模型而不只是一个。我们如何决定使用哪个单一模型？</p>
+<p>这 5 个模型仅用于评估目的，以便我们可以报告度量值。实际上，我们并不需要这些模型，而是想要构建可能的最佳模型。可能的最佳模型将是一个<strong>使用所有数据的模型</strong>。因此，我们跟踪我们计算的评估指标的值，然后使用所有数据构建一个模型。</p>
+<p>这可能看起来非常浪费，但计算机有大量的计算能力，因此值得多使用一些来确保我们报告了正确的评估指标值。我们将使用这些值来做出决策，因此正确计算它们非常重要。</p>
+<div class="note info flat"><p>在构建模型时，计算能力 (computing power) 对于大型数据集可能是一个问题。在这些情况下，我们只是进行训练测试拆分。</p>
+</div>
+<h1 id="在-SkLearn-中的-KFold-类"><a href="#在-SkLearn-中的-KFold-类" class="headerlink" title="在 SkLearn 中的 KFold 类"></a>在 SkLearn 中的 <code>KFold</code> 类</h1><p>Scikit-learn 已经实现了将数据集分成k个块并创建k个训练和测试集的代码。</p>
+<p>为简单起见，让我们以一个只有 6 个数据点和2个特征的数据集为例，并在该数据集上进行 3 折交叉验证。我们将从 Titanic 数据集中取前 6 行，只使用 Age 和 Fare 列。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">X = df[[<span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Fare&#x27;</span>]].values[:<span class="number">6</span>]</span><br><span class="line">y = df[<span class="string">&#x27;Survived&#x27;</span>].values[:<span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+<p>我们首先实例化一个 KFold 类对象。它接受两个参数：<code>n_splits</code>（这是 k，要创建的块数）和 <code>shuffle</code> （是否对数据的顺序进行随机化）。通常最好对数据进行洗牌，因为数据集经常处于排序的状态。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">kf = KFold(n_splits=<span class="number">3</span>, shuffle=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>为了实现相同的随机状态，您可以将<code>random_state=value</code>作为参数传递给KFold，其中<code>value</code>是用于确定k-fold拆分的随机状态的固定数字。</p>
+</blockquote>
+<p>KFold类有一个 <code>split</code> 方法，用于为我们的数据创建 3 个拆分。</p>
+<p>让我们看一下 <code>split</code> 方法的输出。 <code>split</code> 方法返回一个生成器，因此我们使用 <code>list</code> 函数将其转换为列表。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>(kf.split(X))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>kf.split(X)</code> 返回的是索引，而不是数据点。</p>
+</blockquote>
+<p><strong>完整代码</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> KFold</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;https://kingsmai.github.io/uploads/@files/datasets/titanic/titanic.csv&#x27;</span>)</span><br><span class="line">X = df[[<span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Fare&#x27;</span>]].values[:<span class="number">6</span>]</span><br><span class="line">y = df[<span class="string">&#x27;Survived&#x27;</span>].values[:<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line">kf = KFold(n_splits=<span class="number">3</span>, shuffle=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> train, test <span class="keyword">in</span> kf.split(X):</span><br><span class="line">    <span class="built_in">print</span>(train, test)</span><br></pre></td></tr></table></figure>
+<p>正如我们所看到的，我们有 3 个训练和测试集，符合预期。第一个训练集由数据点 0、2、3、5 组成，测试集由数据点 1、4 组成。</p>
+<div class="note info flat"><p>拆分是随机进行的，因此每次运行代码时都可以看到不同的数据点集。</p>
+</div>
+<h1 id="使用-Folds-创建训练和测试集"><a href="#使用-Folds-创建训练和测试集" class="headerlink" title="使用 Folds 创建训练和测试集"></a>使用 Folds 创建训练和测试集</h1><p>我们使用 KFold 类和 split 方法获取了每个拆分中的索引。现在让我们使用该结果来获得我们的第一个（共3个）训练 / 测试拆分。</p>
+<p>首先，让我们取出第一个拆分。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">splits = <span class="built_in">list</span>(kf.split(X))</span><br><span class="line">first_split = splits[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(first_split)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># (array([0, 2, 3, 5]), array([1, 4]))</span><br></pre></td></tr></table></figure>
+<p>第一个数组是训练集的索引，第二个是测试集的索引。让我们创建这些变量。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">train_indices, test_indices = first_split</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;training set indices:&quot;</span>, train_indices)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;test set indices:&quot;</span>, test_indices)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># training set indices: [0, 2, 3, 5]</span><br><span class="line"># test set indices: [1, 4]</span><br></pre></td></tr></table></figure>
+<p>现在我们可以根据这些索引创建 X_train、y_train、X_test 和 y_test。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">X_train = X[train_indices]</span><br><span class="line">X_test = X[test_indices]</span><br><span class="line">y_train = y[train_indices]</span><br><span class="line">y_test = y[test_indices]</span><br></pre></td></tr></table></figure>
+<p>如果我们打印出每个变量，我们将看到 X_train 中有四个数据点及其目标值，而剩下的两个数据点在 X_test 中，它们的目标值在 y_test 中。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;X_train&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(X_train)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;y_train&quot;</span>, y_train)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;X_test&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(X_test)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;y_test&quot;</span>, y_test)</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> KFold</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;https://kingsmai.github.io/uploads/@files/datasets/titanic/titanic.csv&#x27;</span>)</span><br><span class="line">X = df[[<span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Fare&#x27;</span>]].values[:<span class="number">6</span>]</span><br><span class="line">y = df[<span class="string">&#x27;Survived&#x27;</span>].values[:<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line">kf = KFold(n_splits=<span class="number">3</span>, shuffle=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">splits = <span class="built_in">list</span>(kf.split(X))</span><br><span class="line">first_split = splits[<span class="number">0</span>]</span><br><span class="line">train_indices, test_indices = first_split</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;training set indices:&quot;</span>, train_indices)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;test set indices:&quot;</span>, test_indices)</span><br><span class="line"></span><br><span class="line">X_train = X[train_indices]</span><br><span class="line">X_test = X[test_indices]</span><br><span class="line">y_train = y[train_indices]</span><br><span class="line">y_test = y[test_indices]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;X_train&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(X_train)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;y_train&quot;</span>, y_train)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;X_test&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(X_test)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;y_test&quot;</span>, y_test)</span><br></pre></td></tr></table></figure>
+<p>运行此代码以查看结果。在这一点上，我们有与使用 train_test_split 函数相同格式的训练和测试集。</p>
+<div class="note warning flat"><p>这可能会让人感到困惑。个人而言，我在提供的代码中添加了一些打印语句，以便更容易看到每个步骤的发生情况：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这提供了索引，而不是实际值。</span></span><br><span class="line">kf = KFold(n_splits=<span class="number">3</span>, shuffle=<span class="literal">True</span>)</span><br><span class="line">splits = <span class="built_in">list</span>(kf.split(X))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;splits:&quot;</span>, splits)</span><br><span class="line"></span><br><span class="line">first_split = splits[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;first split:&quot;</span>, first_split)</span><br><span class="line"></span><br><span class="line">train_indices, test_indices = first_split</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;training set indices:&quot;</span>, train_indices)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;test set indices:&quot;</span>, test_indices)</span><br></pre></td></tr></table></figure>
+<p>这段代码将打印出每个步骤中发生的情况，包括拆分的索引和训练/测试集的索引。</p>
+</div></div>
+<h1 id="构建模型"><a href="#构建模型" class="headerlink" title="构建模型"></a>构建模型</h1><p>现在我们可以使用训练和测试集构建模型并进行预测，就像之前一样。让我们回到使用整个数据集（因为4个数据点不足以构建一个像样的模型）。</p>
+<p>以下是构建并在5折交叉验证的第一个折叠上评分模型的完整代码。请注意，拟合和评分模型的代码与使用train_test_split函数时完全相同。</p>
+<p>请尝试运行它：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> KFold</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;https://kingsmai.github.io/uploads/@files/datasets/titanic/titanic.csv&#x27;</span>)</span><br><span class="line">df[<span class="string">&#x27;male&#x27;</span>] = df[<span class="string">&#x27;Sex&#x27;</span>] == <span class="string">&#x27;male&#x27;</span></span><br><span class="line">X = df[[<span class="string">&#x27;Pclass&#x27;</span>, <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Siblings/Spouses&#x27;</span>, <span class="string">&#x27;Parents/Children&#x27;</span>, <span class="string">&#x27;Fare&#x27;</span>]].values</span><br><span class="line">y = df[<span class="string">&#x27;Survived&#x27;</span>].values</span><br><span class="line"></span><br><span class="line">kf = KFold(n_splits=<span class="number">5</span>, shuffle=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">splits = <span class="built_in">list</span>(kf.split(X))</span><br><span class="line">train_indices, test_indices = splits[<span class="number">0</span>]</span><br><span class="line">X_train = X[train_indices]</span><br><span class="line">X_test = X[test_indices]</span><br><span class="line">y_train = y[train_indices]</span><br><span class="line">y_test = y[test_indices]</span><br><span class="line"></span><br><span class="line">model = LogisticRegression()</span><br><span class="line">model.fit(X_train, y_train)</span><br><span class="line"><span class="built_in">print</span>(model.score(X_test, y_test))</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>到目前为止，我们基本上只是进行了一次训练 / 测试拆分。为了进行 k 折交叉验证，我们需要使用其他 4 个拆分中的每一个来构建模型并评分模型。</p>
+</div>
+<h1 id="循环遍历所有的折叠"><a href="#循环遍历所有的折叠" class="headerlink" title="循环遍历所有的折叠"></a>循环遍历所有的折叠</h1><p>我们之前是一次处理一个折叠，但实际上我们希望循环遍历所有的折叠以获取所有的值。我们将前面部分的代码放在for循环中。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">scores = []</span><br><span class="line">kf = KFold(n_splits=<span class="number">5</span>, shuffle=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> train_index, test_index <span class="keyword">in</span> kf.split(X):</span><br><span class="line">    X_train, X_test = X[train_index], X[test_index]</span><br><span class="line">    y_train, y_test = y[train_index], y[test_index]</span><br><span class="line">    model = LogisticRegression()</span><br><span class="line">    model.fit(X_train, y_train)</span><br><span class="line">    scores.append(model.score(X_test, y_test))</span><br><span class="line"><span class="built_in">print</span>(scores)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># [0.75847, 0.83146, 0.85876, 0.76271, 0.74011]</span><br></pre></td></tr></table></figure>
+<p>由于我们有 5 个折叠，我们得到 5 个准确度值。回想一下，为了得到一个单一的最终值，我们需要取这些值的平均值。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(np.mean(scores))</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 0.79029</span><br></pre></td></tr></table></figure>
+<p>现在我们已经计算了准确度，我们不再需要我们构建的 5 个不同模型。对于将来的使用，我们只想要一个单一的模型。为了获得可能的最佳单一模型，我们在整个数据集上构建一个模型。如果有人问起这个模型的准确度，我们使用通过交叉验证计算的准确度（0.79029），即使我们实际上还没有使用测试集测试过这个特定模型（Model built with whole dataset）。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">final_model = LogisticRegression()</span><br><span class="line">final_model.fit(X, y)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>完整代码</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> KFold</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;https://kingsmai.github.io/uploads/@files/datasets/titanic/titanic.csv&#x27;</span>)</span><br><span class="line">df[<span class="string">&#x27;male&#x27;</span>] = df[<span class="string">&#x27;Sex&#x27;</span>] == <span class="string">&#x27;male&#x27;</span></span><br><span class="line">X = df[[<span class="string">&#x27;Pclass&#x27;</span>, <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Siblings/Spouses&#x27;</span>, <span class="string">&#x27;Parents/Children&#x27;</span>, <span class="string">&#x27;Fare&#x27;</span>]].values</span><br><span class="line">y = df[<span class="string">&#x27;Survived&#x27;</span>].values</span><br><span class="line"></span><br><span class="line">scores = []</span><br><span class="line">kf = KFold(n_splits=<span class="number">5</span>, shuffle=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> train_index, test_index <span class="keyword">in</span> kf.split(X):</span><br><span class="line">   X_train, X_test = X[train_index], X[test_index]</span><br><span class="line">   y_train, y_test = y[train_index], y[test_index]</span><br><span class="line">   model = LogisticRegression()</span><br><span class="line">   model.fit(X_train, y_train)</span><br><span class="line">   scores.append(model.score(X_test, y_test))</span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line"><span class="built_in">print</span>(np.mean(scores))</span><br><span class="line">final_model = LogisticRegression()</span><br><span class="line">final_model.fit(X, y)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<div class="note info flat"><p>每次运行代码都可以期望得到稍微不同的值。KFold 类每次都会随机拆分数据，因此不同的拆分将导致不同的分数，尽管你应该期望这 5 个分数的平均值通常大致相同。</p>
+</div>
+<h1 id="cross-val-score"><a href="#cross-val-score" class="headerlink" title="cross_val_score"></a>cross_val_score</h1><p>sklearn 中的 <code>cross_val_score</code> 函数是一种方便的方法，可以在不必手动迭代折叠的情况下进行交叉验证。以下是使用 <code>cross_val_score</code> 的示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;https://kingsmai.github.io/uploads/@files/datasets/titanic/titanic.csv&#x27;</span>)</span><br><span class="line">df[<span class="string">&#x27;male&#x27;</span>] = df[<span class="string">&#x27;Sex&#x27;</span>] == <span class="string">&#x27;male&#x27;</span></span><br><span class="line">X = df[[<span class="string">&#x27;Pclass&#x27;</span>, <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Siblings/Spouses&#x27;</span>, <span class="string">&#x27;Parents/Children&#x27;</span>, <span class="string">&#x27;Fare&#x27;</span>]].values</span><br><span class="line">y = df[<span class="string">&#x27;Survived&#x27;</span>].values</span><br><span class="line"></span><br><span class="line">model = LogisticRegression()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用cross_val_score进行5折交叉验证并获取准确度分数</span></span><br><span class="line">scores = cross_val_score(model, X, y, cv=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印每个折叠的准确度分数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;每个折叠的准确度分数:&quot;</span>, scores)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印所有折叠的平均准确度</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均准确度:&quot;</span>, np.mean(scores))</span><br></pre></td></tr></table></figure>
+<p>这种方法简化了代码，并提供了一种简洁的方式来执行交叉验证。<code>cv</code>参数指定了折叠的数量，<code>cross_val_score</code>负责拆分数据，训练模型并计算每个折叠的准确度。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kingsmai.github.io">小麦 Andrew Xiaomai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kingsmai.github.io/2024/4137e8ad.html">https://kingsmai.github.io/2024/4137e8ad.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kingsmai.github.io" target="_blank">麦甜怪圈 Xiaomai Circle</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><a class="post-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><a class="post-meta__tags" href="/tags/Sololearn/">Sololearn</a></div><div class="post_share"><div class="social-share" data-image="/Gallery/covers/k-fold-cross-validation-1.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>欢迎打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/Gallery/wallets/WechatPaySquare.jpg" target="_blank"><img class="post-qr-code-img" src="/Gallery/wallets/WechatPaySquare.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/Gallery/wallets/AlipaySquare.jpg" target="_blank"><img class="post-qr-code-img" src="/Gallery/wallets/AlipaySquare.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/c895ec1a.html" title="C 语言笔记复盘 2 C 语言的特点"><img class="cover" src="/Gallery/covers/notebook-about-c-2.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">C 语言笔记复盘 2 C 语言的特点</div></div></a></div><div class="next-post pull-right"><a href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码"><img class="cover" src="/Gallery/covers/binary-files.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">为什么二进制文件内容是乱码</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/787a0c90.html" title="Sololearn 自学机器学习 15 ROC 曲线"><img class="cover" src="/Gallery/covers/the-roc-curve-1.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-29</div><div class="title">Sololearn 自学机器学习 15 ROC 曲线</div></div></a></div><div><a href="/2023/e08309be.html" title="Sololearn 自学机器学习 14 ROC 曲线的基础知识"><img class="cover" src="/Gallery/covers/the-foundation-of-roc-curve-4.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-28</div><div class="title">Sololearn 自学机器学习 14 ROC 曲线的基础知识</div></div></a></div><div><a href="/2023/d24f091e.html" title="Sololearn 自学机器学习 13 训练与测试"><img class="cover" src="/Gallery/covers/ml-training-and-testing-3.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-27</div><div class="title">Sololearn 自学机器学习 13 训练与测试</div></div></a></div><div><a href="/2023/5985afb6.html" title="Sololearn 自学机器学习 12 使用 Scikit-Learn 计算各种指标"><img class="cover" src="/Gallery/covers/Machine-Learning-2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-26</div><div class="title">Sololearn 自学机器学习 12 使用 Scikit-Learn 计算各种指标</div></div></a></div><div><a href="/2023/a865dfe2.html" title="Sololearn 自学机器学习 11 精确度和召回率"><img class="cover" src="/Gallery/covers/precision-recall-1.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-24</div><div class="title">Sololearn 自学机器学习 11 精确度和召回率</div></div></a></div><div><a href="/2023/7d2579fa.html" title="Sololearn 自学机器学习（10）模型评估"><img class="cover" src="/Gallery/covers/machine-learning-accuracy.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-23</div><div class="title">Sololearn 自学机器学习（10）模型评估</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小麦 Andrew Xiaomai</div><div class="author-info__description">一个喜欢肉鸽类游戏的程序员<br>分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">41</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/kingsmai"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kingsmai" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-GitHub" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/670118055" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><i class="iconfont icon-bilibili-fill" style="color: #ff6699;"></i></a><a class="social-icon" href="mailto:xsbugh@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-email-fill" style="color: #ff3e30;"></i></a><a class="social-icon" href="https://www.zhihu.com/people/creeper0924" rel="external nofollow noreferrer" target="_blank" title="Zhihu"><i class="iconfont icon-zhihu" style="color: #1772F6;"></i></a><a class="social-icon" href="https://blog.csdn.net/Xsbugh" rel="external nofollow noreferrer" target="_blank" title="CSDN"><i class="iconfont icon-csdn" style="color: #FC4144;"></i></a><a class="social-icon" href="https://www.linkedin.com/in/%E5%B0%8F%E9%BA%A6-xiaomai-0a672124b/" rel="external nofollow noreferrer" target="_blank" title="LinkedIn"><i class="iconfont icon-linkedin" style="color: #0A66C2;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-Atom" style="color: #6EA3E5;"></i></a><a class="social-icon" href="/rss2.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-dingyue" style="color: #ee802f;"></i></a></div></div><div class="card-widget"><div class="item-headline"><i></i><span></span></div><div class="item-content"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E8%AE%AD%E7%BB%83%E9%9B%86%E5%92%8C%E6%B5%8B%E8%AF%95%E9%9B%86%E7%9A%84%E6%8B%85%E5%BF%A7"><span class="toc-number">1.</span> <span class="toc-text">关于训练集和测试集的担忧</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E8%AE%AD%E7%BB%83%E5%92%8C%E6%B5%8B%E8%AF%95%E9%9B%86"><span class="toc-number">2.</span> <span class="toc-text">多个训练和测试集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E5%92%8C%E8%AF%84%E4%BC%B0%E5%A4%9A%E4%B8%AA%E8%AE%AD%E7%BB%83%E5%92%8C%E6%B5%8B%E8%AF%95%E9%9B%86"><span class="toc-number">3.</span> <span class="toc-text">建立和评估多个训练和测试集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8k%E6%8A%98%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81%E4%B8%AD%E7%9A%84%E6%9C%80%E7%BB%88%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9"><span class="toc-number">4.</span> <span class="toc-text">在k折交叉验证中的最终模型选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8-SkLearn-%E4%B8%AD%E7%9A%84-KFold-%E7%B1%BB"><span class="toc-number">5.</span> <span class="toc-text">在 SkLearn 中的 KFold 类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Folds-%E5%88%9B%E5%BB%BA%E8%AE%AD%E7%BB%83%E5%92%8C%E6%B5%8B%E8%AF%95%E9%9B%86"><span class="toc-number">6.</span> <span class="toc-text">使用 Folds 创建训练和测试集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.</span> <span class="toc-text">构建模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%89%80%E6%9C%89%E7%9A%84%E6%8A%98%E5%8F%A0"><span class="toc-number">8.</span> <span class="toc-text">循环遍历所有的折叠</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cross-val-score"><span class="toc-number">9.</span> <span class="toc-text">cross_val_score</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/d4d355b7.html" title="Leo 语言 Hello World 的学习心得"><div style="background: /Gallery/covers/"></div></a><div class="content"><a class="title" href="/2024/d4d355b7.html" title="Leo 语言 Hello World 的学习心得">Leo 语言 Hello World 的学习心得</a><time datetime="2024-01-09T08:16:27.000Z" title="发表于 2024-01-09 16:16:27">2024-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/2d85c0dd.html" title="Sololearn 自学网页设计 3 让网页变成响应式页面"><img src="/Gallery/covers/resp-web-design-1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sololearn 自学网页设计 3 让网页变成响应式页面"/></a><div class="content"><a class="title" href="/2024/2d85c0dd.html" title="Sololearn 自学网页设计 3 让网页变成响应式页面">Sololearn 自学网页设计 3 让网页变成响应式页面</a><time datetime="2024-01-05T07:47:36.000Z" title="发表于 2024-01-05 15:47:36">2024-01-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/f1de6892.html" title="【话题】编程语言的未来 一个以自然语言作为编程语言的构思">【话题】编程语言的未来 一个以自然语言作为编程语言的构思</a><time datetime="2024-01-03T17:32:51.000Z" title="发表于 2024-01-04 01:32:51">2024-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码"><img src="/Gallery/covers/binary-files.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么二进制文件内容是乱码"/></a><div class="content"><a class="title" href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码">为什么二进制文件内容是乱码</a><time datetime="2024-01-02T22:02:39.000Z" title="发表于 2024-01-03 06:02:39">2024-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证"><img src="/Gallery/covers/k-fold-cross-validation-1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sololearn 自学机器学习 16 K-Fold 交叉验证"/></a><div class="content"><a class="title" href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证">Sololearn 自学机器学习 16 K-Fold 交叉验证</a><time datetime="2024-01-02T05:04:46.000Z" title="发表于 2024-01-02 13:04:46">2024-01-02</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/Gallery/covers/k-fold-cross-validation-1.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 小麦 Andrew Xiaomai</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20235160" rel="external nofollow noreferrer" target="_blank"><img class="icp-icon" src="/Gallery/moe-icons/icon120.png">备案号：✮萌ICP备20235160号✮</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

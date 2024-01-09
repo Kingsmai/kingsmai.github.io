@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Sololearn 自学机器学习 15 ROC 曲线 | 麦甜怪圈 Xiaomai Circle</title><meta name="author" content="小麦 Andrew Xiaomai"><meta name="copyright" content="小麦 Andrew Xiaomai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="本篇笔记是从 Sololearn 自学而来的心得：《15 ROC 曲线》 篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sololearn 自学机器学习 15 ROC 曲线">
+<meta property="og:url" content="https://kingsmai.github.io/2023/787a0c90.html">
+<meta property="og:site_name" content="麦甜怪圈 Xiaomai Circle">
+<meta property="og:description" content="本篇笔记是从 Sololearn 自学而来的心得：《15 ROC 曲线》 篇">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kingsmai.github.io/Gallery/covers/the-roc-curve-1.jpeg">
+<meta property="article:published_time" content="2023-12-29T14:05:19.000Z">
+<meta property="article:modified_time" content="2023-12-30T06:19:26.000Z">
+<meta property="article:author" content="小麦 Andrew Xiaomai">
+<meta property="article:tag" content="人工智能">
+<meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="Sololearn">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kingsmai.github.io/Gallery/covers/the-roc-curve-1.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kingsmai.github.io/2023/787a0c90.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经","messageNext":"天未被更新了，可能里边的内容已经过时，请注意斟酌。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 小麦 Andrew Xiaomai","link":"链接: ","source":"来源: 麦甜怪圈 Xiaomai Circle","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Sololearn 自学机器学习 15 ROC 曲线',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-30 14:19:26'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4366094_hx3hbrje2st.css"><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="麦甜怪圈 Xiaomai Circle" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="麦甜怪圈 Xiaomai Circle" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">41</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/Gallery/covers/the-roc-curve-1.jpeg')"><nav id="nav"><span id="blog-info"><a href="/" title="麦甜怪圈 Xiaomai Circle"><img class="site-icon" src="/Gallery/logos/Logo-11.jpg"/><span class="site-name">麦甜怪圈 Xiaomai Circle</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Sololearn 自学机器学习 15 ROC 曲线</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-29T14:05:19.000Z" title="发表于 2023-12-29 22:05:19">2023-12-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-30T06:19:26.000Z" title="更新于 2023-12-30 14:19:26">2023-12-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%B3%BB%E5%88%97/">系列</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/">Python</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Sololearn 自学机器学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Sololearn 自学机器学习 15 ROC 曲线"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet external nofollow noreferrer" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="如何构建ROC曲线"><a href="#如何构建ROC曲线" class="headerlink" title="如何构建ROC曲线"></a>如何构建ROC曲线</h1><p>ROC曲线是特异性和敏感性（Specificity vs Sensitivity）的图表。我们构建一个逻辑回归模型，然后计算每个可能阈值的特异性和敏感性。每个预测概率都是一个阈值。如果我们有5个数据点，其预测概率分别为：0.3, 0.4, 0.6, 0.7, 0.8，我们将使用这 5 个值作为阈值。</p>
+<p>请注意，实际上我们绘制的是敏感性与（1 - 特异性）的关系图。这样做的主要原因是标准化。</p>
+<p>让我们首先看一下构建 ROC 曲线的代码。Scikit-learn 有一个 <code>roc_curve</code> 函数让我们使用。该函数接受模型的真实目标值和预测概率。</p>
+<p>我们首先使用模型上的 <code>predict_proba</code> 方法获取概率。然后调用 <code>roc_curve</code> 函数。<code>roc_curve</code> 函数返回一个假阳性率 (False Positive) 数组，一个真阳性率 (True Positive) 数组和阈值 (Threshold)。假阳性率是 1 - 特异性（ x 轴 ），真阳性率是敏感性的另一种表达（ y 轴 ）。图中不需要阈值值。</p>
+<p>这是在 matplotlib 中绘制 ROC 曲线的代码。请注意，我们还有绘制对角线的代码。这可以帮助我们直观地看出我们的模型离随机预测的模型有多远。</p>
+<p>我们假设我们已经有了一个已分割成训练集和测试集的数据集。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model = LogisticRegression()</span><br><span class="line">model.fit(X_train, y_train)</span><br><span class="line">y_pred_proba = model.predict_proba(X_test)</span><br><span class="line">fpr, tpr, thresholds = roc_curve(y_test, y_pred_proba[:,<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">plt.plot(fpr, tpr)</span><br><span class="line">plt.plot([<span class="number">0</span>, <span class="number">1</span>], [<span class="number">0</span>, <span class="number">1</span>], linestyle=<span class="string">&#x27;--&#x27;</span>)</span><br><span class="line">plt.xlim([<span class="number">0.0</span>, <span class="number">1.0</span>])</span><br><span class="line">plt.ylim([<span class="number">0.0</span>, <span class="number">1.0</span>])</span><br><span class="line">plt.xlabel(<span class="string">&#x27;1 - 特异性&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;敏感性&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<div class="note primary flat"><p>You have to import roc_curve to run the code</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve</span><br></pre></td></tr></table></figure></div>
+<p><img src="/uploads/sololearn/machine-learning/the%20roc%20curve.jpg"/></p>
+<div class="note info flat"><p>因为我们不使用阈值来构建图形，所以图形并不能告诉我们每个可能模型的阈值是多少。</p>
+</div>
+<div class="note warning flat"><p>In case you are having issues understanding the concept of ROC curves, watch the video in the link below 👇 </p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://m.youtube.com/watch?v=4jRBRDbJemM">https://m.youtube.com/watch?v=4jRBRDbJemM</a></p>
+</div>
+<h1 id="ROC曲线解释"><a href="#ROC曲线解释" class="headerlink" title="ROC曲线解释"></a>ROC曲线解释</h1><p>ROC曲线显示的不是单个模型的性能，而是许多模型的性能。每个阈值的选择对应一个不同的模型。</p>
+<p>让我们看一下突出显示这些点的ROC曲线。</p>
+<p><img src="/uploads/sololearn/machine-learning/the%20roc%20curve%20with%20points.jpg"/></p>
+<p>每个点 A、B 和 C 表示具有不同阈值的模型。</p>
+<p>模型A的敏感性为 0.6，特异性为 0.9（请记住图表显示的是 1 减去 特异性）。<br>模型B的敏感性为 0.8，特异性为 0.7。<br>模型C的敏感性为 0.9，特异性为 0.5。</p>
+<p>在这些模型之间如何选择将取决于我们情境的具体情况。</p>
+<div class="note info flat"><p>曲线越靠近左上角，性能越好。曲线不应该低于对角线，因为那意味着它的性能比随机模型还差。</p>
+</div>
+<div class="note primary flat"><p>请记住，我们的目标是最大化这两个值。一个理想的模型将具有敏感性为 1 和特异性为 1，因此敏感性 + 特异性的总和为2。</p>
+<ul>
+<li>模型A的敏感性为 0.6，特异性为 0.9，总和为 1.5；</li>
+<li>模型B的敏感性为 0.8，特异性为 0.7，总和为 1.5；</li>
+<li>模型C的敏感性为 0.9，特异性为 0.5，总和为 1.4。</li>
+</ul>
+<p>因此，我们可以说模型 A 和模型 B 的表现相当，但模型 C 稍逊一筹，因为其敏感性和特异性之和较低。你可以看到 A 和 B 都与左上角等距，而 C 则更远。我猜你可能仍然会选择使用 C，这取决于具体情况。例如，如果你确实需要一个敏感性（召回率）更高的模型，即使特异性 / 精确度较低。</p>
+<p>我认为这确实取决于具体情况，不一定是敏感性和特异性之和越高模型就越好。在某些情况下，你可能只需要高特异性，而不关心敏感性。最终取决于目标。</p>
+</div>
+<h1 id="从-ROC-曲线中选择一个模型"><a href="#从-ROC-曲线中选择一个模型" class="headerlink" title="从 ROC 曲线中选择一个模型"></a>从 ROC 曲线中选择一个模型</h1><p>当我们准备最终确定我们的模型时，我们必须选择一个单一的阈值来进行预测。ROC 曲线是帮助我们为我们的问题选择理想阈值的一种方式。</p>
+<p>让我们再次看一下我们突出显示三个点的 ROC 曲线：</p>
+<p><img src="/uploads/sololearn/machine-learning/the%20roc%20curve%20with%20points.jpg"/></p>
+<p>如果我们处于一个情况：其中所有正类别的预测都正确更重要，而不是我们捕捉所有正类别的情况（这意味着我们要正确预测大多数负类别），我们应该选择特异性较高的模型（模型 A）。</p>
+<p>如果我们处于一个情况，其中尽可能多地捕捉正类别的情况更为重要，我们应该选择敏感性较高的模型（模型 C）。</p>
+<p>如果我们希望在敏感性和特异性之间取得平衡，我们应该选择模型 B。</p>
+<details class="toggle" ><summary class="toggle-button" style="">原文</summary><div class="toggle-content"><p>If we are in a situation where it’s more important that all of our positive predictions are correct than that we catch all the positive cases (meaning that we predict most of the negative cases correctly), we should choose the model with higher specificity (model A).</p>
+<p>If we are in a situation where it’s important that we catch as many of the positive cases as possible, we should choose the model with the higher sensitivity (model C).</p>
+<p>If we want a balance between sensitivity and specificity, we should choose model B.</p>
+</div></details>
+<div class="note info flat"><p>跟踪所有这些术语 (terms) 可能有点棘手。即使是专业人士也不得不再次查阅它们，以确保他们正确解释这些值。</p>
+</div>
+<h2 id="从-ROC-曲线中选择一个模型的练习"><a href="#从-ROC-曲线中选择一个模型的练习" class="headerlink" title="从 ROC 曲线中选择一个模型的练习"></a>从 ROC 曲线中选择一个模型的练习</h2><p>假设我们有一个用于预测信用卡欺诈的模型。如果我们在某人的账户上检测到欺诈交易，我们将禁用他们的信用卡。因此，我们希望确保在做出正类别预测时我们是准确的。在ROC图中的这三个模型中，哪一个在这种情况下更可取？</p>
+<details class="toggle" ><summary class="toggle-button" style="">查看答案和解释</summary><div class="toggle-content"><p>A</p>
+<p>In the case of predicting credit card fraud, where it’s crucial to ensure accuracy when making positive predictions (minimizing false positives), a higher specificity is preferred. Therefore, Model A, which has higher specificity, would be preferred in this scenario. This is because a higher specificity indicates a lower false positive rate, meaning that the model is less likely to incorrectly flag legitimate transactions as fraudulent.</p>
+<p>在预测信用卡欺诈的情况下，当确保在进行正类别预测时的准确性至关重要（最小化假正例），更高的特异性是首选的。因此，在这种情况下，更倾向于选择具有较高特异性的模型 A。这是因为较高的特异性表示较低的假正例率，意味着该模型更不太可能将合法交易错误地标记为欺诈。</p>
+</div></details>
+<h1 id="曲线下面积-Area-Under-the-Curve"><a href="#曲线下面积-Area-Under-the-Curve" class="headerlink" title="曲线下面积 Area Under the Curve"></a>曲线下面积 Area Under the Curve</h1><p>有时我们希望使用ROC曲线来比较两个不同的模型。这里是两个模型的ROC曲线比较。</p>
+<p><img src="/uploads/sololearn/machine-learning/roc%20curve%20of%20two%20models.jpg"/></p>
+<p>你可以看到蓝色曲线的性能优于橙色曲线，因为蓝线几乎总是在橙线上方。</p>
+<p>为了获得这个的经验性度量，我们计算曲线下面积，也称为 AUC（Area Under the Curve）。这是 ROC 曲线下面的面积，取值范围在 0 到 1 之间，数值越高越好。</p>
+<p>由于 ROC 是各种具有不同阈值的逻辑回归模型的图表，AUC 并不衡量单个模型的性能。它提供了逻辑回归模型的整体性能的一般概念。要获得单一模型，仍然需要找到问题的最佳阈值。</p>
+<p>让我们使用 scikit-learn 帮助我们计算曲线下面积。我们可以使用 <code>roc_auc_score</code> 函数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_auc_score</span><br><span class="line"></span><br><span class="line">roc_auc_score(y_test, y_pred_proba[:,<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p>这里是两条曲线的AUC值：</p>
+<ul>
+<li>蓝色 AUC：0.8379</li>
+<li>橙色 AUC：0.7385</li>
+</ul>
+<p>你可以通过经验性的方式看到蓝色的效果更好。</p>
+<p>我们可以使用 <code>roc_auc_score</code> 函数计算 Titanic 数据集上逻辑回归模型的 AUC 分数。我们构建了两个逻辑回归模型，model 1 具有 6 个特征，model 2 只有 Pclass 和 male 两个特征。我们看到 model 1 的 AUC 分数更高。</p>
+<p>运行此代码以查看结果。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_auc_score</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;https://kingsmai.github.io/uploads/@files/datasets/titanic/titanic.csv&#x27;</span>)</span><br><span class="line">df[<span class="string">&#x27;male&#x27;</span>] = df[<span class="string">&#x27;Sex&#x27;</span>] == <span class="string">&#x27;male&#x27;</span></span><br><span class="line">X = df[[<span class="string">&#x27;Pclass&#x27;</span>, <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Siblings/Spouses&#x27;</span>, <span class="string">&#x27;Parents/Children&#x27;</span>, <span class="string">&#x27;Fare&#x27;</span>]].values</span><br><span class="line">y = df[<span class="string">&#x27;Survived&#x27;</span>].values</span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y)</span><br><span class="line"></span><br><span class="line">model1 = LogisticRegression()</span><br><span class="line">model1.fit(X_train, y_train)</span><br><span class="line">y_pred_proba1 = model1.predict_proba(X_test)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;model 1 AUC score:&quot;</span>, roc_auc_score(y_test, y_pred_proba1[:, <span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line">model2 = LogisticRegression()</span><br><span class="line">model2.fit(X_train[:, <span class="number">0</span>:<span class="number">2</span>], y_train)</span><br><span class="line">y_pred_proba2 = model2.predict_proba(X_test[:, <span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;model 2 AUC score:&quot;</span>, roc_auc_score(y_test, y_pred_proba2[:, <span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>重要的是要注意，这个指标告诉我们逻辑回归模型在我们的数据上总体表现如何。由于 ROC 曲线显示了多个模型的性能，AUC 并不衡量单个模型的性能。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kingsmai.github.io">小麦 Andrew Xiaomai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kingsmai.github.io/2023/787a0c90.html">https://kingsmai.github.io/2023/787a0c90.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kingsmai.github.io" target="_blank">麦甜怪圈 Xiaomai Circle</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><a class="post-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><a class="post-meta__tags" href="/tags/Sololearn/">Sololearn</a></div><div class="post_share"><div class="social-share" data-image="/Gallery/covers/the-roc-curve-1.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>欢迎打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/Gallery/wallets/WechatPaySquare.jpg" target="_blank"><img class="post-qr-code-img" src="/Gallery/wallets/WechatPaySquare.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/Gallery/wallets/AlipaySquare.jpg" target="_blank"><img class="post-qr-code-img" src="/Gallery/wallets/AlipaySquare.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/8855a9f7.html" title="浅谈编程中的学习路线 - 我的学习经历"><img class="cover" src="/Gallery/covers/programming-roadmap-3.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">浅谈编程中的学习路线 - 我的学习经历</div></div></a></div><div class="next-post pull-right"><a href="/2023/215fd6fd.html" title="快速开发十款游戏系列（1）：飞机大战 策划篇"><img class="cover" src="/Gallery/covers/spacecraft-1.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">快速开发十款游戏系列（1）：飞机大战 策划篇</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证"><img class="cover" src="/Gallery/covers/k-fold-cross-validation-1.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-02</div><div class="title">Sololearn 自学机器学习 16 K-Fold 交叉验证</div></div></a></div><div><a href="/2023/e08309be.html" title="Sololearn 自学机器学习 14 ROC 曲线的基础知识"><img class="cover" src="/Gallery/covers/the-foundation-of-roc-curve-4.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-28</div><div class="title">Sololearn 自学机器学习 14 ROC 曲线的基础知识</div></div></a></div><div><a href="/2023/d24f091e.html" title="Sololearn 自学机器学习 13 训练与测试"><img class="cover" src="/Gallery/covers/ml-training-and-testing-3.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-27</div><div class="title">Sololearn 自学机器学习 13 训练与测试</div></div></a></div><div><a href="/2023/5985afb6.html" title="Sololearn 自学机器学习 12 使用 Scikit-Learn 计算各种指标"><img class="cover" src="/Gallery/covers/Machine-Learning-2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-26</div><div class="title">Sololearn 自学机器学习 12 使用 Scikit-Learn 计算各种指标</div></div></a></div><div><a href="/2023/a865dfe2.html" title="Sololearn 自学机器学习 11 精确度和召回率"><img class="cover" src="/Gallery/covers/precision-recall-1.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-24</div><div class="title">Sololearn 自学机器学习 11 精确度和召回率</div></div></a></div><div><a href="/2023/7d2579fa.html" title="Sololearn 自学机器学习（10）模型评估"><img class="cover" src="/Gallery/covers/machine-learning-accuracy.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-23</div><div class="title">Sololearn 自学机器学习（10）模型评估</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小麦 Andrew Xiaomai</div><div class="author-info__description">一个喜欢肉鸽类游戏的程序员<br>分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">41</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/kingsmai"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kingsmai" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-GitHub" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/670118055" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><i class="iconfont icon-bilibili-fill" style="color: #ff6699;"></i></a><a class="social-icon" href="mailto:xsbugh@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-email-fill" style="color: #ff3e30;"></i></a><a class="social-icon" href="https://www.zhihu.com/people/creeper0924" rel="external nofollow noreferrer" target="_blank" title="Zhihu"><i class="iconfont icon-zhihu" style="color: #1772F6;"></i></a><a class="social-icon" href="https://blog.csdn.net/Xsbugh" rel="external nofollow noreferrer" target="_blank" title="CSDN"><i class="iconfont icon-csdn" style="color: #FC4144;"></i></a><a class="social-icon" href="https://www.linkedin.com/in/%E5%B0%8F%E9%BA%A6-xiaomai-0a672124b/" rel="external nofollow noreferrer" target="_blank" title="LinkedIn"><i class="iconfont icon-linkedin" style="color: #0A66C2;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-Atom" style="color: #6EA3E5;"></i></a><a class="social-icon" href="/rss2.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-dingyue" style="color: #ee802f;"></i></a></div></div><div class="card-widget"><div class="item-headline"><i></i><span></span></div><div class="item-content"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BAROC%E6%9B%B2%E7%BA%BF"><span class="toc-number">1.</span> <span class="toc-text">如何构建ROC曲线</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ROC%E6%9B%B2%E7%BA%BF%E8%A7%A3%E9%87%8A"><span class="toc-number">2.</span> <span class="toc-text">ROC曲线解释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E-ROC-%E6%9B%B2%E7%BA%BF%E4%B8%AD%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">从 ROC 曲线中选择一个模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E-ROC-%E6%9B%B2%E7%BA%BF%E4%B8%AD%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%BB%83%E4%B9%A0"><span class="toc-number">3.1.</span> <span class="toc-text">从 ROC 曲线中选择一个模型的练习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B2%E7%BA%BF%E4%B8%8B%E9%9D%A2%E7%A7%AF-Area-Under-the-Curve"><span class="toc-number">4.</span> <span class="toc-text">曲线下面积 Area Under the Curve</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/d4d355b7.html" title="Leo 语言 Hello World 的学习心得"><div style="background: /Gallery/covers/"></div></a><div class="content"><a class="title" href="/2024/d4d355b7.html" title="Leo 语言 Hello World 的学习心得">Leo 语言 Hello World 的学习心得</a><time datetime="2024-01-09T08:16:27.000Z" title="发表于 2024-01-09 16:16:27">2024-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/2d85c0dd.html" title="Sololearn 自学网页设计 3 让网页变成响应式页面"><img src="/Gallery/covers/resp-web-design-1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sololearn 自学网页设计 3 让网页变成响应式页面"/></a><div class="content"><a class="title" href="/2024/2d85c0dd.html" title="Sololearn 自学网页设计 3 让网页变成响应式页面">Sololearn 自学网页设计 3 让网页变成响应式页面</a><time datetime="2024-01-05T07:47:36.000Z" title="发表于 2024-01-05 15:47:36">2024-01-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/f1de6892.html" title="【话题】编程语言的未来 一个以自然语言作为编程语言的构思">【话题】编程语言的未来 一个以自然语言作为编程语言的构思</a><time datetime="2024-01-03T17:32:51.000Z" title="发表于 2024-01-04 01:32:51">2024-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码"><img src="/Gallery/covers/binary-files.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么二进制文件内容是乱码"/></a><div class="content"><a class="title" href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码">为什么二进制文件内容是乱码</a><time datetime="2024-01-02T22:02:39.000Z" title="发表于 2024-01-03 06:02:39">2024-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证"><img src="/Gallery/covers/k-fold-cross-validation-1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sololearn 自学机器学习 16 K-Fold 交叉验证"/></a><div class="content"><a class="title" href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证">Sololearn 自学机器学习 16 K-Fold 交叉验证</a><time datetime="2024-01-02T05:04:46.000Z" title="发表于 2024-01-02 13:04:46">2024-01-02</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/Gallery/covers/the-roc-curve-1.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 小麦 Andrew Xiaomai</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20235160" rel="external nofollow noreferrer" target="_blank"><img class="icp-icon" src="/Gallery/moe-icons/icon120.png">备案号：✮萌ICP备20235160号✮</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

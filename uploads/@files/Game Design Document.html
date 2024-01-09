@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>麦甜怪圈 Xiaomai Circle | 麦甜怪圈 Xiaomai Circle</title><meta name="author" content="小麦 Andrew Xiaomai"><meta name="copyright" content="小麦 Andrew Xiaomai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="游戏策划文件 V0.1 Game Design Document Outline A game design document is the blueprint from which a game is to be built. As such, every single detail necessary to build the game should be addressed. The lar">
+<meta property="og:type" content="website">
+<meta property="og:title" content="麦甜怪圈 Xiaomai Circle">
+<meta property="og:url" content="https://kingsmai.github.io/uploads/@files/Game%20Design%20Document.html">
+<meta property="og:site_name" content="麦甜怪圈 Xiaomai Circle">
+<meta property="og:description" content="游戏策划文件 V0.1 Game Design Document Outline A game design document is the blueprint from which a game is to be built. As such, every single detail necessary to build the game should be addressed. The lar">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kingsmai.github.io/Gallery/notion-avatar-1703138102056.png">
+<meta property="article:published_time" content="2024-01-07T15:59:50.481Z">
+<meta property="article:modified_time" content="2023-12-18T15:33:44.000Z">
+<meta property="article:author" content="小麦 Andrew Xiaomai">
+<meta property="article:tag" content="游戏开发, 程序员, 留学生, 中国, 小麦">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kingsmai.github.io/Gallery/notion-avatar-1703138102056.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kingsmai.github.io/uploads/@files/Game%20Design%20Document.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经","messageNext":"天未被更新了，可能里边的内容已经过时，请注意斟酌。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 小麦 Andrew Xiaomai","link":"链接: ","source":"来源: 麦甜怪圈 Xiaomai Circle","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '麦甜怪圈 Xiaomai Circle',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-12-18 23:33:44'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4366094_hx3hbrje2st.css"><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="麦甜怪圈 Xiaomai Circle" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="麦甜怪圈 Xiaomai Circle" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">41</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/Gallery/backgrounds/background%20(12).jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="麦甜怪圈 Xiaomai Circle"><img class="site-icon" src="/Gallery/logos/Logo-11.jpg"/><span class="site-name">麦甜怪圈 Xiaomai Circle</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">麦甜怪圈 Xiaomai Circle</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="游戏策划文件-V0-1"><a href="#游戏策划文件-V0-1" class="headerlink" title="游戏策划文件 V0.1"></a>游戏策划文件 V0.1</h1><blockquote>
+<p><strong>Game Design Document Outline</strong></p>
+<p>A game design document is the blueprint from which a game is to be built. As such, every single detail necessary to build the game should be addressed. The larger the team and the longer the design and development cycle, the more critical is the need. For your purpose, the intent is to capture as much as possible of your design. I want you to think big…bigger than what you are able to develop. I also want you to be clear about what the software delivers and what the design entails. My recommendation is that you define the ultimate game and then clarify what it is that you have developed.</p>
+<p>All topics must be included, but “not applicable” is fine. The goal is NOT to force you to make up answers, but to assure that you have considered all of these elements and why they are or are not relevant to your game.</p>
+<p>Your document must include the top levels of the outline explicitly. You should use your judgment as to how to present the additional detail, particularly when it is not relevant to your game. I don’t need a page of “not applicable.”</p>
+<p>游戏设计文档是构建游戏的蓝图。因此，应该解决构建游戏所需的每一个细节。团队越大，设计和开发周期越长，需求就越关键。为了您的目的，目的是尽可能多地捕捉您的设计。我想让你想得更远……比你能开发的更远。我还希望您清楚软件提供什么以及设计需要什么。我的建议是你定义终极游戏，然后阐明你开发的是什么。</p>
+<p>必须包括所有主题，但“不适用”也可以。目标不是强迫您做出答案，而是确保您已经考虑了所有这些元素以及它们与您的游戏相关或不相关的原因。</p>
+<p>您的文档必须明确包含大纲的顶层。您应该根据自己的判断来决定如何呈现额外的细节，尤其是当它与您的游戏无关时。我不需要“不适用”的页面。</p>
+</blockquote>
+<h2 id="1-Title-Page-封面页"><a href="#1-Title-Page-封面页" class="headerlink" title="1. Title Page 封面页"></a>1. Title Page 封面页</h2><h3 id="1-1-Game-Name游戏名"><a href="#1-1-Game-Name游戏名" class="headerlink" title="1.1. Game Name游戏名"></a>1.1. Game Name游戏名</h3><h3 id="1-2-Tag-line-标语"><a href="#1-2-Tag-line-标语" class="headerlink" title="1.2. Tag line 标语"></a>1.2. Tag line 标语</h3><h3 id="1-3-Team-开发团队"><a href="#1-3-Team-开发团队" class="headerlink" title="1.3. Team 开发团队"></a>1.3. Team 开发团队</h3><h3 id="1-4-Date-of-last-update-最后一次更新日期"><a href="#1-4-Date-of-last-update-最后一次更新日期" class="headerlink" title="1.4. Date of last update 最后一次更新日期"></a>1.4. Date of last update 最后一次更新日期</h3><h2 id="2-Game-Overview-游戏概览"><a href="#2-Game-Overview-游戏概览" class="headerlink" title="2. Game Overview 游戏概览"></a>2. Game Overview 游戏概览</h2><h3 id="2-1-Game-Concept-游戏概念"><a href="#2-1-Game-Concept-游戏概念" class="headerlink" title="2.1. Game Concept 游戏概念"></a>2.1. Game Concept 游戏概念</h3><h3 id="2-2-Target-Audience-目标客户群"><a href="#2-2-Target-Audience-目标客户群" class="headerlink" title="2.2. Target Audience 目标客户群"></a>2.2. Target Audience 目标客户群</h3><h3 id="2-3-Genre-s-流派"><a href="#2-3-Genre-s-流派" class="headerlink" title="2.3. Genre(s) 流派"></a>2.3. Genre(s) 流派</h3><h3 id="2-4-Game-Flow-Summary-游戏流程总结"><a href="#2-4-Game-Flow-Summary-游戏流程总结" class="headerlink" title="2.4. Game Flow Summary 游戏流程总结"></a>2.4. Game Flow Summary 游戏流程总结</h3><blockquote>
+<p>How does the player move through the game? Include both the interface and the game itself.</p>
+<p>玩家如何在游戏中移动？ 包括界面和游戏本身。 </p>
+</blockquote>
+<h3 id="2-5-Look-and-Feel-外观和感觉"><a href="#2-5-Look-and-Feel-外观和感觉" class="headerlink" title="2.5. Look and Feel 外观和感觉"></a>2.5. Look and Feel 外观和感觉</h3><blockquote>
+<p>What is the basic look and feel of the game? What is the visual style?</p>
+<p>游戏的基本外观和感觉是什么？ 什么是视觉风格？</p>
+</blockquote>
+<h2 id="3-Gameplay-游戏性"><a href="#3-Gameplay-游戏性" class="headerlink" title="3. Gameplay 游戏性"></a>3. Gameplay 游戏性</h2><h3 id="3-1-Objectives-目标"><a href="#3-1-Objectives-目标" class="headerlink" title="3.1. Objectives 目标"></a>3.1. Objectives 目标</h3><blockquote>
+<p>What are the objectives of the game?</p>
+<p>游戏的目标是什么？</p>
+</blockquote>
+<h3 id="3-2-Game-Progression-游戏进程"><a href="#3-2-Game-Progression-游戏进程" class="headerlink" title="3.2. Game Progression 游戏进程"></a>3.2. Game Progression 游戏进程</h3><h3 id="3-3-Play-Flow-游戏流程"><a href="#3-3-Play-Flow-游戏流程" class="headerlink" title="3.3. Play Flow 游戏流程"></a>3.3. Play Flow 游戏流程</h3><blockquote>
+<p>How does the game flow for the game player</p>
+<p>游戏玩家的游戏流程如何</p>
+</blockquote>
+<h3 id="3-4-Mission-challenge-Structure-任务-挑战结构"><a href="#3-4-Mission-challenge-Structure-任务-挑战结构" class="headerlink" title="3.4. Mission/challenge Structure 任务/挑战结构"></a>3.4. Mission/challenge Structure 任务/挑战结构</h3><h3 id="3-5-Puzzle-Structure-谜题结构"><a href="#3-5-Puzzle-Structure-谜题结构" class="headerlink" title="3.5. Puzzle Structure 谜题结构"></a>3.5. Puzzle Structure 谜题结构</h3><h2 id="4-Mechanics-Key-Section-机制（重点部分）"><a href="#4-Mechanics-Key-Section-机制（重点部分）" class="headerlink" title="4. Mechanics (Key Section) 机制（重点部分）"></a>4. Mechanics (Key Section) 机制（重点部分）</h2><h3 id="4-1-Rules-规则"><a href="#4-1-Rules-规则" class="headerlink" title="4.1. Rules 规则"></a>4.1. Rules 规则</h3><blockquote>
+<p>What are the rules to the game, both implicit and explicit.</p>
+<p>游戏的规则是什么，包括隐式和显式。</p>
+</blockquote>
+<h3 id="4-2-Model-of-the-game-universe-游戏世界模型"><a href="#4-2-Model-of-the-game-universe-游戏世界模型" class="headerlink" title="4.2. Model of the game universe 游戏世界模型"></a>4.2. Model of the game universe 游戏世界模型</h3><blockquote>
+<p>Think of it as a simulation of a world, how do all the pieces interact?</p>
+<p>把它想象成一个世界的模拟，所有的部分如何相互作用？</p>
+</blockquote>
+<h3 id="4-3-Physics-物理"><a href="#4-3-Physics-物理" class="headerlink" title="4.3. Physics 物理"></a>4.3. Physics 物理</h3><blockquote>
+<p>How does the physical universe work?</p>
+<p>物理宇宙是如何运作的？</p>
+</blockquote>
+<h3 id="4-4-Economy-经济"><a href="#4-4-Economy-经济" class="headerlink" title="4.4. Economy 经济"></a>4.4. Economy 经济</h3><blockquote>
+<p>What is the economy of the game? How does it work?</p>
+<p>游戏的经济是什么？ 它是如何工作的？</p>
+</blockquote>
+<h3 id="4-5-Character-movement-in-the-game-玩家移动方式"><a href="#4-5-Character-movement-in-the-game-玩家移动方式" class="headerlink" title="4.5. Character movement in the game 玩家移动方式"></a>4.5. Character movement in the game 玩家移动方式</h3><h3 id="4-6-Objects-物件"><a href="#4-6-Objects-物件" class="headerlink" title="4.6. Objects 物件"></a>4.6. Objects 物件</h3><blockquote>
+<p>how to pick them up and move them</p>
+<p>如何拿起和移动它们</p>
+</blockquote>
+<h3 id="4-7-Actions-动作"><a href="#4-7-Actions-动作" class="headerlink" title="4.7. Actions 动作"></a>4.7. Actions 动作</h3><blockquote>
+<p>including whatever switches and buttons are used, interacting with objects, and what means of communication are used</p>
+<p>包括使用的任何开关和按钮、与对象的交互以及使用的通信方式</p>
+</blockquote>
+<h3 id="4-8-Combat-战斗"><a href="#4-8-Combat-战斗" class="headerlink" title="4.8. Combat 战斗"></a>4.8. Combat 战斗</h3><blockquote>
+<p>If there is combat or even conflict, how is this specifically modeled?</p>
+<p>如果有战斗甚至冲突，这是如何具体建模的？</p>
+</blockquote>
+<h3 id="4-9-Screen-Flow-界面流程"><a href="#4-9-Screen-Flow-界面流程" class="headerlink" title="4.9. Screen Flow 界面流程"></a>4.9. Screen Flow 界面流程</h3><blockquote>
+<p>How each screen is related to every other and a description of the purpose of each screen</p>
+<p>每个屏幕如何相互关联以及每个屏幕的用途描述</p>
+</blockquote>
+<h3 id="4-10-Game-Options-游戏设置"><a href="#4-10-Game-Options-游戏设置" class="headerlink" title="4.10. Game Options 游戏设置"></a>4.10. Game Options 游戏设置</h3><blockquote>
+<p>What are the options and how do they affect game play?</p>
+<p>有哪些选项以及它们如何影响游戏体验？</p>
+</blockquote>
+<h3 id="4-11-Replaying-and-saving-存档"><a href="#4-11-Replaying-and-saving-存档" class="headerlink" title="4.11. Replaying and saving 存档"></a>4.11. Replaying and saving 存档</h3><h3 id="4-12-Cheats-and-Easter-Eggs-作弊码和彩蛋"><a href="#4-12-Cheats-and-Easter-Eggs-作弊码和彩蛋" class="headerlink" title="4.12. Cheats and Easter Eggs 作弊码和彩蛋"></a>4.12. Cheats and Easter Eggs 作弊码和彩蛋</h3><h2 id="5-Story-and-Narrative-故事与叙述"><a href="#5-Story-and-Narrative-故事与叙述" class="headerlink" title="5. Story and Narrative 故事与叙述"></a>5. Story and Narrative 故事与叙述</h2><h3 id="5-1-Back-story-背景故事"><a href="#5-1-Back-story-背景故事" class="headerlink" title="5.1. Back story 背景故事"></a>5.1. Back story 背景故事</h3><h3 id="5-2-Plot-elements-剧情元素"><a href="#5-2-Plot-elements-剧情元素" class="headerlink" title="5.2. Plot elements 剧情元素"></a>5.2. Plot elements 剧情元素</h3><h3 id="5-3-Game-story-progression-游戏剧情进展"><a href="#5-3-Game-story-progression-游戏剧情进展" class="headerlink" title="5.3. Game story progression 游戏剧情进展"></a>5.3. Game story progression 游戏剧情进展</h3><h3 id="5-4-Cut-scenes-剪辑场景"><a href="#5-4-Cut-scenes-剪辑场景" class="headerlink" title="5.4. Cut scenes 剪辑场景"></a>5.4. Cut scenes 剪辑场景</h3><blockquote>
+<p>descriptions include the actors, the setting, and the storyboard or script.</p>
+<p>说明包括演员，设置和故事板或脚本。</p>
+</blockquote>
+<h2 id="6-Game-World-游戏世界"><a href="#6-Game-World-游戏世界" class="headerlink" title="6. Game World 游戏世界"></a>6. Game World 游戏世界</h2><h3 id="6-1-General-look-and-feel-of-world-世界的一般外观和感觉"><a href="#6-1-General-look-and-feel-of-world-世界的一般外观和感觉" class="headerlink" title="6.1. General look and feel of world 世界的一般外观和感觉"></a>6.1. General look and feel of world 世界的一般外观和感觉</h3><h3 id="6-2-Areas-地区"><a href="#6-2-Areas-地区" class="headerlink" title="6.2. Areas 地区"></a>6.2. Areas 地区</h3><h4 id="6-2-1-General-description-and-physical-characteristics-一般描述和物理特性"><a href="#6-2-1-General-description-and-physical-characteristics-一般描述和物理特性" class="headerlink" title="6.2.1. General description and physical characteristics 一般描述和物理特性"></a>6.2.1. General description and physical characteristics 一般描述和物理特性</h4><h4 id="6-2-2-How-relate-to-the-rest-of-the-world-与世界其他地方的关系"><a href="#6-2-2-How-relate-to-the-rest-of-the-world-与世界其他地方的关系" class="headerlink" title="6.2.2. How relate to the rest of the world 与世界其他地方的关系"></a>6.2.2. How relate to the rest of the world 与世界其他地方的关系</h4><h5 id="6-2-2-1-What-levels-use-it-什么级别使用它"><a href="#6-2-2-1-What-levels-use-it-什么级别使用它" class="headerlink" title="6.2.2.1. What levels use it 什么级别使用它"></a>6.2.2.1. What levels use it 什么级别使用它</h5><h5 id="6-2-2-2-Connections-to-other-areas-与其他区域的连接"><a href="#6-2-2-2-Connections-to-other-areas-与其他区域的连接" class="headerlink" title="6.2.2.2. Connections to other areas 与其他区域的连接"></a>6.2.2.2. Connections to other areas 与其他区域的连接</h5><h2 id="7-Characters-人物"><a href="#7-Characters-人物" class="headerlink" title="7. Characters 人物"></a>7. Characters 人物</h2><h3 id="7-1-For-each-character-对于每个任务"><a href="#7-1-For-each-character-对于每个任务" class="headerlink" title="7.1. For each character 对于每个任务"></a>7.1. For each character 对于每个任务</h3><h4 id="7-1-1-Back-story-背景故事"><a href="#7-1-1-Back-story-背景故事" class="headerlink" title="7.1.1. Back story 背景故事"></a>7.1.1. Back story 背景故事</h4><h4 id="7-1-2-Personality-性格"><a href="#7-1-2-Personality-性格" class="headerlink" title="7.1.2. Personality 性格"></a>7.1.2. Personality 性格</h4><h4 id="7-1-3-Appearance-外貌"><a href="#7-1-3-Appearance-外貌" class="headerlink" title="7.1.3. Appearance 外貌"></a>7.1.3. Appearance 外貌</h4><h4 id="7-1-4-Abilities-能力"><a href="#7-1-4-Abilities-能力" class="headerlink" title="7.1.4. Abilities 能力"></a>7.1.4. Abilities 能力</h4><h4 id="7-1-5-Relevance-to-the-story-与故事的相关性"><a href="#7-1-5-Relevance-to-the-story-与故事的相关性" class="headerlink" title="7.1.5. Relevance to the story 与故事的相关性"></a>7.1.5. Relevance to the story 与故事的相关性</h4><h4 id="7-1-6-Relationship-to-other-characters-与其他角色的关系"><a href="#7-1-6-Relationship-to-other-characters-与其他角色的关系" class="headerlink" title="7.1.6. Relationship to other characters 与其他角色的关系"></a>7.1.6. Relationship to other characters 与其他角色的关系</h4><h3 id="7-2-Artificial-Intelligence-Use-in-Opponent-and-Enemy-人工智能在对手和敌人中的使用"><a href="#7-2-Artificial-Intelligence-Use-in-Opponent-and-Enemy-人工智能在对手和敌人中的使用" class="headerlink" title="7.2. Artificial Intelligence Use in Opponent and Enemy 人工智能在对手和敌人中的使用"></a>7.2. Artificial Intelligence Use in Opponent and Enemy 人工智能在对手和敌人中的使用</h3><h3 id="7-3-Non-combat-and-Friendly-Characters-非战斗和友好角色"><a href="#7-3-Non-combat-and-Friendly-Characters-非战斗和友好角色" class="headerlink" title="7.3. Non-combat and Friendly Characters 非战斗和友好角色"></a>7.3. Non-combat and Friendly Characters 非战斗和友好角色</h3><h2 id="8-Levels-关卡"><a href="#8-Levels-关卡" class="headerlink" title="8. Levels 关卡"></a>8. Levels 关卡</h2><h3 id="8-1-Training-Level-训练关卡"><a href="#8-1-Training-Level-训练关卡" class="headerlink" title="8.1. Training Level 训练关卡"></a>8.1. Training Level 训练关卡</h3><h3 id="8-2-For-each-level-对于每个关卡"><a href="#8-2-For-each-level-对于每个关卡" class="headerlink" title="8.2. For each level 对于每个关卡"></a>8.2. For each level 对于每个关卡</h3><h4 id="8-2-1-Synopsis-概要"><a href="#8-2-1-Synopsis-概要" class="headerlink" title="8.2.1. Synopsis 概要"></a>8.2.1. Synopsis 概要</h4><h4 id="8-2-2-Required-introductory-material-and-how-it-is-provided-所需的介绍材料及其提供方式"><a href="#8-2-2-Required-introductory-material-and-how-it-is-provided-所需的介绍材料及其提供方式" class="headerlink" title="8.2.2. Required introductory material and how it is provided 所需的介绍材料及其提供方式"></a>8.2.2. Required introductory material and how it is provided 所需的介绍材料及其提供方式</h4><h4 id="8-2-3-Objectives-目标"><a href="#8-2-3-Objectives-目标" class="headerlink" title="8.2.3. Objectives 目标"></a>8.2.3. Objectives 目标</h4><h4 id="8-2-4-Details-of-what-happens-in-the-level-关卡中发生的事情的详细信息"><a href="#8-2-4-Details-of-what-happens-in-the-level-关卡中发生的事情的详细信息" class="headerlink" title="8.2.4. Details of what happens in the level 关卡中发生的事情的详细信息"></a>8.2.4. Details of what happens in the level 关卡中发生的事情的详细信息</h4><h5 id="8-2-4-1-Map-地图"><a href="#8-2-4-1-Map-地图" class="headerlink" title="8.2.4.1. Map 地图"></a>8.2.4.1. Map 地图</h5><h5 id="8-2-4-2-Critical-path-that-the-player-needs-to-take-玩家需要走的关键路径"><a href="#8-2-4-2-Critical-path-that-the-player-needs-to-take-玩家需要走的关键路径" class="headerlink" title="8.2.4.2. Critical path that the player needs to take 玩家需要走的关键路径"></a>8.2.4.2. Critical path that the player needs to take 玩家需要走的关键路径</h5><h5 id="8-2-4-3-Important-and-incidental-encounters-重要和偶然的相遇"><a href="#8-2-4-3-Important-and-incidental-encounters-重要和偶然的相遇" class="headerlink" title="8.2.4.3. Important and incidental encounters 重要和偶然的相遇"></a>8.2.4.3. Important and incidental encounters 重要和偶然的相遇</h5><h2 id="9-Interface-界面"><a href="#9-Interface-界面" class="headerlink" title="9. Interface 界面"></a>9. Interface 界面</h2><h3 id="9-1-Visual-System-视觉系统"><a href="#9-1-Visual-System-视觉系统" class="headerlink" title="9.1. Visual System 视觉系统"></a>9.1. Visual System 视觉系统</h3><h4 id="9-1-1-HUD-显示器"><a href="#9-1-1-HUD-显示器" class="headerlink" title="9.1.1. HUD 显示器"></a>9.1.1. HUD 显示器</h4><h4 id="9-1-2-Menus-菜单"><a href="#9-1-2-Menus-菜单" class="headerlink" title="9.1.2. Menus 菜单"></a>9.1.2. Menus 菜单</h4><h4 id="9-1-3-Camera-model-镜头机位"><a href="#9-1-3-Camera-model-镜头机位" class="headerlink" title="9.1.3. Camera model 镜头机位"></a>9.1.3. Camera model 镜头机位</h4><h3 id="9-2-Control-System"><a href="#9-2-Control-System" class="headerlink" title="9.2. Control System"></a>9.2. Control System</h3><blockquote>
+<p>How does the game player control the game? What are the specific commands?</p>
+<p>玩家如何控制游戏？ 具体命令是什么？</p>
+</blockquote>
+<h3 id="9-3-Audio-music-sound-effects-音频、音乐、音效"><a href="#9-3-Audio-music-sound-effects-音频、音乐、音效" class="headerlink" title="9.3. Audio, music, sound effects 音频、音乐、音效"></a>9.3. Audio, music, sound effects 音频、音乐、音效</h3><h3 id="9-4-Game-Art-游戏美术"><a href="#9-4-Game-Art-游戏美术" class="headerlink" title="9.4. Game Art 游戏美术"></a>9.4. Game Art 游戏美术</h3><blockquote>
+<p>intended style</p>
+<p>预期风格</p>
+</blockquote>
+<h3 id="9-5-Help-System-帮助系统"><a href="#9-5-Help-System-帮助系统" class="headerlink" title="9.5. Help System 帮助系统"></a>9.5. Help System 帮助系统</h3></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小麦 Andrew Xiaomai</div><div class="author-info__description">一个喜欢肉鸽类游戏的程序员<br>分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">41</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/kingsmai"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kingsmai" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-GitHub" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/670118055" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><i class="iconfont icon-bilibili-fill" style="color: #ff6699;"></i></a><a class="social-icon" href="mailto:xsbugh@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-email-fill" style="color: #ff3e30;"></i></a><a class="social-icon" href="https://www.zhihu.com/people/creeper0924" rel="external nofollow noreferrer" target="_blank" title="Zhihu"><i class="iconfont icon-zhihu" style="color: #1772F6;"></i></a><a class="social-icon" href="https://blog.csdn.net/Xsbugh" rel="external nofollow noreferrer" target="_blank" title="CSDN"><i class="iconfont icon-csdn" style="color: #FC4144;"></i></a><a class="social-icon" href="https://www.linkedin.com/in/%E5%B0%8F%E9%BA%A6-xiaomai-0a672124b/" rel="external nofollow noreferrer" target="_blank" title="LinkedIn"><i class="iconfont icon-linkedin" style="color: #0A66C2;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-Atom" style="color: #6EA3E5;"></i></a><a class="social-icon" href="/rss2.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-dingyue" style="color: #ee802f;"></i></a></div></div><div class="card-widget"><div class="item-headline"><i></i><span></span></div><div class="item-content"></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/d4d355b7.html" title="Leo 语言 Hello World 的学习心得"><div style="background: /Gallery/covers/"></div></a><div class="content"><a class="title" href="/2024/d4d355b7.html" title="Leo 语言 Hello World 的学习心得">Leo 语言 Hello World 的学习心得</a><time datetime="2024-01-09T08:16:27.000Z" title="发表于 2024-01-09 16:16:27">2024-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/2d85c0dd.html" title="Sololearn 自学网页设计 3 让网页变成响应式页面"><img src="/Gallery/covers/resp-web-design-1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sololearn 自学网页设计 3 让网页变成响应式页面"/></a><div class="content"><a class="title" href="/2024/2d85c0dd.html" title="Sololearn 自学网页设计 3 让网页变成响应式页面">Sololearn 自学网页设计 3 让网页变成响应式页面</a><time datetime="2024-01-05T07:47:36.000Z" title="发表于 2024-01-05 15:47:36">2024-01-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/f1de6892.html" title="【话题】编程语言的未来 一个以自然语言作为编程语言的构思">【话题】编程语言的未来 一个以自然语言作为编程语言的构思</a><time datetime="2024-01-03T17:32:51.000Z" title="发表于 2024-01-04 01:32:51">2024-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码"><img src="/Gallery/covers/binary-files.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么二进制文件内容是乱码"/></a><div class="content"><a class="title" href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码">为什么二进制文件内容是乱码</a><time datetime="2024-01-02T22:02:39.000Z" title="发表于 2024-01-03 06:02:39">2024-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证"><img src="/Gallery/covers/k-fold-cross-validation-1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sololearn 自学机器学习 16 K-Fold 交叉验证"/></a><div class="content"><a class="title" href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证">Sololearn 自学机器学习 16 K-Fold 交叉验证</a><time datetime="2024-01-02T05:04:46.000Z" title="发表于 2024-01-02 13:04:46">2024-01-02</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/QA/"><span class="card-category-list-name">QA</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">技术</span><span class="card-category-list-count">15</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/Godot-4/"><span class="card-category-list-name">Godot 4</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/Hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">Hexo 博客搭建</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%8C%BA%E5%9D%97%E9%93%BE/"><span class="card-category-list-name">区块链</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6/"><span class="card-category-list-name">密码学</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">游戏开发</span><span class="card-category-list-count">3</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F%E7%B1%BB%E5%9E%8B/"><span class="card-category-list-name">游戏类型</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">37</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">23</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">108</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-05-16T01:26:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">134.8k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-09T12:36:17.492Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div><div class="card-widget"><div class="item-headline"><i></i><span></span></div><div class="item-content"></div></div></div></div></main><footer id="footer" style="background-image: url('/Gallery/backgrounds/background%20(12).jpg')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 小麦 Andrew Xiaomai</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20235160" rel="external nofollow noreferrer" target="_blank"><img class="icp-icon" src="/Gallery/moe-icons/icon120.png">备案号：✮萌ICP备20235160号✮</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

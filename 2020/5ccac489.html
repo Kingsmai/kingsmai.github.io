@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>集训 Wamp 环境讲解第 2 版 | 麦甜怪圈 Xiaomai Circle</title><meta name="author" content="小麦 Andrew Xiaomai"><meta name="copyright" content="小麦 Andrew Xiaomai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="目录 20200530 版本与主机声明 20200531 安装步骤 20200530 wamp 自带插件 MySQL &#x2F; MariaDB Apache PHP   20200530 wamp 插件更新办法 20200530 wamp 纠错 图标橘色   20200530 MariaDB &lt;-&gt; MySQL 主要数据库 (DBMS) 的切换 （20200531 更新注意事项） 20200">
+<meta property="og:type" content="article">
+<meta property="og:title" content="集训 Wamp 环境讲解第 2 版">
+<meta property="og:url" content="https://kingsmai.github.io/2020/5ccac489.html">
+<meta property="og:site_name" content="麦甜怪圈 Xiaomai Circle">
+<meta property="og:description" content="目录 20200530 版本与主机声明 20200531 安装步骤 20200530 wamp 自带插件 MySQL &#x2F; MariaDB Apache PHP   20200530 wamp 插件更新办法 20200530 wamp 纠错 图标橘色   20200530 MariaDB &lt;-&gt; MySQL 主要数据库 (DBMS) 的切换 （20200531 更新注意事项） 20200">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kingsmai.github.io/Gallery/notion-avatar-1703138102056.png">
+<meta property="article:published_time" content="2020-05-30T12:42:10.000Z">
+<meta property="article:modified_time" content="2020-06-01T00:56:00.000Z">
+<meta property="article:author" content="小麦 Andrew Xiaomai">
+<meta property="article:tag" content="游戏开发, 程序员, 留学生, 中国, 小麦">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kingsmai.github.io/Gallery/notion-avatar-1703138102056.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kingsmai.github.io/2020/5ccac489.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经","messageNext":"天未被更新了，可能里边的内容已经过时，请注意斟酌。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 小麦 Andrew Xiaomai","link":"链接: ","source":"来源: 麦甜怪圈 Xiaomai Circle","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '集训 Wamp 环境讲解第 2 版',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-06-01 08:56:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4366094_hx3hbrje2st.css"><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="麦甜怪圈 Xiaomai Circle" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="麦甜怪圈 Xiaomai Circle" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">41</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/Gallery/backgrounds/background%20(12).jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="麦甜怪圈 Xiaomai Circle"><img class="site-icon" src="/Gallery/logos/Logo-11.jpg"/><span class="site-name">麦甜怪圈 Xiaomai Circle</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">集训 Wamp 环境讲解第 2 版</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-05-30T12:42:10.000Z" title="发表于 2020-05-30 20:42:10">2020-05-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-06-01T00:56:00.000Z" title="更新于 2020-06-01 08:56:00">2020-06-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="集训 Wamp 环境讲解第 2 版"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet external nofollow noreferrer" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li><a href="#20200530-版本与主机声明">20200530 版本与主机声明</a></li>
+<li><a href="#20200531-安装步骤">20200531 安装步骤</a></li>
+<li><a href="#20200530-wamp-自带插件">20200530 wamp 自带插件</a><ul>
+<li><a href="#mysql--mariadb">MySQL / MariaDB</a></li>
+<li><a href="#apache">Apache</a></li>
+<li><a href="#php">PHP</a></li>
+</ul>
+</li>
+<li><a href="#20200530-wamp-插件更新办法">20200530 wamp 插件更新办法</a></li>
+<li><a href="#20200530-wamp-纠错">20200530 wamp 纠错</a><ul>
+<li><a href="#图标橘色">图标橘色</a></li>
+</ul>
+</li>
+<li><a href="#20200530-mariadb--mysql-主要数据库-dbms-的切换-20200531-更新注意事项">20200530 MariaDB &lt;-&gt; MySQL 主要数据库 (DBMS) 的切换 （20200531 更新注意事项）</a></li>
+<li><a href="#20200531-创建与删除-virtualhost">20200531 创建与删除 VirtualHost</a></li>
+<li><a href="#20200531-外部设备访问">20200531 外部设备访问</a><ul>
+<li><a href="#步骤">步骤</a></li>
+<li><a href="#纠错">纠错</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="本次-wamp-安装日期：-2019年5月29日"><a href="#本次-wamp-安装日期：-2019年5月29日" class="headerlink" title="本次 wamp 安装日期： 2019年5月29日"></a>本次 wamp 安装日期： 2019年5月29日</h2><ul>
+<li>安装版本<ul>
+<li>WampServer 3.2.0 -&gt; 3.2.2</li>
+<li>PHP 7.3.12 -&gt; 7.4.6</li>
+<li>MySQL 0 (NULL) -&gt; MySQL 8.0</li>
+<li>MariaDB 10.4.10</li>
+</ul>
+</li>
+<li>主机<ul>
+<li>系统版本：Win 10 Home Single Language</li>
+<li>处理器：英特尔 酷睿 i5-8265U CPU @ 1.60GHz 1.80GHz</li>
+<li>RAM： 12G</li>
+<li>系统类型：64 位操作系统</li>
+</ul>
+</li>
+</ul>
+<h2 id="20200531-更新"><a href="#20200531-更新" class="headerlink" title="20200531 更新"></a>20200531 更新</h2><ul>
+<li><p>安装</p>
+<ul>
+<li>从 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://wampserver.aviatechno.net/">http://wampserver.aviatechno.net/</a> 下载 （我的是 64位 操作系统）</li>
+<li>Wampserver 3.2.0 64 bit x64 - Apache 2.4.41 - PHP 5.6.40/7.3.12/7.4.0 - MariaDB 10.4.10|10.3.20</li>
+<li>双击运行 wampserver3.2.0_x64.exe 进行安装</li>
+<li>一直点下一步（不要调任何东西）</li>
+<li>后面会让你选择默认浏览器，选择 chrome 安装目录：[通常在：”C:\Program Files (x86)\Google\Chrome\Application\chrome.exe”]</li>
+<li>再来选择默认文本打开工具，我选的 VScode：[通常在：”C:\Users\用户名\AppData\Local\Programs\Microsoft VS Code\Code.exe”]</li>
+<li>第一次运行可能会出错（wamp 小图标不会变绿色）：[退出重启 wamp 即可]</li>
+</ul>
+</li>
+<li><p>安装wamp的时候不要选择任何附带的产品（如 MySQL5.7，MySQL8.0）</p>
+<ul>
+<li>wamp的插件位置（默认）：C:\wamp64\bin</li>
+<li>wampserver会自带一个 MariaDB 数据库，默认端口是 3306<ul>
+<li>MariaDB的默认数据库用户名是：root，密码是：【空的】</li>
+<li>这会导致我们的原有的 MySQL5.5 数据库的端口被占用<ul>
+<li>打开 navicat，会发现就有的数据库都没了，这是正常的。</li>
+<li>旧的数据库都还在，只不过因为服务被 MariaDB 占用了，MariaDB 是不会继承旧有数据库的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>wampserver会自带PHP版本有三个<ul>
+<li>5.6.40 - 旧版本是 wampserver 客户端CLI的运行环境，不能删除</li>
+<li>7.3.12 - 这里可以切换，左键任务栏的 wamp 的图标，然后选择 PHP 第一个 version</li>
+<li>7.4.0</li>
+<li>切换版本之后需要刷新 wamp：右键任务栏的 wamp 的图标，然后 restart</li>
+</ul>
+</li>
+<li>wampserver会自带 apache<ul>
+<li>2.4.41 版本</li>
+</ul>
+</li>
+<li>以上我说的插件 addon 都能更新：到 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://wampserver.aviatechno.net/">http://wampserver.aviatechno.net/</a> 有作者提供的包<ul>
+<li>在下面 Addons Wampserver 3 的版块里<ul>
+<li>谨慎更新，毕竟版本换了，旧有的一些 ini 文件里还是保存旧的</li>
+<li>所以会导致 service（服务关闭不干净）的后果，但是无伤大雅：[只不过你以后就可以不用打开 wamp 主程序 就能直接打开 localhost 了]</li>
+</ul>
+</li>
+<li>在更新之前，要先更新 wamp server 到 3.2.2 版本：[更新包位置就在 Updates 板块，有个 Wampserver update 3.2.2 的下载包]</li>
+<li>然后再从 Addons 点击你想要的版本进行下载<ul>
+<li>一般不建议胡乱更新，因为新版本通常在修 bug 会产生新 bug</li>
+<li>下载 MySQL 的话，他会使用你的 3308 的端口<ul>
+<li>可以将 MySQL 设置为主要数据库 (DBMS)<ul>
+<li>但是不建议这么做</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关于 PHP 插件：<ul>
+<li>你打开 localhost 之后，会发现有个板块<ul>
+<li>Loaded Extensions</li>
+<li>这里都是 PHP 的插件，当你安装新的版本的时候，有时候会缺少插件<ul>
+<li>左键 wamp 小图标，单击 PHP， 单击 PHP extensions，然后就会让你选择激活 PHP 的插件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>更新之后，最保险的方法</p>
+<ul>
+<li>在关闭电脑之前，右键 wamp 的小图标，exit 退出 wamp</li>
+</ul>
+</li>
+<li><p>wamp 的几个纠错</p>
+<ul>
+<li>开机后，打开 wamp 图标是橙色的，能够打开 localhost，但是不能访问数据库<ul>
+<li>对于集训的同学最直接的就是：wordpress 不能正常打开<ul>
+<li>Win键 + R，输入： service.msc 打开服务菜单</li>
+<li>找到 MySQL 服务，右键停止这个服务</li>
+<li>重启 wamp 就回复正常了</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MariaDB &lt;-&gt; MySQL 主要数据库 (DBMS) 的切换</p>
+<ul>
+<li>首先确保你已经在 wamp 安装了 MySQL 和 MariaDB</li>
+<li>正常情况下<ul>
+<li>主端口为：3306</li>
+<li>MariaDB 为主，MySQL 端口就在3308</li>
+<li>MySQL 为主，MariaDB 端口就在3307</li>
+</ul>
+</li>
+<li>重要<ul>
+<li>先到 PHPmyAdmin <a target="_blank" rel="noopener external nofollow noreferrer" href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> 导出原有的数据库</li>
+<li>登录 MariaDB / MySQL 数据库之后，最上面一排控制栏点击 Export</li>
+<li>选择 Quick，Format = SQL</li>
+<li>然后 右下角的 GO</li>
+<li>这时候到下载（download）文件夹里，就会存在一个 127_0_0_1.sql 文件，这时候就是导出成功了</li>
+<li>切换之后，回到 PHPmyAdmin</li>
+<li>登录 MySQL / MariaDB 数据库之后，点击 Import</li>
+<li>Choose File 选择 127_0_0_1.sql 文件</li>
+<li>直接点 GO</li>
+<li>切换主要服务器，只需要<ul>
+<li>右键 wamp 的小图标，单击 Tools，在 Default DBMS 那块点击 Invert…</li>
+<li>重启 wamp 就行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>任何修改，都要重启 wamp 以防万一</li>
+</ul>
+</li>
+</ul>
+<h2 id="20200531-更新-1"><a href="#20200531-更新-1" class="headerlink" title="20200531 更新"></a>20200531 更新</h2><ul>
+<li><p>创建 virtual host</p>
+<ul>
+<li>在 localhost 或者 127.0.0.1 左下角找到 Add a virtual host</li>
+<li>在 Name of the Virtual Host 输入任意你想要的名字（不能有空格和下划线），大写会变成小写</li>
+<li>在 Complete absolute path of the VirtualHost folder 输入绝对路径</li>
+<li>【可选】If you want to use VirtualHost by IP 输入你想要有的本地 IP</li>
+<li>最后，右键 wamp 小图标，restart</li>
+<li>例如：<ul>
+<li>test-helloWorld</li>
+<li>C:/wamp64/www/SunshineAirlines-mobile</li>
+<li>127.0.0.8</li>
+</ul>
+</li>
+<li>那么我访问的话可以通过这几种方式访问<ul>
+<li>localhost/SunshineAirlines-mobile</li>
+<li>127.0.0.1/SunshineAirlines-mobile</li>
+<li>test-helloworld/</li>
+<li>127.0.0.8</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>删除 virtual host</p>
+<ul>
+<li>在 localhost 或者 127.0.0.1 左下角找到 Add a virtual host</li>
+<li>右边有个 suppress VirtualHost form 按钮</li>
+<li>勾选你要删除的 ServerName</li>
+<li>完了之后点击 Supress VirtualHost</li>
+</ul>
+</li>
+<li><p>外部访问</p>
+<ul>
+<li>前提：主机与需要访问主机的设备在同一局域网下</li>
+<li>访问步骤<ul>
+<li>主机电脑 win键 + R，输入：cmd</li>
+<li>在命令提示符(cmd)里输入 ipconfig</li>
+<li>找到：IPv4 Address. . . . . . . . . . . : 192.168.1.1</li>
+<li>在需要访问主机的设备的浏览器输入框里输入这个 IP 地址</li>
+<li>这时候就会出现 wamp 的界面了</li>
+</ul>
+</li>
+<li>报错<ul>
+<li>同一局域网下，输入 IP 地址后，仍无法访问<ul>
+<li>在主机任务栏的无线连接小图标点击</li>
+<li>点击《网络与 Internet 设置 || Network and Internet settings》</li>
+<li>点击《更改连接属性 || Change connection propertise》</li>
+<li>选择《专用 || Private》</li>
+<li>刷新需要访问主机的设备的浏览器</li>
+</ul>
+</li>
+<li>没有权限访问：403 Forbidden<ul>
+<li>前提：本机通过127.0.0.1和localhost都可以正常访问</li>
+<li>自wamp 3开始，localhost 被定义为 virtual host，我们需要修改 httpd-vhosts.conf 文件来修改相关的行为。<ul>
+<li>首先创建 virtual host<ul>
+<li>上边有 virtual host 的创建方法</li>
+</ul>
+</li>
+<li>左键 wamp，鼠标悬浮 Apache，点击 httpd-vhosts.conf</li>
+<li>这时候会跳出文本编辑器<ul>
+<li>如果是 VScode<ul>
+<li>ctrl + F 搜索 Require local</li>
+</ul>
+</li>
+<li>如果是 Notepad || Notepad++<ul>
+<li>ctrl + H 搜索 Require local</li>
+</ul>
+</li>
+<li>全部替换为 Require all granted</li>
+</ul>
+</li>
+<li>左键 wamp，鼠标悬浮 Apache，<ul>
+<li>悬浮 Service admin…</li>
+<li>restart service</li>
+</ul>
+</li>
+<li>局域网内其他主机通过IP访问成功</li>
+<li>参考：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/yang5726685/article/details/79359803">https://blog.csdn.net/yang5726685/article/details/79359803</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kingsmai.github.io">小麦 Andrew Xiaomai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kingsmai.github.io/2020/5ccac489.html">https://kingsmai.github.io/2020/5ccac489.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kingsmai.github.io" target="_blank">麦甜怪圈 Xiaomai Circle</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/Gallery/notion-avatar-1703138102056.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>欢迎打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/Gallery/wallets/WechatPaySquare.jpg" target="_blank"><img class="post-qr-code-img" src="/Gallery/wallets/WechatPaySquare.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/Gallery/wallets/AlipaySquare.jpg" target="_blank"><img class="post-qr-code-img" src="/Gallery/wallets/AlipaySquare.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/61622d0e.html" title="JavaScript 笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JavaScript 笔记</div></div></a></div><div class="next-post pull-right"><a href="/2020/60cf182d.html" title="Java 命名规范"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java 命名规范</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小麦 Andrew Xiaomai</div><div class="author-info__description">一个喜欢肉鸽类游戏的程序员<br>分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">108</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">41</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/kingsmai"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kingsmai" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-GitHub" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/670118055" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><i class="iconfont icon-bilibili-fill" style="color: #ff6699;"></i></a><a class="social-icon" href="mailto:xsbugh@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-email-fill" style="color: #ff3e30;"></i></a><a class="social-icon" href="https://www.zhihu.com/people/creeper0924" rel="external nofollow noreferrer" target="_blank" title="Zhihu"><i class="iconfont icon-zhihu" style="color: #1772F6;"></i></a><a class="social-icon" href="https://blog.csdn.net/Xsbugh" rel="external nofollow noreferrer" target="_blank" title="CSDN"><i class="iconfont icon-csdn" style="color: #FC4144;"></i></a><a class="social-icon" href="https://www.linkedin.com/in/%E5%B0%8F%E9%BA%A6-xiaomai-0a672124b/" rel="external nofollow noreferrer" target="_blank" title="LinkedIn"><i class="iconfont icon-linkedin" style="color: #0A66C2;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-Atom" style="color: #6EA3E5;"></i></a><a class="social-icon" href="/rss2.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-dingyue" style="color: #ee802f;"></i></a></div></div><div class="card-widget"><div class="item-headline"><i></i><span></span></div><div class="item-content"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%AC%A1-wamp-%E5%AE%89%E8%A3%85%E6%97%A5%E6%9C%9F%EF%BC%9A-2019%E5%B9%B45%E6%9C%8829%E6%97%A5"><span class="toc-number">1.1.</span> <span class="toc-text">本次 wamp 安装日期： 2019年5月29日</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20200531-%E6%9B%B4%E6%96%B0"><span class="toc-number">1.2.</span> <span class="toc-text">20200531 更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20200531-%E6%9B%B4%E6%96%B0-1"><span class="toc-number">1.3.</span> <span class="toc-text">20200531 更新</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/d4d355b7.html" title="Leo 语言 Hello World 的学习心得"><div style="background: /Gallery/covers/"></div></a><div class="content"><a class="title" href="/2024/d4d355b7.html" title="Leo 语言 Hello World 的学习心得">Leo 语言 Hello World 的学习心得</a><time datetime="2024-01-09T08:16:27.000Z" title="发表于 2024-01-09 16:16:27">2024-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/2d85c0dd.html" title="Sololearn 自学网页设计 3 让网页变成响应式页面"><img src="/Gallery/covers/resp-web-design-1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sololearn 自学网页设计 3 让网页变成响应式页面"/></a><div class="content"><a class="title" href="/2024/2d85c0dd.html" title="Sololearn 自学网页设计 3 让网页变成响应式页面">Sololearn 自学网页设计 3 让网页变成响应式页面</a><time datetime="2024-01-05T07:47:36.000Z" title="发表于 2024-01-05 15:47:36">2024-01-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/f1de6892.html" title="【话题】编程语言的未来 一个以自然语言作为编程语言的构思">【话题】编程语言的未来 一个以自然语言作为编程语言的构思</a><time datetime="2024-01-03T17:32:51.000Z" title="发表于 2024-01-04 01:32:51">2024-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码"><img src="/Gallery/covers/binary-files.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么二进制文件内容是乱码"/></a><div class="content"><a class="title" href="/2024/9aed2ce9.html" title="为什么二进制文件内容是乱码">为什么二进制文件内容是乱码</a><time datetime="2024-01-02T22:02:39.000Z" title="发表于 2024-01-03 06:02:39">2024-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证"><img src="/Gallery/covers/k-fold-cross-validation-1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sololearn 自学机器学习 16 K-Fold 交叉验证"/></a><div class="content"><a class="title" href="/2024/4137e8ad.html" title="Sololearn 自学机器学习 16 K-Fold 交叉验证">Sololearn 自学机器学习 16 K-Fold 交叉验证</a><time datetime="2024-01-02T05:04:46.000Z" title="发表于 2024-01-02 13:04:46">2024-01-02</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/Gallery/backgrounds/background%20(12).jpg')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 小麦 Andrew Xiaomai</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20235160" rel="external nofollow noreferrer" target="_blank"><img class="icp-icon" src="/Gallery/moe-icons/icon120.png">备案号：✮萌ICP备20235160号✮</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

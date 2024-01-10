@@ -15,8 +15,62 @@
     <atom:link href="https://kingsmai.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个喜欢肉鸽类游戏的程序员&lt;br&gt;分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</description>
-    <pubDate>Tue, 09 Jan 2024 12:41:18 GMT</pubDate>
+    <pubDate>Wed, 10 Jan 2024 15:21:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[How-To Fix] Error while installing cargo-generate</title>
+      <link>https://kingsmai.github.io/2024/77854802.html</link>
+      <guid>https://kingsmai.github.io/2024/77854802.html</guid>
+      <pubDate>Wed, 10 Jan 2024 14:50:52 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">区块链开发笔记</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/">经验</category>
+      
+      
+      
+      <comments>https://kingsmai.github.io/2024/77854802.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[How-To Fix] VS Code Installation Failure on Ubuntu</title>
+      <link>https://kingsmai.github.io/2024/27ee556c.html</link>
+      <guid>https://kingsmai.github.io/2024/27ee556c.html</guid>
+      <pubDate>Wed, 10 Jan 2024 14:26:29 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/">经验</category>
+      
+      
+      
+      <comments>https://kingsmai.github.io/2024/27ee556c.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Leo 语言 Hello World 的学习心得</title>
@@ -509,72 +563,6 @@
       
       
       <comments>https://kingsmai.github.io/2023/a865dfe2.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Sololearn 自学机器学习（10）模型评估</title>
-      <link>https://kingsmai.github.io/2023/7d2579fa.html</link>
-      <guid>https://kingsmai.github.io/2023/7d2579fa.html</guid>
-      <pubDate>Sat, 23 Dec 2023 13:08:56 GMT</pubDate>
-      
-      <description>本篇笔记是从 Sololearn 自学而来的心得：《模型评估》 篇</description>
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/">Python</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Sololearn 自学机器学习</category>
-      
-      
-      <category domain="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</category>
-      
-      <category domain="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</category>
-      
-      <category domain="https://kingsmai.github.io/tags/Sololearn/">Sololearn</category>
-      
-      <category domain="https://kingsmai.github.io/tags/%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5/">混淆矩阵</category>
-      
-      
-      <comments>https://kingsmai.github.io/2023/7d2579fa.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Sololearn 自学机器学习 Code Project 2 Bob the Builder</title>
-      <link>https://kingsmai.github.io/2023/665f82e5.html</link>
-      <guid>https://kingsmai.github.io/2023/665f82e5.html</guid>
-      <pubDate>Fri, 22 Dec 2023 17:40:02 GMT</pubDate>
-      
-      <description>本篇笔记是从 Sololearn 自学而来的心得：《Code Project 2 Bob the Builder》 篇</description>
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/">Python</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Sololearn 自学机器学习</category>
-      
-      
-      <category domain="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</category>
-      
-      <category domain="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</category>
-      
-      <category domain="https://kingsmai.github.io/tags/Sololearn/">Sololearn</category>
-      
-      <category domain="https://kingsmai.github.io/tags/Code-Project/">Code Project</category>
-      
-      
-      <comments>https://kingsmai.github.io/2023/665f82e5.html#disqus_thread</comments>
       
     </item>
     

@@ -6,7 +6,7 @@
   <link href="https://kingsmai.github.io/atom.xml" rel="self"/>
   
   <link href="https://kingsmai.github.io/"/>
-  <updated>2024-01-11T05:44:50.413Z</updated>
+  <updated>2024-01-11T05:56:25.849Z</updated>
   <id>https://kingsmai.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://kingsmai.github.io/2024/ef0ee0b3.html"/>
     <id>https://kingsmai.github.io/2024/ef0ee0b3.html</id>
     <published>2024-01-11T01:05:20.000Z</published>
-    <updated>2024-01-11T05:44:50.413Z</updated>
+    <updated>2024-01-11T05:56:25.849Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;今天需要尝试学习 Solidity 智能合约开发。需要在 Linux</summary>
         
       
     

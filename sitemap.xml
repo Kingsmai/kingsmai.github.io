@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kingsmai.github.io/Gallery/covers/index.html</loc>
+    
+    <lastmod>2024-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kingsmai.github.io/Gallery/covers-spare/index.html</loc>
+    
+    <lastmod>2024-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kingsmai.github.io/2024/ef0ee0b3.html</loc>
     
     <lastmod>2024-01-11</lastmod>
@@ -29,25 +47,7 @@
   </url>
   
   <url>
-    <loc>https://kingsmai.github.io/Gallery/covers/index.html</loc>
-    
-    <lastmod>2024-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kingsmai.github.io/2024/d4d355b7.html</loc>
-    
-    <lastmod>2024-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kingsmai.github.io/Gallery/covers-spare/index.html</loc>
     
     <lastmod>2024-01-09</lastmod>
     

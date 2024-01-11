@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kingsmai.github.io/2024/ef0ee0b3.html</loc>
+    
+    <lastmod>2024-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kingsmai.github.io/2024/77854802.html</loc>
     
     <lastmod>2024-01-11</lastmod>
@@ -1569,6 +1578,27 @@
   
   <url>
     <loc>https://kingsmai.github.io/tags/Experience/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kingsmai.github.io/tags/Node-JS/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kingsmai.github.io/tags/Ubuntu/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kingsmai.github.io/tags/ARM%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

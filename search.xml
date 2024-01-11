@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>在 Ubuntu 系统中安装 Node JS</title>
+      <link href="/2024/ef0ee0b3.html"/>
+      <url>/2024/ef0ee0b3.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote><p><strong>前提条件：</strong></p><p>我的开发环境如下：</p><ul><li>Ubuntu 22.04（在 Parallel Desktop 上运行）</li><li>Mac OS M2 Chip</li></ul></blockquote><p>由于使用 <code>sudo apt install nodejs</code> 安装的 NodeJS 版本为 12.x，稍显过时。为了获取 20 版本的 NodeJS，我们需要前往 <a href="https://nodejs.org/en/download/">NodeJS 官网</a> 进行下载。选择适用于我们的开发环境 Ubuntu 22.04，且<strong>运行于 ARM 架构</strong>上（M2 芯片为 ARM 架构）的 Linux Binaries (ARM) 发行包。在我的情况中，我下载了 ARMv8 版本，下载完成后，文件夹中将出现 <code>node-v20.11.0-linux-arm64.tar.xz</code>。</p><p>首先卸载之前安装的旧版本 NodeJS：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt remove nodejs</span><br></pre></td></tr></table></figure><p>然后使用 <code>tar</code> 命令解压：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 根据实际情况修改文件名称</span></span><br><span class="line">tar -xsf node-v20.11.0-linux-arm64.tar.xz</span><br></pre></td></tr></table></figure><p>接下来更改解压得到的文件夹名称，我个人习惯更改为避免影响 <code>/usr/</code> 下的 node 目录名：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 根据实际情况修改文件名称</span></span><br><span class="line">sudo <span class="built_in">cp</span> -r ./node-v20.11.0-linux-arm64.tar.xz/ ./node/</span><br></pre></td></tr></table></figure><p>将 node 添加到 bin 目录下：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 因为我们上面改了 node 文件夹名称，所以这里直接用 node</span></span><br><span class="line">sudo <span class="built_in">cp</span> -r ./node/&#123;bin,include,libs,share&#125; /usr/</span><br></pre></td></tr></table></figure><p>将可执行文件添加到 PATH 中：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/node/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure><p>最后，检查你的 node 版本：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node --version</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系列 </category>
+          
+          <category> 区块链开发笔记 </category>
+          
+          <category> 经验 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Node JS </tag>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> ARM架构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[How-To Fix] Error while installing cargo-generate</title>
       <link href="/2024/77854802.html"/>
       <url>/2024/77854802.html</url>

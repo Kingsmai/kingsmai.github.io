@@ -6,7 +6,7 @@
   <link href="https://kingsmai.github.io/atom.xml" rel="self"/>
   
   <link href="https://kingsmai.github.io/"/>
-  <updated>2024-01-10T15:21:59.355Z</updated>
+  <updated>2024-01-11T00:09:02.361Z</updated>
   <id>https://kingsmai.github.io/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://kingsmai.github.io/2024/77854802.html"/>
     <id>https://kingsmai.github.io/2024/77854802.html</id>
     <published>2024-01-10T14:50:52.000Z</published>
-    <updated>2024-01-10T15:21:59.355Z</updated>
+    <updated>2024-01-11T00:09:02.361Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1</summary>
-        
-      
+    <summary type="html">Troubleshooting `cargo generate` Installation for Sway Smart Contract Deployment: Learn how to resolve common errors while installing `cargo generate`, essential for Sway Smart Contract testing and deployment. Resolve linker and `openssl-sys` build issues to set up your development environment successfully.</summary>
     
     
     
@@ -48,21 +42,17 @@
     <link href="https://kingsmai.github.io/2024/27ee556c.html"/>
     <id>https://kingsmai.github.io/2024/27ee556c.html</id>
     <published>2024-01-10T14:26:29.000Z</published>
-    <updated>2024-01-10T14:48:57.754Z</updated>
+    <updated>2024-01-11T00:08:37.752Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1</summary>
-        
-      
+    <summary type="html">Learn how to fix VS Code installation issues on Ubuntu. This step-by-step guide addresses common errors, especially for virtual machines, and emphasizes matching your system&#39;s architecture with the correct VS Code build for a successful installation.</summary>
     
     
     
     <category term="经验" scheme="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
     
+    
+    <category term="Experience" scheme="https://kingsmai.github.io/tags/Experience/"/>
     
   </entry>
   

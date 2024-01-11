@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kingsmai.github.io/2024/798b701e.html</loc>
+    
+    <lastmod>2024-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kingsmai.github.io/2024/ef0ee0b3.html</loc>
     
     <lastmod>2024-01-11</lastmod>
@@ -1895,6 +1904,20 @@
   
   <url>
     <loc>https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kingsmai.github.io/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kingsmai.github.io/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/Sway/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

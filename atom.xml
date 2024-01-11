@@ -6,7 +6,7 @@
   <link href="https://kingsmai.github.io/atom.xml" rel="self"/>
   
   <link href="https://kingsmai.github.io/"/>
-  <updated>2024-01-11T05:56:25.849Z</updated>
+  <updated>2024-01-11T14:00:23.252Z</updated>
   <id>https://kingsmai.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fuel 区块链开发并部署智能合约</title>
+    <link href="https://kingsmai.github.io/2024/798b701e.html"/>
+    <id>https://kingsmai.github.io/2024/798b701e.html</id>
+    <published>2024-01-11T12:06:26.000Z</published>
+    <updated>2024-01-11T14:00:23.252Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;今天需要尝试部署一个智能合约（Smart Contract），使用的是</summary>
+        
+      
+    
+    
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="区块链开发笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="开发语言" scheme="https://kingsmai.github.io/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Sway" scheme="https://kingsmai.github.io/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/Sway/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>在 Ubuntu 系统中安装 Node JS</title>
@@ -486,35 +515,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Sololearn 自学机器学习 12 使用 Scikit-Learn 计算各种指标</title>
-    <link href="https://kingsmai.github.io/2023/5985afb6.html"/>
-    <id>https://kingsmai.github.io/2023/5985afb6.html</id>
-    <published>2023-12-26T02:46:18.000Z</published>
-    <updated>2023-12-30T06:19:24.000Z</updated>
-    
-    
-    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《使用 Scikit-Learn 计算各种指标》 篇</summary>
-    
-    
-    
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
-    
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
-    
-    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
     
   </entry>
   

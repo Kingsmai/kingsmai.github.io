@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>怎么快速的做好一份战略计划</title>
+      <link href="/2024/b6bd7002.html"/>
+      <url>/2024/b6bd7002.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>想知道怎么在 1 个小时内撰写一份战略计划并进行汇报吗？这篇文章保证效率 UP！（作者提醒：本文适合初入职场的大学生食用）。</p><blockquote><p>前情提要：昨天晚上心血来潮回到办公室（不是加班，就纯粹喜欢办公室环境，回来坐坐），领导交代我一个任务：了解 Aleo 区块链的 Prover 节点部署，并将其部署到云服务器上测试其可行性后大量部署。</p></blockquote><p>我今早花费了大约 1 小时就将文档整理出来并展示。这篇文章将介绍我是怎么进行工作的。</p><p>食用前须知：</p><ol><li>本文需要读者有一点 Markdown 撰写文档的经验（没有也行，了解思路即可）</li><li>在进行计划之前，肯定要对相关知识拥有一定的了解。既然是计划，那肯定涉及到某些步骤。</li><li>当然，既然领导会将任务交给你，说明他对你的专业能力有一定的认可，理论上不会出现超纲的知识点（就算有，也不是核心的技术点）</li></ol><h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><p>在和领导交谈时，一定要仔细的聆听领导的需求。公司最终需要的是收益，所以当你对某些需求不理解的时候，就问清详情，确保自己最后得到的成果和领导 / 项目负责人设想的一致。以我们的案例来说，就是需要理清：</p><ul><li>需要部署一个节点到云服务器</li><li>了解部署流程</li><li>简化操作流程</li><li>大量部署</li></ul><p>对整个需要做的事情有了全面的认知后，我们才能进行下一步操作</p><p>在捋清楚需求之后，我们就可以对项目进行策划了。对于一件要做的事情，不该是进行全方位的策划，我们需要对该事情有一个大致框架。人的专注力是有限的，要有效的<strong>利用你的三分钟热度</strong>，才能不停的进行工作。一个项目，主要的过程就是：</p><ol><li>做什么？</li><li>怎么做？</li><li>有什么条件？</li><li>需要花多少资金？</li><li>策略是什么？</li></ol><p>需求分析中我们已经解答了前两个问题，接下来就是去了解项目的流程以及需求了。</p><h1 id="了解具体的整个流程与需求"><a href="#了解具体的整个流程与需求" class="headerlink" title="了解具体的整个流程与需求"></a>了解具体的整个流程与需求</h1><blockquote><p>这里的需求指的是：<strong>如果需要顺利运行这个东西，我需要最起码具备什么条件？</strong></p></blockquote><p>以我们的案例，那么运行一个区块链节点，他是有一定的算力需求的，我们在官方文档中找到的配置资料如下：</p><p><img src="/uploads/how-to-write-a-plan-swiftly/example-requirement.png" alt="项目需求案例"></p><p>在我撰写的文档中，我清晰的列出了整个项目所需要的最低配置。这里因为 Validator 的配置要求高于 Prover，所以只写出差异性，这么做可以减少计划书篇幅，毕竟<strong>计划书是给人看的，从来不是形式主义拼字数的畸形产物</strong>。</p><p>当然，根据自身对行业的了解，以可靠资料作为支撑去对一些点做出分析及建议。比如在文档中，我在配置需求下附加了一项声明，表示项目配置需求会有所增加，并附上了参考资料来源。</p><hr><p>除了列出具体需要的配置之外，我也通过官网查阅了资料（这边我疏忽了，并没有列出我的资料来源），目的是为了了解我接下来需要做的东西具体是什么，它所能给公司带来的贡献是什么。同时在查阅的过程中，我也了解关于 Validator 是有一定的门槛才能参与的。如果没有去进行详细分析的话，可能我会在之后购买 Validator 的配置，却只能运行 Prover 节点，<strong>造成不必要的损失</strong>。</p><p>而虽然说这是后面才查阅到的资料，但是它属于很重要的信息，所以我将其放在文档的开头。</p><h1 id="货比三家"><a href="#货比三家" class="headerlink" title="货比三家"></a>货比三家</h1><p>在购买一样物品时，我们一定会去货比三家，找到性价比最高的产品。这里我使用某云服务（没有恰饭内容），因为时间太短了，无法跨商家进行对比。但是对于某些不同地区的不同服务器，还是有细微的价格差异的，所以我们需要在价格上进行对比，选择一个性价比相对较高的工具作为我们使用。</p><p><img src="/uploads/how-to-write-a-plan-swiftly/example-comparing-servers.png" alt="比较每个服务器价格"></p><p>同样的，这里我犯了一个错误，就是忘记了服务器有分国内外，所以一开始选择了南京的服务器，虽然价格相对便宜，但是硬性条件却不满足我们的业务需求。</p><h1 id="战略策划与可视化流程图"><a href="#战略策划与可视化流程图" class="headerlink" title="战略策划与可视化流程图"></a>战略策划与可视化流程图</h1><p>有了前面的数据集之后，我们就可以对整个项目进行战略规划了。这一步就是<strong>让领导知道我们整个计划应该是怎么实现的</strong>，公司有我，领导放心！有了一个策略之后，后面可以对照这个策略进行任务展开。而<strong>文字可能会疏漏什么，但是图大概率不会</strong>，这里我就将我们的整个计划用 mermaid 绘制成一个流程图，让文档阅读者可以清晰的知道整个项目是怎么被执行的，这也是我为什么推荐使用 Markdown 来编写文档的重要原因。</p><p>这是整个流程图的 mermaid 源码：</p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">````mermaid</span></span><br><span class="line"><span class="code">graph TD</span></span><br><span class="line"><span class="code">  START([开始]) --&gt; A</span></span><br><span class="line"><span class="code">  A[租赁服务器] --&gt; B[运行测试]</span></span><br><span class="line"><span class="code">  B --&gt; C&#123;块挖掘成功？&#125;</span></span><br><span class="line"><span class="code">  C -- 是 --&gt; D[判断出块速度]</span></span><br><span class="line"><span class="code">  C -- 否 --&gt; E[升级服务器]</span></span><br><span class="line"><span class="code">  E --&gt; A</span></span><br><span class="line"><span class="code">  D --&gt; F[计算每小时租金花费]</span></span><br><span class="line"><span class="code">  F --&gt; G&#123;继续项目？&#125;</span></span><br><span class="line"><span class="code">  G -- 是 --&gt; H[保存当前配置快照]</span></span><br><span class="line"><span class="code">  G -- 否 --&gt; I[结束项目]</span></span><br><span class="line"><span class="code">  H --&gt; J[租赁更多同性能服务器]</span></span><br><span class="line"><span class="code">  J --&gt; K[部署]</span></span><br><span class="line"><span class="code">````</span></span><br></pre></td></tr></table></figure><p><img src="/uploads/how-to-write-a-plan-swiftly/example-strategy-plan.png" alt="战略规划"></p><h1 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h1><p>时间紧任务重，肯定有一些来不及准备的，比较不是很重要（属于加分项）的点。这时候我们就可以通过在这部分进行阐述，相当于是做一个<strong>备忘录</strong>，在项目开展的过程中可以去逐步了解并对项目进一步进行调整。</p><p><img src="/uploads/how-to-write-a-plan-swiftly/example-todos.png" alt="待办事项"></p><h1 id="列出参考文献"><a href="#列出参考文献" class="headerlink" title="列出参考文献"></a>列出参考文献</h1><p>上面对需求分析所进行阐述的观点，肯定需要用到支撑材料。毕竟我们基本上都不是业界大牛，想要<strong>让人家相信你说的话，也得有一定的数据</strong> / 文献支撑。而参考文献就是作为这个功能而存在。</p><p><img src="/uploads/how-to-write-a-plan-swiftly/example-references.png" alt="参考资料"></p><p>那么以上就是如何在短时间内进行开发的过程啦！喜欢我的文章的各位老板可以在下方给我买杯奶茶，祝你们在职场以及工作中顺利，一起努力，我们顶峰相见！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 经验 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Fuel 区块链开发并部署智能合约</title>
       <link href="/2024/798b701e.html"/>
       <url>/2024/798b701e.html</url>

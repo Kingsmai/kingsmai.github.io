@@ -6,7 +6,7 @@
   <link href="https://kingsmai.github.io/atom.xml" rel="self"/>
   
   <link href="https://kingsmai.github.io/"/>
-  <updated>2024-01-12T13:52:08.476Z</updated>
+  <updated>2024-01-15T08:35:34.245Z</updated>
   <id>https://kingsmai.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>区块链交易的安全须知</title>
+    <link href="https://kingsmai.github.io/2024/904904c6.html"/>
+    <id>https://kingsmai.github.io/2024/904904c6.html</id>
+    <published>2024-01-15T07:54:34.000Z</published>
+    <updated>2024-01-15T08:35:34.245Z</updated>
+    
+    
+    <summary type="html">谁也不想自己辛辛苦苦赚的钱被盗走，这里是我这几天参考资料后做的一些总结。当然，道高一尺魔高一丈，不确定的事情就再三通过 Discord / Twitter / 官网 等官方渠道去获取信息。</summary>
+    
+    
+    
+    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>怎么快速的做好一份战略计划</title>
@@ -38,7 +57,7 @@
     <link href="https://kingsmai.github.io/2024/798b701e.html"/>
     <id>https://kingsmai.github.io/2024/798b701e.html</id>
     <published>2024-01-11T12:06:26.000Z</published>
-    <updated>2024-01-11T14:00:23.252Z</updated>
+    <updated>2024-01-15T08:06:48.518Z</updated>
     
     
       
@@ -53,11 +72,11 @@
     
     <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="区块链开发笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="开发语言" scheme="https://kingsmai.github.io/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
-    <category term="Sway" scheme="https://kingsmai.github.io/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/Sway/"/>
+    <category term="Sway" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Sway/"/>
     
     
   </entry>
@@ -67,7 +86,7 @@
     <link href="https://kingsmai.github.io/2024/ef0ee0b3.html"/>
     <id>https://kingsmai.github.io/2024/ef0ee0b3.html</id>
     <published>2024-01-11T01:05:20.000Z</published>
-    <updated>2024-01-11T05:56:25.849Z</updated>
+    <updated>2024-01-15T08:03:12.798Z</updated>
     
     
       
@@ -80,11 +99,15 @@
     
     
     
+    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="区块链开发笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
-    <category term="经验" scheme="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="Linux Ubuntu" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
+    
+    <category term="NodeJS" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/NodeJS/"/>
     
     
     <category term="Node JS" scheme="https://kingsmai.github.io/tags/Node-JS/"/>
@@ -100,18 +123,20 @@
     <link href="https://kingsmai.github.io/2024/77854802.html"/>
     <id>https://kingsmai.github.io/2024/77854802.html</id>
     <published>2024-01-10T14:50:52.000Z</published>
-    <updated>2024-01-11T00:09:02.361Z</updated>
+    <updated>2024-01-15T08:04:49.177Z</updated>
     
     
     <summary type="html">Troubleshooting `cargo generate` Installation for Sway Smart Contract Deployment: Learn how to resolve common errors while installing `cargo generate`, essential for Sway Smart Contract testing and deployment. Resolve linker and `openssl-sys` build issues to set up your development environment successfully.</summary>
     
     
     
+    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
     <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="区块链开发笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
-    <category term="经验" scheme="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="Linux Ubuntu" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
     
     
   </entry>
@@ -121,17 +146,19 @@
     <link href="https://kingsmai.github.io/2024/27ee556c.html"/>
     <id>https://kingsmai.github.io/2024/27ee556c.html</id>
     <published>2024-01-10T14:26:29.000Z</published>
-    <updated>2024-01-11T00:08:37.752Z</updated>
+    <updated>2024-01-15T08:05:50.075Z</updated>
     
     
     <summary type="html">Learn how to fix VS Code installation issues on Ubuntu. This step-by-step guide addresses common errors, especially for virtual machines, and emphasizes matching your system&#39;s architecture with the correct VS Code build for a successful installation.</summary>
     
     
     
-    <category term="经验" scheme="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Linux Ubuntu" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
     
     
-    <category term="Experience" scheme="https://kingsmai.github.io/tags/Experience/"/>
+    <category term="Linux" scheme="https://kingsmai.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -140,7 +167,7 @@
     <link href="https://kingsmai.github.io/2024/d4d355b7.html"/>
     <id>https://kingsmai.github.io/2024/d4d355b7.html</id>
     <published>2024-01-09T08:16:27.000Z</published>
-    <updated>2024-01-09T12:41:18.094Z</updated>
+    <updated>2024-01-15T07:59:47.649Z</updated>
     
     
       
@@ -161,7 +188,7 @@
     
     <category term="区块链" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
-    <category term="区块链开发笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
     <category term="Leo" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Leo/"/>
     
@@ -282,9 +309,9 @@
     
     <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="C 语言笔记复盘" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/"/>
-    
     <category term="C" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/"/>
+    
+    <category term="C 语言笔记复盘" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/"/>
     
     
   </entry>
@@ -311,9 +338,9 @@
     
     <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="C 语言笔记复盘" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/"/>
-    
     <category term="C" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/"/>
+    
+    <category term="C 语言笔记复盘" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/"/>
     
     
   </entry>
@@ -465,35 +492,6 @@
     
     
     <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《ROC 曲线的基础知识》 篇</summary>
-    
-    
-    
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
-    
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Python" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
-    
-    <category term="Sololearn 自学机器学习" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="人工智能" scheme="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="机器学习" scheme="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sololearn 自学机器学习 13 训练与测试</title>
-    <link href="https://kingsmai.github.io/2023/d24f091e.html"/>
-    <id>https://kingsmai.github.io/2023/d24f091e.html</id>
-    <published>2023-12-27T11:58:56.000Z</published>
-    <updated>2023-12-30T06:19:26.000Z</updated>
-    
-    
-    <summary type="html">本篇笔记是从 Sololearn 自学而来的心得：《训练（Training）与测试（Testing）》 篇</summary>
     
     
     

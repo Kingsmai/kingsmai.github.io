@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>区块链交易的安全须知</title>
+      <link href="/2024/904904c6.html"/>
+      <url>/2024/904904c6.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote><p>谁也不想自己辛辛苦苦赚的钱被盗走，这里是我这几天参考资料后做的一些总结。当然，道高一尺魔高一丈，不确定的事情就再三通过 Discord / Twitter / 官网 等官方渠道去获取信息。</p></blockquote><p><a href="https://hacked.slowmist.io/zh/statistics/">SlowMist Hacked 区块链被黑档案库</a> 统计，截止 2024 年 1 月 13 日，加密货币被黑所造成的损失达到了 314 亿美金</p><p><img src="/uploads/区块链交易的安全须知/SlowMistHacked-stat-2024-01.png" alt="Hacked BlockChain Amounts - SlowMist"></p><h1 id="无燃料签名类型"><a href="#无燃料签名类型" class="headerlink" title="无燃料签名类型"></a>无燃料签名类型</h1><ol><li>Identity Proof ✅ - 安全的<ol><li>一般上 ”连接钱包“ 和登录都会是这个界面</li><li>你的虚拟资产不会被转移</li></ol></li><li>Seaport ⚠️ - 如果在非官方网站，那这是非常危险的<ol><li>如果不是在 OpenSea 或者其他可信任的交易场所发现的，<strong>不要签</strong></li><li>难以阅读里边的内容究竟发生什么</li><li>可以使用 <a href="join.pocketuniverse.app/ref/8WS7">Pocket Universe</a>（邀请码：8WS7）去解读内容</li></ol></li><li>Hex Message ⚠️ - 避开这个<ol><li>这种签名方式不能直接转移资产</li><li>但是可以通过之前用户之前允许的权限进行间接的转移</li><li>基本上没有理由会让一个交易信息以十六进制（Hex）的形式呈现</li></ol></li><li>Eth_Sign ⛔ - 不要签！<ol><li>这是一个”空头支票“，可以让对方代表你执行任何交易</li><li>这肯定不会在有名望的项目团队中出现，所以<strong>不要签</strong>！</li><li><img src="/uploads/区块链交易的安全须知/PocketUniverse-GaslessSignatures.png" alt="Gasless Signature - Pocket Universe"></li></ol></li></ol><h1 id="Discord-假链接"><a href="#Discord-假链接" class="headerlink" title="Discord 假链接"></a>Discord 假链接</h1><p>Discord 的消息编辑器是基于 Markdown 的，这意味着用户可以通过 Markdown 的形式编辑一个隐藏的链接，然后用一个正常的链接去骗过用户。所以这点也是要非常注意的！比如你可以点击我的主页链接试试这个功能：<a href="https://opensea.io">https://kingsmai.github.io</a>，会跳到 OpenSea 平台。</p><p><img src="/uploads/区块链交易的安全须知/discord-hidden-link.png" alt="Discord Hidden Link - Pocket Universe"></p><p>点击 Discord 的链接会出现相关提示，确保你要访问的网站是正确的网站</p><p><img src="/uploads/区块链交易的安全须知/discord-open-url-confirmation.png" alt="Discord Hidden Link - Pocket Universe"></p><p>以上是一些区块链交易的注意事项，后续可能还会更新其他的套路。请大家持续关注！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系列 </category>
+          
+          <category> 我在 Web3 行业摸爬滚打的日子 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>怎么快速的做好一份战略计划</title>
       <link href="/2024/b6bd7002.html"/>
       <url>/2024/b6bd7002.html</url>
@@ -34,9 +55,9 @@
           
           <category> 系列 </category>
           
-          <category> 区块链开发笔记 </category>
+          <category> 编程语言 </category>
           
-          <category> 开发语言 </category>
+          <category> 我在 Web3 行业摸爬滚打的日子 </category>
           
           <category> Sway </category>
           
@@ -57,11 +78,15 @@
       
       <categories>
           
+          <category> 技术 </category>
+          
           <category> 系列 </category>
           
-          <category> 区块链开发笔记 </category>
+          <category> 我在 Web3 行业摸爬滚打的日子 </category>
           
-          <category> 经验 </category>
+          <category> Linux Ubuntu </category>
+          
+          <category> NodeJS </category>
           
       </categories>
       
@@ -90,11 +115,13 @@
       
       <categories>
           
+          <category> 技术 </category>
+          
           <category> 系列 </category>
           
-          <category> 区块链开发笔记 </category>
+          <category> 我在 Web3 行业摸爬滚打的日子 </category>
           
-          <category> 经验 </category>
+          <category> Linux Ubuntu </category>
           
       </categories>
       
@@ -113,14 +140,16 @@
       
       <categories>
           
-          <category> 经验 </category>
+          <category> 技术 </category>
+          
+          <category> Linux Ubuntu </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Experience </tag>
+            <tag> Linux </tag>
             
         </tags>
       
@@ -146,7 +175,7 @@
           
           <category> 区块链 </category>
           
-          <category> 区块链开发笔记 </category>
+          <category> 我在 Web3 行业摸爬滚打的日子 </category>
           
           <category> Leo </category>
           
@@ -279,9 +308,9 @@
           
           <category> 编程语言 </category>
           
-          <category> C 语言笔记复盘 </category>
-          
           <category> C </category>
+          
+          <category> C 语言笔记复盘 </category>
           
       </categories>
       
@@ -304,9 +333,9 @@
           
           <category> 编程语言 </category>
           
-          <category> C 语言笔记复盘 </category>
-          
           <category> C </category>
+          
+          <category> C 语言笔记复盘 </category>
           
       </categories>
       
@@ -1408,6 +1437,8 @@
           
           <category> Hexo 博客搭建 </category>
           
+          <category> NodeJS </category>
+          
       </categories>
       
       
@@ -1429,6 +1460,8 @@
           
           <category> Hexo 博客搭建 </category>
           
+          <category> NodeJS </category>
+          
       </categories>
       
       
@@ -1449,6 +1482,8 @@
           <category> 技术 </category>
           
           <category> Hexo 博客搭建 </category>
+          
+          <category> NodeJS </category>
           
       </categories>
       

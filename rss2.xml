@@ -15,8 +15,29 @@
     <atom:link href="https://kingsmai.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个喜欢肉鸽类游戏的程序员&lt;br&gt;分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</description>
-    <pubDate>Fri, 12 Jan 2024 13:52:08 GMT</pubDate>
+    <pubDate>Mon, 15 Jan 2024 08:35:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>区块链交易的安全须知</title>
+      <link>https://kingsmai.github.io/2024/904904c6.html</link>
+      <guid>https://kingsmai.github.io/2024/904904c6.html</guid>
+      <pubDate>Mon, 15 Jan 2024 07:54:34 GMT</pubDate>
+      
+      <description>谁也不想自己辛辛苦苦赚的钱被盗走，这里是我这几天参考资料后做的一些总结。当然，道高一尺魔高一丈，不确定的事情就再三通过 Discord / Twitter / 官网 等官方渠道去获取信息。</description>
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
+      
+      
+      
+      <comments>https://kingsmai.github.io/2024/904904c6.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>怎么快速的做好一份战略计划</title>
@@ -56,11 +77,11 @@
       
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">区块链开发笔记</category>
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/">开发语言</category>
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/Sway/">Sway</category>
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Sway/">Sway</category>
       
       
       
@@ -85,11 +106,15 @@
       
       
       
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">区块链开发笔记</category>
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/">经验</category>
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/">Linux Ubuntu</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/NodeJS/">NodeJS</category>
       
       
       <category domain="https://kingsmai.github.io/tags/Node-JS/">Node JS</category>
@@ -114,11 +139,13 @@
       
       
       
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">区块链开发笔记</category>
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/">经验</category>
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/">Linux Ubuntu</category>
       
       
       
@@ -137,10 +164,12 @@
       
       
       
-      <category domain="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/">经验</category>
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/">Linux Ubuntu</category>
       
       
-      <category domain="https://kingsmai.github.io/tags/Experience/">Experience</category>
+      <category domain="https://kingsmai.github.io/tags/Linux/">Linux</category>
       
       
       <comments>https://kingsmai.github.io/2024/27ee556c.html#disqus_thread</comments>
@@ -172,7 +201,7 @@
       
       <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">区块链开发笔记</category>
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
       
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Leo/">Leo</category>
       
@@ -303,9 +332,9 @@
       
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/">C 语言笔记复盘</category>
-      
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/">C 语言笔记复盘</category>
       
       
       
@@ -334,9 +363,9 @@
       
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/">C 语言笔记复盘</category>
-      
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/">C 语言笔记复盘</category>
       
       
       
@@ -522,37 +551,6 @@
       
       
       <comments>https://kingsmai.github.io/2023/e08309be.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Sololearn 自学机器学习 13 训练与测试</title>
-      <link>https://kingsmai.github.io/2023/d24f091e.html</link>
-      <guid>https://kingsmai.github.io/2023/d24f091e.html</guid>
-      <pubDate>Wed, 27 Dec 2023 11:58:56 GMT</pubDate>
-      
-      <description>本篇笔记是从 Sololearn 自学而来的心得：《训练（Training）与测试（Testing）》 篇</description>
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/">Python</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Sololearn 自学机器学习</category>
-      
-      
-      <category domain="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</category>
-      
-      <category domain="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</category>
-      
-      <category domain="https://kingsmai.github.io/tags/Sololearn/">Sololearn</category>
-      
-      
-      <comments>https://kingsmai.github.io/2023/d24f091e.html#disqus_thread</comments>
       
     </item>
     

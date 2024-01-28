@@ -6,7 +6,7 @@
   <link href="https://kingsmai.github.io/atom.xml" rel="self"/>
   
   <link href="https://kingsmai.github.io/"/>
-  <updated>2024-01-15T14:59:18.190Z</updated>
+  <updated>2024-01-28T10:10:15.886Z</updated>
   <id>https://kingsmai.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git Branch 分支的用法以及使用场景</title>
+    <link href="https://kingsmai.github.io/2024/30c66ff0.html"/>
+    <id>https://kingsmai.github.io/2024/30c66ff0.html</id>
+    <published>2024-01-28T10:03:16.000Z</published>
+    <updated>2024-01-28T10:10:15.886Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;Git 分支（branch）是 Git</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Git" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Git/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>加密货币行业交易现状</title>
@@ -485,25 +510,6 @@
     <summary type="html">今天看到一个很有意思的提问：编程有没有学习路线？这篇文章就是以我从小学初识编程，一直到大学入门，并获得各种成就的经历。故事很长，满满干货！希望大家多多分享哟~</summary>
     
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2023 年度总结</title>
-    <link href="https://kingsmai.github.io/2023/ccc2b0d8.html"/>
-    <id>https://kingsmai.github.io/2023/ccc2b0d8.html</id>
-    <published>2023-12-29T03:38:11.000Z</published>
-    <updated>2023-12-29T09:40:34.000Z</updated>
-    
-    
-    <summary type="html">本文记录了我这一年的反省，由于博主还没有反省完，所以各位看官需要密码才能阅读~</summary>
-    
-    
-    
-    <category term="灵感笔记" scheme="https://kingsmai.github.io/categories/%E7%81%B5%E6%84%9F%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="年度总结" scheme="https://kingsmai.github.io/categories/%E7%81%B5%E6%84%9F%E7%AC%94%E8%AE%B0/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
     
     
   </entry>

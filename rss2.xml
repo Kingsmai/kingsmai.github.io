@@ -15,8 +15,35 @@
     <atom:link href="https://kingsmai.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个喜欢肉鸽类游戏的程序员&lt;br&gt;分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</description>
-    <pubDate>Mon, 15 Jan 2024 14:59:18 GMT</pubDate>
+    <pubDate>Sun, 28 Jan 2024 10:10:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Git Branch 分支的用法以及使用场景</title>
+      <link>https://kingsmai.github.io/2024/30c66ff0.html</link>
+      <guid>https://kingsmai.github.io/2024/30c66ff0.html</guid>
+      <pubDate>Sun, 28 Jan 2024 10:03:16 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;Git 分支（branch）是 Git</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Git/">Git</category>
+      
+      
+      
+      <comments>https://kingsmai.github.io/2024/30c66ff0.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>加密货币行业交易现状</title>
@@ -526,27 +553,6 @@
       
       
       <comments>https://kingsmai.github.io/2023/8855a9f7.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>2023 年度总结</title>
-      <link>https://kingsmai.github.io/2023/ccc2b0d8.html</link>
-      <guid>https://kingsmai.github.io/2023/ccc2b0d8.html</guid>
-      <pubDate>Fri, 29 Dec 2023 03:38:11 GMT</pubDate>
-      
-      <description>本文记录了我这一年的反省，由于博主还没有反省完，所以各位看官需要密码才能阅读~</description>
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%81%B5%E6%84%9F%E7%AC%94%E8%AE%B0/">灵感笔记</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%81%B5%E6%84%9F%E7%AC%94%E8%AE%B0/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">年度总结</category>
-      
-      
-      
-      <comments>https://kingsmai.github.io/2023/ccc2b0d8.html#disqus_thread</comments>
       
     </item>
     

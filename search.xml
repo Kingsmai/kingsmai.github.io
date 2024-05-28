@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>获取和某个智能合约交互的所有地址</title>
+      <link href="/2024/c3c62cc2.html"/>
+      <url>/2024/c3c62cc2.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote><p>本项目已经开源到 GitHub 中，地址为：<a href="https://github.com/hubei-xhjy/blockchain-history-analyzer">https://github.com/hubei-xhjy/blockchain-history-analyzer</a></p></blockquote><h1 id="Eigenlayer-交互地址查询"><a href="#Eigenlayer-交互地址查询" class="headerlink" title="Eigenlayer 交互地址查询"></a>Eigenlayer 交互地址查询</h1><h2 id="1-get-txn-by-etherscan-py"><a href="#1-get-txn-by-etherscan-py" class="headerlink" title="1. get_txn_by_etherscan.py"></a>1. get_txn_by_etherscan.py</h2><h3 id="1-获取-EigenLayer-合约地址"><a href="#1-获取-EigenLayer-合约地址" class="headerlink" title="1. 获取 EigenLayer 合约地址"></a>1. 获取 EigenLayer 合约地址</h3><p>一般上，项目都会在他们的官网提供合约地址。通常在 Documentation 文档中。</p><ol><li>如 EigenLayer 的官网： <a href="https://www.eigenlayer.xyz/">https://www.eigenlayer.xyz/</a></li><li>打开 Documentation 页面</li><li>直接搜索 Contract，找到类似 <code>Contract Address</code><ol><li>会跳转到这里： <a href="https://docs.eigenlayer.xyz/eigenlayer/deployed-contracts/">https://docs.eigenlayer.xyz/eigenlayer/deployed-contracts/</a></li></ol></li><li>从文档中可以看到，这里提供了几个站外连接，我们点击 README.md 文档</li><li>这时候会跳转到 GitHub（其他项目会有不同的方法，可能直接写在页面中）<ol><li><a href="https://github.com/Layr-Labs/eigenlayer-contracts?tab=readme-ov-file#deployments">https://github.com/Layr-Labs/eigenlayer-contracts?tab=readme-ov-file#deployments</a></li></ol></li></ol><p>可以看到他们的表格如下：</p><div class="table-container"><table><thead><tr><th>Name</th><th>Proxy</th><th>Implementation</th><th>Notes</th></tr></thead><tbody><tr><td>DelegationManager</td><td>0x012345</td><td>0xabcdef</td><td>Proxy: TUP@4.7.1</td></tr></tbody></table></div><p>我们只需要获取 Proxy 的合约就行，可以看到这里有一大串合约地址，都要留下来，以免有漏网之鱼</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0x39053D51B77DC0d36036Fc1fCc8Cb819df8Ef37A</span><br><span class="line">0x858646372CC42E1A627fcE94aa7A7033e7CF075A</span><br><span class="line">0x91E677b07F7AF907ec9a428aafA9fc14a0d3A338</span><br><span class="line">0x135dda560e946695d6f155dacafc6f1f25c1f5af</span><br><span class="line">0xD92145c07f8Ed1D392c1B88017934E301CC1c3Cd</span><br><span class="line"></span><br><span class="line">0x54945180dB7943c0ed0FEE7EdaB2Bd24620256bc</span><br><span class="line">0x93c4b944D05dfe6df7645A86cd2206016c51564D</span><br><span class="line">0x1BeE69b7dFFfA4E2d53C2a2Df135C388AD25dCD2</span><br><span class="line">0x9d7eD45EE2E8FC5482fa2428f15C971e6369011d</span><br><span class="line">0x13760F50a9d7377e4F20CB8CF9e4c26586c658ff</span><br><span class="line">0xa4C637e0F704745D182e4D38cAb7E7485321d059</span><br><span class="line">0x57ba429517c3473B6d34CA9aCd56c0e735b94c02</span><br><span class="line">0x0Fe4F44beE93503346A3Ac9EE5A26b130a5796d6</span><br><span class="line">0x7CA911E83dabf90C90dD3De5411a10F1A6112184</span><br><span class="line">0x8CA7A5d6f3acd3A7A8bC468a8CD0FB14B6BD28b6</span><br><span class="line">0xAe60d8180437b5C34bB956822ac2710972584473</span><br><span class="line">0x298aFB19A105D59E74658C4C334Ff360BadE6dd2</span><br><span class="line">0xbeaC0eeEeeeeEEeEeEEEEeeEEeEeeeEeeEEBEaC0</span><br><span class="line"></span><br><span class="line">0x5a2a4F2F3C18f09179B6703e63D9eDD165909073</span><br><span class="line">0x7Fe7E9CC0F274d2435AD5d56D5fa73E47F6A23D8</span><br><span class="line"></span><br><span class="line">0x5050389572f2d220ad927CcbeA0D406831012390</span><br><span class="line">0xFEA47018D632A77bA579846c840d5706705Dc598</span><br><span class="line">0x369e6F597e22EaB55fFb173C6d9cD234BD699111</span><br><span class="line">0xBE1685C81aA44FF9FB319dD389addd9374383e90</span><br></pre></td></tr></table></figure><h3 id="2-使用-Etherscan-搭配合约地址进行数据爬取"><a href="#2-使用-Etherscan-搭配合约地址进行数据爬取" class="headerlink" title="2. 使用 Etherscan 搭配合约地址进行数据爬取"></a>2. 使用 Etherscan 搭配合约地址进行数据爬取</h3><p>Etherscan 已经给我们提供了通过合约地址以及区块范围进行数据爬取的 API</p><blockquote><p>注意：此 API 每次最大只返回 10000 条数据</p></blockquote><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://api.etherscan.io/api</span><br><span class="line">?module=account</span><br><span class="line">&amp;action=txlist</span><br><span class="line">&amp;address=合约地址</span><br><span class="line">&amp;startblock=起始区块</span><br><span class="line">&amp;endblock=结束区块</span><br><span class="line">&amp;page=1</span><br><span class="line">&amp;offset=10000</span><br><span class="line">&amp;sort=asc</span><br><span class="line">&amp;apikey=&#123;etherscan_api&#125;</span><br></pre></td></tr></table></figure><p>我们在这里做个示例，执行以下请求：</p><ul><li>我们用 18905564 作为起始区块</li><li>这里我们用 19438188 作为结束区块</li><li>这里我们用 1 作为页数</li><li>这里我们用 1 作为偏移量（显示 1 条数据）</li><li>示例 API </li></ul><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://api.etherscan.io/api</span><br><span class="line">?module=account</span><br><span class="line">&amp;action=txlist</span><br><span class="line">&amp;address=0x858646372CC42E1A627fcE94aa7A7033e7CF075A</span><br><span class="line">&amp;startblock=18905564</span><br><span class="line">&amp;endblock=19438188</span><br><span class="line">&amp;page=1</span><br><span class="line">&amp;offset=10000</span><br><span class="line">&amp;sort=asc</span><br><span class="line">&amp;apikey=你的 API Key</span><br></pre></td></tr></table></figure><h3 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h3><p>这段代码是为了从 Etherscan API 拉取特定以太坊智能合约地址的交易数据，并将其保存到本地文件中。以下是对代码各部分的详细解释：</p><ol><li><strong>导入模块</strong>:<br>使用 <code>import requests</code> 导入 Python 的 <code>requests</code> 库，这是一个常用的库，用于发起 HTTP 请求。</li><li><strong>API 密钥和合约地址</strong>:<br><code>etherscan_api_key</code> 存储了 Etherscan API 的密钥，这是进行 API 调用时验证用户的关键信息。<br><code>contract_addresses</code> 列表包含了需要查询交易信息的多个智能合约地址。</li><li><strong>区块范围</strong>:<br><code>start_block</code> 和 <code>end_block</code> 定义了查询交易的起始和结束区块号。代码中将起始区块设定为 10000000，结束区块设定为 19438188。这样设定是为了确保涵盖了需要查询的所有交易数据。</li><li><strong>查询循环</strong>:<br>代码使用了一个外层的 <code>for</code> 循环遍历每一个合约地址，内层的 <code>while</code> 循环则用于持续查询直到没有更多数据。对于每个合约地址，代码构造一个 URL 来调用 Etherscan 的 API，获取该地址的交易列表。如果一页的结果满了（默认是 10000 条最大），就调整 <code>current_block</code> 来获取接下来的数据。</li><li><strong>构造 URL</strong>:<br>URL 包括合约地址、起始和结束区块号等参数。为了保证 URL 的正确，代码中有步骤替换 URL 中的空格和换行符。</li><li><strong>处理响应</strong>:<br>如果 HTTP 请求成功（状态码 200），则读取返回的数据并检查结果集的长度。如果结果集为 0，说明没有更多数据；否则，将数据写入本地文件。每次成功写入文件后，如果结果集达到 10000 条，就更新 <code>current_block</code> 并增加文件索引 <code>file_index</code>，准备写入新的文件。</li><li><strong>错误处理</strong>:<br>如果 HTTP 请求失败，会打印错误信息和状态码。</li></ol><p>这段代码的主要功能是从 Etherscan API 拉取交易数据，并根据数据量可能将结果分成多个文件保存。这可以用于分析智能合约的交易历史或进行区块链数据的备份。</p><h2 id="2-get-addresses-list-py"><a href="#2-get-addresses-list-py" class="headerlink" title="2. get_addresses_list.py"></a>2. get_addresses_list.py</h2><p>有了这些 tx 数据，接下来我们需要对这些数据进行分析。得出与这个智能合约交互的地址列表。</p><p>上面的 json 返回数据如下（节选）</p><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;status&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;OK&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;result&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;blockNumber&quot;</span><span class="punctuation">:</span> <span class="string">&quot;18000269&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;timeStamp&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1693070135&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;hash&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0x853e2a2f40ccf327b850724e538846a5268ead8e7fb3f359abbb678a469b9759&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;nonce&quot;</span><span class="punctuation">:</span> <span class="string">&quot;214&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;blockHash&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0x89d54f887e7f948d9f9c0c7d6144c90f31cd81618c1d7c1772d9b2ac23c50691&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;transactionIndex&quot;</span><span class="punctuation">:</span> <span class="string">&quot;154&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;from&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0xd06210462fa34227ecfff888c143fccd32b89157&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;to&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0x858646372cc42e1a627fce94aa7a7033e7cf075a&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;value&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;gas&quot;</span><span class="punctuation">:</span> <span class="string">&quot;285000&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;gasPrice&quot;</span><span class="punctuation">:</span> <span class="string">&quot;12600604735&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;isError&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;txreceipt_status&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;input&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0xe7a050aa0000000000000000000000001bee69b7dfffa4e2d53c2a2df135c388ad25dcd2000000000000000000000000ae78736cd615f374d3085123a210448e74fc63930000000000000000000000000000000000000000000000000166d2f688429c50&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;contractAddress&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cumulativeGasUsed&quot;</span><span class="punctuation">:</span> <span class="string">&quot;16328658&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;gasUsed&quot;</span><span class="punctuation">:</span> <span class="string">&quot;32119&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;confirmations&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1815150&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;methodId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0xe7a050aa&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;functionName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;depositIntoStrategy(address strategy,address token,uint256 amount)&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>可以得到以下信息：</p><ol><li>我们所需的数据都在 result 数组里</li><li>重要的几个字段有：<ol><li>from</li><li>to</li><li>isError</li></ol></li></ol><p>其中，isError 是用来检查这个 tx 是否成功的，0 表示成功，1 表示失败。</p><p>接下来要做的事情就是对所有交互过的地址进行收集并去重。</p><h3 id="代码解释-1"><a href="#代码解释-1" class="headerlink" title="代码解释"></a>代码解释</h3><p>这段代码用于从之前通过 Etherscan API 获取的交易数据中提取出所有唯一的钱包地址，并将它们保存到一个文本文件中。以下是对代码各部分的详细解释：</p><ol><li><strong>导入模块</strong>:<br>使用 <code>import os</code> 和 <code>import json</code> 导入 Python 的 <code>os</code> 库和 <code>json</code> 库。<code>os</code> 库用于操作文件和目录，<code>json</code> 库用于解析 JSON 文件。</li><li><strong>初始化数据</strong>:<br><code>contract_addresses</code> 列表包含了所有需要处理的智能合约地址。这些地址之前已通过其他脚本用来获取交易数据。<br><code>wallet_addresses</code> 是一个集合（set），用于存储不重复的钱包地址。</li><li><strong>处理文件</strong>:<br>代码遍历 <code>contract_addresses</code> 中的每个地址。对于每个地址，它查找 <code>output</code> 目录下以该地址开头且以 <code>.json</code> 结尾的所有文件。</li><li><strong>读取和解析数据</strong>:<br>对于找到的每个文件，代码打开文件并加载 JSON 数据。它遍历每个交易数据的 ‘result’ 部分，对每个交易项进行处理。</li><li><strong>筛选交易数据</strong>:<br>代码检查每个交易是否有错误（通过 ‘isError’ 字段）。如果 <code>isError</code> 为 <code>1</code>，则忽略该交易；否则，将交易的发送方（’from’）和接收方（’to’）地址添加到 <code>wallet_addresses</code> 集合中。</li><li><strong>保存结果</strong>:<br>将 <code>wallet_addresses</code> 集合中的地址写入到 <code>output/wallet_addresses.txt</code> 文件中，每个地址占一行。</li><li><strong>输出统计信息</strong>:<br>最后，打印出存储的钱包地址总数，以帮助了解处理的结果规模。</li></ol><h2 id="3-track-eigenlayer-airdrop-by-address-py"><a href="#3-track-eigenlayer-airdrop-by-address-py" class="headerlink" title="3. track_eigenlayer_airdrop_by_address.py"></a>3. track_eigenlayer_airdrop_by_address.py</h2><p>现在有了所有的地址列表，接下来就是向空投项目方发送请求，查询空投额度：</p><p>通过一次前端请求过程中，我们使用开发者工具获取到了官方的空投 API 地址：</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">&quot;https://claims.eigenfoundation.org/clique-eigenlayer-api/campaign/eigenlayer/credentials?walletAddress=&#123;&#125;&quot;</span></span><br></pre></td></tr></table></figure><p>我们发现官方并没有对 IP 进行禁止（流量限制），所以我们可以只挂一个 VPN 就开始暴力请求</p><p>因为这是一个很漫长的请求，所以我加入了 tqdm 来追踪进度</p><h3 id="代码解释-2"><a href="#代码解释-2" class="headerlink" title="代码解释"></a>代码解释</h3><p>这段代码旨在从一个 CSV 文件中读取钱包地址，通过并发请求一个 API 来获取关于每个钱包地址的额外数据（例如资格令牌信息），并将结果写入到一个新的 CSV 文件中。下面是对代码的详细解释：</p><ol><li><strong>导入必要的模块</strong>:<ul><li><code>requests</code> 用于发起网络请求。</li><li><code>csv</code> 用于处理 CSV 文件读写。</li><li><code>tqdm</code> 提供进度条功能，让用户可视化处理进度。</li><li><code>ThreadPoolExecutor</code> 用于实现多线程并发，提高请求处理的效率。</li></ul></li><li><strong>定义 API URL</strong>:<br><code>url</code> 定义了用来获取数据的 API 地址，该地址需要填入一个钱包地址。</li><li><strong>读取钱包地址</strong>:<br>使用 <code>csv.reader</code> 从 “output/wallet_addresses.csv” 文件中读取钱包地址。首先读取标题行，并检查是否已经包含 ‘Tokens’ 列。如果没有，将 ‘Tokens’ 添加到标题行中。</li><li><strong>定义辅助函数 <code>fetch_token_data</code></strong>:<br>这个函数接收一行数据（即一个钱包地址），向 API 发送请求，并处理响应。成功获取数据后，将其添加到该行；如果请求失败或发生异常，则记录相应的错误信息。</li><li><strong>多线程处理</strong>:<br>使用 <code>ThreadPoolExecutor</code> 创建一个线程池，最多允许 10 个并发线程。这些线程将并行地为每个钱包地址调用 <code>fetch_token_data</code> 函数。</li><li><strong>写入新的 CSV 文件</strong>:<br>结果被写入到 “output/wallet_addresses_updated.csv” 文件中。首先写入更新后的标题行，然后写入每行的处理结果。</li><li><strong>进度条显示</strong>:<br>使用 <code>tqdm</code> 包装 <code>executor.map</code> 的调用，显示处理进度条，提供用户友好的进度显示。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系列 </category>
+          
+          <category> 我在 Web3 行业摸爬滚打的日子 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git Branch 分支的用法以及使用场景</title>
       <link href="/2024/30c66ff0.html"/>
       <url>/2024/30c66ff0.html</url>
@@ -97,9 +118,9 @@
           
           <category> 系列 </category>
           
-          <category> 编程语言 </category>
-          
           <category> 我在 Web3 行业摸爬滚打的日子 </category>
+          
+          <category> 编程语言 </category>
           
           <category> Sway </category>
           
@@ -120,9 +141,9 @@
       
       <categories>
           
-          <category> 技术 </category>
-          
           <category> 系列 </category>
+          
+          <category> 技术 </category>
           
           <category> 我在 Web3 行业摸爬滚打的日子 </category>
           
@@ -157,9 +178,9 @@
       
       <categories>
           
-          <category> 技术 </category>
-          
           <category> 系列 </category>
+          
+          <category> 技术 </category>
           
           <category> 我在 Web3 行业摸爬滚打的日子 </category>
           
@@ -209,15 +230,15 @@
       
       <categories>
           
+          <category> 系列 </category>
+          
           <category> 技术 </category>
           
-          <category> 系列 </category>
+          <category> 我在 Web3 行业摸爬滚打的日子 </category>
           
           <category> 编程语言 </category>
           
           <category> 区块链 </category>
-          
-          <category> 我在 Web3 行业摸爬滚打的日子 </category>
           
           <category> Leo </category>
           
@@ -350,9 +371,9 @@
           
           <category> 编程语言 </category>
           
-          <category> C </category>
-          
           <category> C 语言笔记复盘 </category>
+          
+          <category> C </category>
           
       </categories>
       
@@ -375,9 +396,9 @@
           
           <category> 编程语言 </category>
           
-          <category> C </category>
-          
           <category> C 语言笔记复盘 </category>
+          
+          <category> C </category>
           
       </categories>
       
@@ -1442,9 +1463,9 @@
           
           <category> 灵感笔记 </category>
           
-          <category> 游戏构思 </category>
-          
           <category> 游戏开发 </category>
+          
+          <category> 游戏构思 </category>
           
           <category> 超随机沙盒游戏 </category>
           
@@ -2641,11 +2662,11 @@
       
         <tags>
             
+            <tag> 哈希函数 (Hash Function) </tag>
+            
             <tag> 数字签名 (Digital Signature) </tag>
             
             <tag> 生日碰撞 (Birthday Collision) </tag>
-            
-            <tag> 哈希函数 (Hash Function) </tag>
             
             <tag> 非对称加密 (Asymmetric Encryption) </tag>
             
@@ -2725,8 +2746,6 @@
       
         <tags>
             
-            <tag> 哈希函数 (Hash Function) </tag>
-            
             <tag> 比特币 (Bitcoin) </tag>
             
             <tag> 去中心化 (Decentralization) </tag>
@@ -2736,6 +2755,8 @@
             <tag> 工作量证明 (Proof of Work) </tag>
             
             <tag> 挖矿 (Mining) </tag>
+            
+            <tag> 哈希函数 (Hash Function) </tag>
             
             <tag> 共识机制 (Consensus Mechanism) </tag>
             

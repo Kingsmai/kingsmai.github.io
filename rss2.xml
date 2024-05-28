@@ -15,8 +15,36 @@
     <atom:link href="https://kingsmai.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个喜欢肉鸽类游戏的程序员&lt;br&gt;分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</description>
-    <pubDate>Sun, 28 Jan 2024 10:10:15 GMT</pubDate>
+    <pubDate>Tue, 28 May 2024 15:10:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>获取和某个智能合约交互的所有地址</title>
+      <link>https://kingsmai.github.io/2024/c3c62cc2.html</link>
+      <guid>https://kingsmai.github.io/2024/c3c62cc2.html</guid>
+      <pubDate>Tue, 28 May 2024 14:39:10 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;blockquote&gt;
+&lt;p&gt;本项目已经开源到 GitHub 中，地址为：&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
+      
+      
+      
+      <comments>https://kingsmai.github.io/2024/c3c62cc2.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Git Branch 分支的用法以及使用场景</title>
@@ -131,9 +159,9 @@
       
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
       
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Sway/">Sway</category>
       
@@ -160,9 +188,9 @@
       
       
       
-      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
-      
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
       
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
       
@@ -193,9 +221,9 @@
       
       
       
-      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
-      
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
       
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
       
@@ -247,15 +275,15 @@
       
       
       
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
       <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
       
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
       
       <category domain="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/">我在 Web3 行业摸爬滚打的日子</category>
       
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Leo/">Leo</category>
       
@@ -386,9 +414,9 @@
       
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</category>
-      
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/">C 语言笔记复盘</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</category>
       
       
       
@@ -417,9 +445,9 @@
       
       <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
       
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</category>
-      
       <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/">C 语言笔记复盘</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</category>
       
       
       
@@ -536,23 +564,6 @@
       
       
       <comments>https://kingsmai.github.io/2023/787a0c90.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>浅谈编程中的学习路线 - 我的学习经历</title>
-      <link>https://kingsmai.github.io/2023/8855a9f7.html</link>
-      <guid>https://kingsmai.github.io/2023/8855a9f7.html</guid>
-      <pubDate>Fri, 29 Dec 2023 08:46:55 GMT</pubDate>
-      
-      <description>今天看到一个很有意思的提问：编程有没有学习路线？这篇文章就是以我从小学初识编程，一直到大学入门，并获得各种成就的经历。故事很长，满满干货！希望大家多多分享哟~</description>
-      
-      
-      
-      
-      
-      
-      <comments>https://kingsmai.github.io/2023/8855a9f7.html#disqus_thread</comments>
       
     </item>
     

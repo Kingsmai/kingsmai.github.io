@@ -15,8 +15,31 @@
     <atom:link href="https://kingsmai.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个喜欢肉鸽类游戏的程序员&lt;br&gt;分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</description>
-    <pubDate>Tue, 28 May 2024 15:10:12 GMT</pubDate>
+    <pubDate>Wed, 29 May 2024 15:01:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>在 Godot 中实现超大数十六进制转十进制</title>
+      <link>https://kingsmai.github.io/2024/6eea2b0c.html</link>
+      <guid>https://kingsmai.github.io/2024/6eea2b0c.html</guid>
+      <pubDate>Wed, 29 May 2024 14:15:58 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h3 id=&quot;使用-Godot-引擎实现以太坊仪表盘-🛠️✨&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://kingsmai.github.io/2024/6eea2b0c.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>获取和某个智能合约交互的所有地址</title>
@@ -533,37 +556,6 @@
       
       
       <comments>https://kingsmai.github.io/2023/215fd6fd.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Sololearn 自学机器学习 15 ROC 曲线</title>
-      <link>https://kingsmai.github.io/2023/787a0c90.html</link>
-      <guid>https://kingsmai.github.io/2023/787a0c90.html</guid>
-      <pubDate>Fri, 29 Dec 2023 14:05:19 GMT</pubDate>
-      
-      <description>本篇笔记是从 Sololearn 自学而来的心得：《15 ROC 曲线》 篇</description>
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/">Python</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Sololearn 自学机器学习</category>
-      
-      
-      <category domain="https://kingsmai.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</category>
-      
-      <category domain="https://kingsmai.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</category>
-      
-      <category domain="https://kingsmai.github.io/tags/Sololearn/">Sololearn</category>
-      
-      
-      <comments>https://kingsmai.github.io/2023/787a0c90.html#disqus_thread</comments>
       
     </item>
     

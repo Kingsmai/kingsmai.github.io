@@ -15,8 +15,31 @@
     <atom:link href="https://kingsmai.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个喜欢肉鸽类游戏的程序员&lt;br&gt;分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</description>
-    <pubDate>Wed, 29 May 2024 19:01:13 GMT</pubDate>
+    <pubDate>Sat, 08 Jun 2024 15:04:18 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>The usage of Signal in Godot 4</title>
+      <link>https://kingsmai.github.io/2024/b89e24c9.html</link>
+      <guid>https://kingsmai.github.io/2024/b89e24c9.html</guid>
+      <pubDate>Sat, 08 Jun 2024 14:59:02 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;Bind&quot;&gt;&lt;a href=&quot;#Bind&quot;</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://kingsmai.github.io/2024/b89e24c9.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>在 Godot 中实现超大数十六进制转十进制</title>
@@ -529,33 +552,6 @@
       
       
       <comments>https://kingsmai.github.io/2023/7bb5faec.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>快速开发十款游戏系列（1）：飞机大战 策划篇</title>
-      <link>https://kingsmai.github.io/2023/215fd6fd.html</link>
-      <guid>https://kingsmai.github.io/2023/215fd6fd.html</guid>
-      <pubDate>Sat, 30 Dec 2023 03:43:46 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E5%8D%81%E6%AC%BE%E6%B8%B8%E6%88%8F/">快速开发十款游戏</category>
-      
-      
-      
-      <comments>https://kingsmai.github.io/2023/215fd6fd.html#disqus_thread</comments>
       
     </item>
     

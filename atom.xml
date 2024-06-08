@@ -6,7 +6,7 @@
   <link href="https://kingsmai.github.io/atom.xml" rel="self"/>
   
   <link href="https://kingsmai.github.io/"/>
-  <updated>2024-05-29T19:01:13.992Z</updated>
+  <updated>2024-06-08T15:04:18.897Z</updated>
   <id>https://kingsmai.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The usage of Signal in Godot 4</title>
+    <link href="https://kingsmai.github.io/2024/b89e24c9.html"/>
+    <id>https://kingsmai.github.io/2024/b89e24c9.html</id>
+    <published>2024-06-08T14:59:02.000Z</published>
+    <updated>2024-06-08T15:04:18.897Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;Bind&quot;&gt;&lt;a href=&quot;#Bind&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>在 Godot 中实现超大数十六进制转十进制</title>
@@ -489,31 +510,6 @@
     
     
     <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快速开发十款游戏系列（1）：飞机大战 策划篇</title>
-    <link href="https://kingsmai.github.io/2023/215fd6fd.html"/>
-    <id>https://kingsmai.github.io/2023/215fd6fd.html</id>
-    <published>2023-12-30T03:43:46.000Z</published>
-    <updated>2023-12-30T06:21:36.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
-    
-    <category term="快速开发十款游戏" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E5%8D%81%E6%AC%BE%E6%B8%B8%E6%88%8F/"/>
-    
     
   </entry>
   

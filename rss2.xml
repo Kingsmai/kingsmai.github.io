@@ -15,8 +15,140 @@
     <atom:link href="https://kingsmai.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个喜欢肉鸽类游戏的程序员&lt;br&gt;分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</description>
-    <pubDate>Sat, 08 Jun 2024 15:04:18 GMT</pubDate>
+    <pubDate>Mon, 30 Sep 2024 07:01:38 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Springboot JavaEE @Resource 注解解释</title>
+      <link>https://kingsmai.github.io/2024/91b8a59.html</link>
+      <guid>https://kingsmai.github.io/2024/91b8a59.html</guid>
+      <pubDate>Mon, 30 Sep 2024 06:51:30 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;code&gt;@Resource&lt;/code&gt; 是 Java EE（也称为</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Springboot 学习笔记</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/">Java Springboot</category>
+      
+      
+      <category domain="https://kingsmai.github.io/tags/ChatGPT-%E7%AC%94%E8%AE%B0/">ChatGPT 笔记</category>
+      
+      
+      <comments>https://kingsmai.github.io/2024/91b8a59.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Springboot Spring @Component 注解解释</title>
+      <link>https://kingsmai.github.io/2024/8aef8f58.html</link>
+      <guid>https://kingsmai.github.io/2024/8aef8f58.html</guid>
+      <pubDate>Mon, 30 Sep 2024 06:50:43 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;code&gt;@Component&lt;/code&gt; 是 Spring</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Springboot 学习笔记</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/">Java Springboot</category>
+      
+      
+      <category domain="https://kingsmai.github.io/tags/ChatGPT-%E7%AC%94%E8%AE%B0/">ChatGPT 笔记</category>
+      
+      
+      <comments>https://kingsmai.github.io/2024/8aef8f58.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Springboot Spring Security 的基础解释</title>
+      <link>https://kingsmai.github.io/2024/d207740e.html</link>
+      <guid>https://kingsmai.github.io/2024/d207740e.html</guid>
+      <pubDate>Mon, 30 Sep 2024 06:47:09 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Springboot 学习笔记</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/">Java Springboot</category>
+      
+      
+      <category domain="https://kingsmai.github.io/tags/ChatGPT-%E7%AC%94%E8%AE%B0/">ChatGPT 笔记</category>
+      
+      
+      <comments>https://kingsmai.github.io/2024/d207740e.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Springboot Spring @Configuration 和 @Bean 注解解释</title>
+      <link>https://kingsmai.github.io/2024/195a7602.html</link>
+      <guid>https://kingsmai.github.io/2024/195a7602.html</guid>
+      <pubDate>Mon, 30 Sep 2024 06:41:26 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;!-- hexo new note-springboot &quot;Spring</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Springboot 学习笔记</category>
+      
+      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/">Java Springboot</category>
+      
+      
+      <category domain="https://kingsmai.github.io/tags/ChatGPT-%E7%AC%94%E8%AE%B0/">ChatGPT 笔记</category>
+      
+      
+      <comments>https://kingsmai.github.io/2024/195a7602.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>The usage of Signal in Godot 4</title>
@@ -436,122 +568,6 @@
       
       
       <comments>https://kingsmai.github.io/2024/4137e8ad.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>C 语言笔记复盘 2 C 语言的特点</title>
-      <link>https://kingsmai.github.io/2024/c895ec1a.html</link>
-      <guid>https://kingsmai.github.io/2024/c895ec1a.html</guid>
-      <pubDate>Mon, 01 Jan 2024 02:30:13 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;上一篇文章呢，我们介绍了 C 语言的由来。是怎么从机器语言一直转变到 C</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/">C 语言笔记复盘</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</category>
-      
-      
-      
-      <comments>https://kingsmai.github.io/2024/c895ec1a.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>C 语言笔记复盘 1 初识 C 语言</title>
-      <link>https://kingsmai.github.io/2023/9e7729ba.html</link>
-      <guid>https://kingsmai.github.io/2023/9e7729ba.html</guid>
-      <pubDate>Sat, 30 Dec 2023 18:35:56 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;这几天在学机器学习，可能太浮躁了，学到 k-fold</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/C-%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0%E5%A4%8D%E7%9B%98/">C 语言笔记复盘</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</category>
-      
-      
-      
-      <comments>https://kingsmai.github.io/2023/9e7729ba.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Sololearn 自学网页设计 2 使用 HTML 和 CSS 构建页面</title>
-      <link>https://kingsmai.github.io/2023/cdbf2aa6.html</link>
-      <guid>https://kingsmai.github.io/2023/cdbf2aa6.html</guid>
-      <pubDate>Sat, 30 Dec 2023 15:07:25 GMT</pubDate>
-      
-      <description>本篇笔记是 Sololearn 响应式页面设计自学心得：《使用 HTML 和 CSS 构建页面》 篇</description>
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/">Sololearn 自学网页设计</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML-CSS-JS/">HTML, CSS, JS</category>
-      
-      
-      <category domain="https://kingsmai.github.io/tags/Sololearn/">Sololearn</category>
-      
-      
-      <comments>https://kingsmai.github.io/2023/cdbf2aa6.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Sololearn 自学网页设计 1 响应式页面设计</title>
-      <link>https://kingsmai.github.io/2023/7bb5faec.html</link>
-      <guid>https://kingsmai.github.io/2023/7bb5faec.html</guid>
-      <pubDate>Sat, 30 Dec 2023 14:01:49 GMT</pubDate>
-      
-      <description>本篇笔记是 Sololearn 响应式页面设计自学心得：《响应式页面设计》 篇</description>
-      
-      
-      
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/">系列</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/">Sololearn 自学网页设计</category>
-      
-      <category domain="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML-CSS-JS/">HTML, CSS, JS</category>
-      
-      
-      <category domain="https://kingsmai.github.io/tags/Sololearn/">Sololearn</category>
-      
-      
-      <comments>https://kingsmai.github.io/2023/7bb5faec.html#disqus_thread</comments>
       
     </item>
     

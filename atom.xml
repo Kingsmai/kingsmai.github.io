@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>麦甜怪圈 Xiaomai Circle</title>
-  <icon>https://kingsmai.github.io/icon.png</icon>
+  <icon>https://xiaomai.tootaio.com/icon.png</icon>
   <subtitle>一个每天都在学习的程序员</subtitle>
-  <link href="https://kingsmai.github.io/atom.xml" rel="self"/>
+  <link href="https://xiaomai.tootaio.com/atom.xml" rel="self"/>
   
-  <link href="https://kingsmai.github.io/"/>
-  <updated>2025-09-11T17:24:58.960Z</updated>
-  <id>https://kingsmai.github.io/</id>
+  <link href="https://xiaomai.tootaio.com/"/>
+  <updated>2025-09-20T00:55:53.679Z</updated>
+  <id>https://xiaomai.tootaio.com/</id>
   
   <author>
     <name>小麦 Andrew Xiaomai</name>
@@ -17,9 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何优雅地整理 Git 分支历史：从混乱到清晰</title>
+    <link href="https://xiaomai.tootaio.com/2025/a3c435dc.html"/>
+    <id>https://xiaomai.tootaio.com/2025/a3c435dc.html</id>
+    <published>2025-09-20T00:33:25.000Z</published>
+    <updated>2025-09-20T00:55:53.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Git" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/Git/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>使用 Cloudflare Tunnel 将家里服务器映射到公网</title>
-    <link href="https://kingsmai.github.io/2025/5a564e54.html"/>
-    <id>https://kingsmai.github.io/2025/5a564e54.html</id>
+    <link href="https://xiaomai.tootaio.com/2025/5a564e54.html"/>
+    <id>https://xiaomai.tootaio.com/2025/5a564e54.html</id>
     <published>2025-09-11T17:19:00.000Z</published>
     <updated>2025-09-11T17:24:58.960Z</updated>
     
@@ -34,19 +59,19 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="运维" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E8%BF%90%E7%BB%B4/"/>
+    <category term="运维" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E8%BF%90%E7%BB%B4/"/>
     
     
-    <category term="域名, Tunnel" scheme="https://kingsmai.github.io/tags/%E5%9F%9F%E5%90%8D-Tunnel/"/>
+    <category term="域名, Tunnel" scheme="https://xiaomai.tootaio.com/tags/%E5%9F%9F%E5%90%8D-Tunnel/"/>
     
   </entry>
   
   <entry>
     <title>Springboot JavaEE @Resource 注解解释</title>
-    <link href="https://kingsmai.github.io/2024/91b8a59.html"/>
-    <id>https://kingsmai.github.io/2024/91b8a59.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/91b8a59.html"/>
+    <id>https://xiaomai.tootaio.com/2024/91b8a59.html</id>
     <published>2024-09-30T06:51:30.000Z</published>
     <updated>2024-09-30T07:01:38.292Z</updated>
     
@@ -61,23 +86,23 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Springboot 学习笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Springboot 学习笔记" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java Springboot" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/"/>
+    <category term="Java Springboot" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/"/>
     
     
-    <category term="ChatGPT 笔记" scheme="https://kingsmai.github.io/tags/ChatGPT-%E7%AC%94%E8%AE%B0/"/>
+    <category term="ChatGPT 笔记" scheme="https://xiaomai.tootaio.com/tags/ChatGPT-%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Springboot Spring @Component 注解解释</title>
-    <link href="https://kingsmai.github.io/2024/8aef8f58.html"/>
-    <id>https://kingsmai.github.io/2024/8aef8f58.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/8aef8f58.html"/>
+    <id>https://xiaomai.tootaio.com/2024/8aef8f58.html</id>
     <published>2024-09-30T06:50:43.000Z</published>
     <updated>2024-09-30T07:00:15.028Z</updated>
     
@@ -92,23 +117,23 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Springboot 学习笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Springboot 学习笔记" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java Springboot" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/"/>
+    <category term="Java Springboot" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/"/>
     
     
-    <category term="ChatGPT 笔记" scheme="https://kingsmai.github.io/tags/ChatGPT-%E7%AC%94%E8%AE%B0/"/>
+    <category term="ChatGPT 笔记" scheme="https://xiaomai.tootaio.com/tags/ChatGPT-%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Springboot Spring Security 的基础解释</title>
-    <link href="https://kingsmai.github.io/2024/d207740e.html"/>
-    <id>https://kingsmai.github.io/2024/d207740e.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/d207740e.html"/>
+    <id>https://xiaomai.tootaio.com/2024/d207740e.html</id>
     <published>2024-09-30T06:47:09.000Z</published>
     <updated>2024-09-30T06:58:03.769Z</updated>
     
@@ -123,23 +148,23 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Springboot 学习笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Springboot 学习笔记" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java Springboot" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/"/>
+    <category term="Java Springboot" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/"/>
     
     
-    <category term="ChatGPT 笔记" scheme="https://kingsmai.github.io/tags/ChatGPT-%E7%AC%94%E8%AE%B0/"/>
+    <category term="ChatGPT 笔记" scheme="https://xiaomai.tootaio.com/tags/ChatGPT-%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Springboot Spring @Configuration 和 @Bean 注解解释</title>
-    <link href="https://kingsmai.github.io/2024/195a7602.html"/>
-    <id>https://kingsmai.github.io/2024/195a7602.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/195a7602.html"/>
+    <id>https://xiaomai.tootaio.com/2024/195a7602.html</id>
     <published>2024-09-30T06:41:26.000Z</published>
     <updated>2024-09-30T06:56:06.499Z</updated>
     
@@ -154,23 +179,23 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Springboot 学习笔记" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Springboot 学习笔记" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/Springboot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java Springboot" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/"/>
+    <category term="Java Springboot" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java-Springboot/"/>
     
     
-    <category term="ChatGPT 笔记" scheme="https://kingsmai.github.io/tags/ChatGPT-%E7%AC%94%E8%AE%B0/"/>
+    <category term="ChatGPT 笔记" scheme="https://xiaomai.tootaio.com/tags/ChatGPT-%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>The usage of Signal in Godot 4</title>
-    <link href="https://kingsmai.github.io/2024/b89e24c9.html"/>
-    <id>https://kingsmai.github.io/2024/b89e24c9.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/b89e24c9.html"/>
+    <id>https://xiaomai.tootaio.com/2024/b89e24c9.html</id>
     <published>2024-06-08T14:59:02.000Z</published>
     <updated>2024-06-08T15:04:27.162Z</updated>
     
@@ -190,8 +215,8 @@
   
   <entry>
     <title>在 Godot 中实现超大数十六进制转十进制</title>
-    <link href="https://kingsmai.github.io/2024/6eea2b0c.html"/>
-    <id>https://kingsmai.github.io/2024/6eea2b0c.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/6eea2b0c.html"/>
+    <id>https://xiaomai.tootaio.com/2024/6eea2b0c.html</id>
     <published>2024-05-29T14:15:58.000Z</published>
     <updated>2024-05-29T19:01:13.992Z</updated>
     
@@ -211,8 +236,8 @@
   
   <entry>
     <title>获取和某个智能合约交互的所有地址</title>
-    <link href="https://kingsmai.github.io/2024/c3c62cc2.html"/>
-    <id>https://kingsmai.github.io/2024/c3c62cc2.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/c3c62cc2.html"/>
+    <id>https://xiaomai.tootaio.com/2024/c3c62cc2.html</id>
     <published>2024-05-28T14:39:10.000Z</published>
     <updated>2024-05-28T15:10:12.582Z</updated>
     
@@ -228,17 +253,17 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
     
   </entry>
   
   <entry>
     <title>Git Branch 分支的用法以及使用场景</title>
-    <link href="https://kingsmai.github.io/2024/30c66ff0.html"/>
-    <id>https://kingsmai.github.io/2024/30c66ff0.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/30c66ff0.html"/>
+    <id>https://xiaomai.tootaio.com/2024/30c66ff0.html</id>
     <published>2024-01-28T10:03:16.000Z</published>
     <updated>2024-01-28T10:10:16.000Z</updated>
     
@@ -253,17 +278,17 @@
     
     
     
-    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="Git" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Git/"/>
+    <category term="Git" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/Git/"/>
     
     
   </entry>
   
   <entry>
     <title>加密货币行业交易现状</title>
-    <link href="https://kingsmai.github.io/2024/6ac08c19.html"/>
-    <id>https://kingsmai.github.io/2024/6ac08c19.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/6ac08c19.html"/>
+    <id>https://xiaomai.tootaio.com/2024/6ac08c19.html</id>
     <published>2024-01-15T14:46:14.000Z</published>
     <updated>2024-01-15T14:59:20.000Z</updated>
     
@@ -278,17 +303,17 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
     
   </entry>
   
   <entry>
     <title>区块链交易的安全须知</title>
-    <link href="https://kingsmai.github.io/2024/904904c6.html"/>
-    <id>https://kingsmai.github.io/2024/904904c6.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/904904c6.html"/>
+    <id>https://xiaomai.tootaio.com/2024/904904c6.html</id>
     <published>2024-01-15T07:54:34.000Z</published>
     <updated>2024-01-15T08:35:36.000Z</updated>
     
@@ -297,17 +322,17 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
     
   </entry>
   
   <entry>
     <title>怎么快速的做好一份战略计划</title>
-    <link href="https://kingsmai.github.io/2024/b6bd7002.html"/>
-    <id>https://kingsmai.github.io/2024/b6bd7002.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/b6bd7002.html"/>
+    <id>https://xiaomai.tootaio.com/2024/b6bd7002.html</id>
     <published>2024-01-12T11:41:33.000Z</published>
     <updated>2024-01-12T13:52:10.000Z</updated>
     
@@ -316,15 +341,15 @@
     
     
     
-    <category term="经验" scheme="https://kingsmai.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="经验" scheme="https://xiaomai.tootaio.com/categories/%E7%BB%8F%E9%AA%8C/"/>
     
     
   </entry>
   
   <entry>
     <title>Fuel 区块链开发并部署智能合约</title>
-    <link href="https://kingsmai.github.io/2024/798b701e.html"/>
-    <id>https://kingsmai.github.io/2024/798b701e.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/798b701e.html"/>
+    <id>https://xiaomai.tootaio.com/2024/798b701e.html</id>
     <published>2024-01-11T12:06:26.000Z</published>
     <updated>2024-01-15T08:06:50.000Z</updated>
     
@@ -339,21 +364,21 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
-    <category term="Sway" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Sway/"/>
+    <category term="Sway" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Sway/"/>
     
     
   </entry>
   
   <entry>
     <title>在 Ubuntu 系统中安装 Node JS</title>
-    <link href="https://kingsmai.github.io/2024/ef0ee0b3.html"/>
-    <id>https://kingsmai.github.io/2024/ef0ee0b3.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/ef0ee0b3.html"/>
+    <id>https://xiaomai.tootaio.com/2024/ef0ee0b3.html</id>
     <published>2024-01-11T01:05:20.000Z</published>
     <updated>2024-01-15T08:03:14.000Z</updated>
     
@@ -368,29 +393,29 @@
     
     
     
-    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
-    <category term="Linux Ubuntu" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
+    <category term="Linux Ubuntu" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
     
-    <category term="NodeJS" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/NodeJS/"/>
+    <category term="NodeJS" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/NodeJS/"/>
     
     
-    <category term="Node JS" scheme="https://kingsmai.github.io/tags/Node-JS/"/>
+    <category term="Node JS" scheme="https://xiaomai.tootaio.com/tags/Node-JS/"/>
     
-    <category term="Ubuntu" scheme="https://kingsmai.github.io/tags/Ubuntu/"/>
+    <category term="Ubuntu" scheme="https://xiaomai.tootaio.com/tags/Ubuntu/"/>
     
-    <category term="ARM架构" scheme="https://kingsmai.github.io/tags/ARM%E6%9E%B6%E6%9E%84/"/>
+    <category term="ARM架构" scheme="https://xiaomai.tootaio.com/tags/ARM%E6%9E%B6%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>[How-To Fix] Error while installing cargo-generate</title>
-    <link href="https://kingsmai.github.io/2024/77854802.html"/>
-    <id>https://kingsmai.github.io/2024/77854802.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/77854802.html"/>
+    <id>https://xiaomai.tootaio.com/2024/77854802.html</id>
     <published>2024-01-10T14:50:52.000Z</published>
     <updated>2024-01-15T08:04:50.000Z</updated>
     
@@ -399,21 +424,21 @@
     
     
     
-    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
-    <category term="Linux Ubuntu" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
+    <category term="Linux Ubuntu" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
     
     
   </entry>
   
   <entry>
     <title>[How-To Fix] VS Code Installation Failure on Ubuntu</title>
-    <link href="https://kingsmai.github.io/2024/27ee556c.html"/>
-    <id>https://kingsmai.github.io/2024/27ee556c.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/27ee556c.html"/>
+    <id>https://xiaomai.tootaio.com/2024/27ee556c.html</id>
     <published>2024-01-10T14:26:29.000Z</published>
     <updated>2024-01-15T08:05:52.000Z</updated>
     
@@ -422,19 +447,19 @@
     
     
     
-    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="Linux Ubuntu" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
+    <category term="Linux Ubuntu" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/Linux-Ubuntu/"/>
     
     
-    <category term="Linux" scheme="https://kingsmai.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://xiaomai.tootaio.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Leo 语言 Hello World 的学习心得</title>
-    <link href="https://kingsmai.github.io/2024/d4d355b7.html"/>
-    <id>https://kingsmai.github.io/2024/d4d355b7.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/d4d355b7.html"/>
+    <id>https://xiaomai.tootaio.com/2024/d4d355b7.html</id>
     <published>2024-01-09T08:16:27.000Z</published>
     <updated>2024-01-15T07:59:48.000Z</updated>
     
@@ -449,25 +474,25 @@
     
     
     
-    <category term="技术" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
+    <category term="我在 Web3 行业摸爬滚打的日子" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E6%88%91%E5%9C%A8-Web3-%E8%A1%8C%E4%B8%9A%E6%91%B8%E7%88%AC%E6%BB%9A%E6%89%93%E7%9A%84%E6%97%A5%E5%AD%90/"/>
     
-    <category term="区块链" scheme="https://kingsmai.github.io/categories/%E6%8A%80%E6%9C%AF/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    <category term="区块链" scheme="https://xiaomai.tootaio.com/categories/%E6%8A%80%E6%9C%AF/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
-    <category term="Leo" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Leo/"/>
+    <category term="Leo" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Leo/"/>
     
     
   </entry>
   
   <entry>
     <title>Sololearn 自学网页设计 3 让网页变成响应式页面</title>
-    <link href="https://kingsmai.github.io/2024/2d85c0dd.html"/>
-    <id>https://kingsmai.github.io/2024/2d85c0dd.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/2d85c0dd.html"/>
+    <id>https://xiaomai.tootaio.com/2024/2d85c0dd.html</id>
     <published>2024-01-05T07:47:36.000Z</published>
     <updated>2024-01-05T10:10:38.000Z</updated>
     
@@ -476,23 +501,23 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="编程语言" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="Sololearn 自学网页设计" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
+    <category term="Sololearn 自学网页设计" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/Sololearn-%E8%87%AA%E5%AD%A6%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
     
-    <category term="HTML, CSS, JS" scheme="https://kingsmai.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML-CSS-JS/"/>
+    <category term="HTML, CSS, JS" scheme="https://xiaomai.tootaio.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/HTML-CSS-JS/"/>
     
     
-    <category term="Sololearn" scheme="https://kingsmai.github.io/tags/Sololearn/"/>
+    <category term="Sololearn" scheme="https://xiaomai.tootaio.com/tags/Sololearn/"/>
     
   </entry>
   
   <entry>
     <title>【话题】编程语言的未来 一个以自然语言作为编程语言的构思</title>
-    <link href="https://kingsmai.github.io/2024/f1de6892.html"/>
-    <id>https://kingsmai.github.io/2024/f1de6892.html</id>
+    <link href="https://xiaomai.tootaio.com/2024/f1de6892.html"/>
+    <id>https://xiaomai.tootaio.com/2024/f1de6892.html</id>
     <published>2024-01-03T17:32:51.000Z</published>
     <updated>2024-01-04T12:28:26.000Z</updated>
     
@@ -501,28 +526,9 @@
     
     
     
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
+    <category term="系列" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/"/>
     
-    <category term="话题" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E8%AF%9D%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>为什么二进制文件内容是乱码</title>
-    <link href="https://kingsmai.github.io/2024/9aed2ce9.html"/>
-    <id>https://kingsmai.github.io/2024/9aed2ce9.html</id>
-    <published>2024-01-02T22:02:39.000Z</published>
-    <updated>2024-01-03T09:53:24.000Z</updated>
-    
-    
-    <summary type="html">不知道大家有会不会好奇想打开二进制文件一探究竟。结果打开一看都是乱码。那么这篇文章将会满足你的好奇心，并附上正确开启方式哦！</summary>
-    
-    
-    
-    <category term="系列" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/"/>
-    
-    <category term="思考" scheme="https://kingsmai.github.io/categories/%E7%B3%BB%E5%88%97/%E6%80%9D%E8%80%83/"/>
+    <category term="话题" scheme="https://xiaomai.tootaio.com/categories/%E7%B3%BB%E5%88%97/%E8%AF%9D%E9%A2%98/"/>
     
     
   </entry>

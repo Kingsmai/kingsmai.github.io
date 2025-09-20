@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>如何优雅地整理 Git 分支历史：从混乱到清晰 | 麦甜怪圈 Xiaomai Circle</title><meta name="author" content="小麦 Andrew Xiaomai"><meta name="copyright" content="小麦 Andrew Xiaomai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="在实际项目开发中，分支管理常常是让人头疼的问题。尤其是当我们“先干了再说”，后面才发现分支规划不合理，就容易出现“乱七八糟”的历史记录。 这篇文章记录了我在一个项目里遇到的真实情况：原本想在 main 分支上直接开发 Vue 版本，后来又想要保持 main 干净，把 Vue 独立出来。于是就有了“历史修复”的一系列操作。下面我会一步步讲解，如何从混乱的分叉整理出清晰的三条线。  1. 问题背景最初">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何优雅地整理 Git 分支历史：从混乱到清晰">
+<meta property="og:url" content="https://xiaomai.tootaio.com/2025/a3c435dc.html">
+<meta property="og:site_name" content="麦甜怪圈 Xiaomai Circle">
+<meta property="og:description" content="在实际项目开发中，分支管理常常是让人头疼的问题。尤其是当我们“先干了再说”，后面才发现分支规划不合理，就容易出现“乱七八糟”的历史记录。 这篇文章记录了我在一个项目里遇到的真实情况：原本想在 main 分支上直接开发 Vue 版本，后来又想要保持 main 干净，把 Vue 独立出来。于是就有了“历史修复”的一系列操作。下面我会一步步讲解，如何从混乱的分叉整理出清晰的三条线。  1. 问题背景最初">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaomai.tootaio.com/Gallery/covers/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E6%95%B4%E7%90%86%20Git%20%E5%88%86%E6%94%AF%E5%8E%86%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%B7%B7%E4%B9%B1%E5%88%B0%E6%B8%85%E6%99%B0.jpeg">
+<meta property="article:published_time" content="2025-09-20T00:33:25.000Z">
+<meta property="article:modified_time" content="2025-09-20T00:55:53.679Z">
+<meta property="article:author" content="小麦 Andrew Xiaomai">
+<meta property="article:tag" content="游戏开发, 程序员, 留学生, 中国, 小麦">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiaomai.tootaio.com/Gallery/covers/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E6%95%B4%E7%90%86%20Git%20%E5%88%86%E6%94%AF%E5%8E%86%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%B7%B7%E4%B9%B1%E5%88%B0%E6%B8%85%E6%99%B0.jpeg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "如何优雅地整理 Git 分支历史：从混乱到清晰",
+  "url": "https://xiaomai.tootaio.com/2025/a3c435dc.html",
+  "image": "https://xiaomai.tootaio.com/Gallery/covers/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E6%95%B4%E7%90%86%20Git%20%E5%88%86%E6%94%AF%E5%8E%86%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%B7%B7%E4%B9%B1%E5%88%B0%E6%B8%85%E6%99%B0.jpeg",
+  "datePublished": "2025-09-20T00:33:25.000Z",
+  "dateModified": "2025-09-20T00:55:53.679Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "小麦 Andrew Xiaomai",
+      "url": "https://xiaomai.tootaio.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://xiaomai.tootaio.com/2025/a3c435dc.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const hour = new Date().getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (theme === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else theme === 'light' ? activateLightMode() : activateDarkMode()
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 小麦 Andrew Xiaomai","link":"链接: ","source":"来源: 麦甜怪圈 Xiaomai Circle","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '如何优雅地整理 Git 分支历史：从混乱到清晰',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4366094_hx3hbrje2st.css"><script defer src="https://umami.tootaio.com/script.js" data-website-id="0a4aaffe-9809-4b7b-ad31-81bee68b29fc"></script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="麦甜怪圈 Xiaomai Circle" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="麦甜怪圈 Xiaomai Circle" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">125</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">69</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">49</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post type-Git" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/Gallery/covers/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E6%95%B4%E7%90%86%20Git%20%E5%88%86%E6%94%AF%E5%8E%86%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%B7%B7%E4%B9%B1%E5%88%B0%E6%B8%85%E6%99%B0.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/Gallery/logos/Logo-11.jpg" alt="Logo"><span class="site-name">麦甜怪圈 Xiaomai Circle</span></a><a class="nav-page-title" href="/"><span class="site-name">如何优雅地整理 Git 分支历史：从混乱到清晰</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">如何优雅地整理 Git 分支历史：从混乱到清晰</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-09-20T00:33:25.000Z" title="发表于 2025-09-20 08:33:25">2025-09-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-09-20T00:55:53.679Z" title="更新于 2025-09-20 08:55:53">2025-09-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/Git/">Git</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">864</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;这篇文章已经&quot;,&quot;messageNext&quot;:&quot;天未被更新了，可能里边的内容已经过时，请注意斟酌。&quot;,&quot;postUpdate&quot;:&quot;2025-09-20 08:55:53&quot;}" hidden></div><link rel="stylesheet external nofollow noreferrer" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在实际项目开发中，分支管理常常是让人头疼的问题。尤其是当我们“先干了再说”，后面才发现分支规划不合理，就容易出现“乱七八糟”的历史记录。</p>
+<p>这篇文章记录了我在一个项目里遇到的真实情况：原本想在 <code>main</code> 分支上直接开发 Vue 版本，后来又想要保持 <code>main</code> 干净，把 Vue 独立出来。于是就有了“历史修复”的一系列操作。下面我会一步步讲解，如何从混乱的分叉整理出清晰的三条线。</p>
+<hr>
+<h2 id="1-问题背景"><a href="#1-问题背景" class="headerlink" title="1. 问题背景"></a>1. 问题背景</h2><p>最初的提交历史长这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* bf4b504 chore: initialize project with Vue 3 and Vite</span><br><span class="line">| * 85093cd feat(ui): implement site under construction page</span><br><span class="line">|/</span><br><span class="line">* e9a3ade feat(branding): initialize project with Tootaio Studio branding</span><br><span class="line">* af429eb refactor(ui): migrate from custom CSS to Tailwind CSS</span><br><span class="line">* f0a0ac1 Initial commit</span><br></pre></td></tr></table></figure>
+<p>问题在于：</p>
+<ul>
+<li><strong>Vue 方向</strong>（<code>bf4b504</code> 开始）本不该在 <code>main</code> 上。</li>
+<li><strong>纯 HTML 方向</strong>（<code>feat-construction</code>）却是基于 <code>main</code> 的，和 Vue 没有关系。</li>
+<li>结果是 <code>main</code> 同时承担了两条路线，历史交织在一起。</li>
+</ul>
+<hr>
+<h2 id="2-目标分支结构"><a href="#2-目标分支结构" class="headerlink" title="2. 目标分支结构"></a>2. 目标分支结构</h2><p>我最终想要的状态是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main</span><br><span class="line">* e9a3ade feat(branding)</span><br><span class="line">* af429eb refactor(ui)</span><br><span class="line">* f0a0ac1 Initial commit</span><br><span class="line"></span><br><span class="line">feat-construction  (基于 main，纯 HTML)</span><br><span class="line">* 4a33800 refactor(structure)</span><br><span class="line">* b380b08 feat(contact)</span><br><span class="line">* 46bd726 feat(security)</span><br><span class="line">* 85093cd feat(ui)</span><br><span class="line"></span><br><span class="line">vue  (基于 bf4b504，Vue + Vite)</span><br><span class="line">* ad4167b feat: scaffold initial application structure</span><br><span class="line">* d9d8d32 ci(gitea)</span><br><span class="line">* 3a379b4 ci(deploy)</span><br><span class="line">* 24a7177 ci(gitea)</span><br><span class="line">* bf4b504 chore: initialize project with Vue 3 and Vite</span><br></pre></td></tr></table></figure>
+<p>可以看到，最终我们得到三条清晰的主线：</p>
+<ul>
+<li><strong>main</strong>：品牌与基础结构</li>
+<li><strong>feat-construction</strong>：从 main 分支出来的实验性 HTML 方向</li>
+<li><strong>vue</strong>：从 <code>bf4b504</code> 开始的 Vue 前端方向</li>
+</ul>
+<hr>
+<h2 id="3-整理分支的步骤"><a href="#3-整理分支的步骤" class="headerlink" title="3. 整理分支的步骤"></a>3. 整理分支的步骤</h2><h3 id="Step-1：修正-main"><a href="#Step-1：修正-main" class="headerlink" title="Step 1：修正 main"></a>Step 1：修正 main</h3><p>把 main 重置回 branding 那条线：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout main</span><br><span class="line">git reset --hard e9a3ade</span><br><span class="line">git push origin main --force</span><br></pre></td></tr></table></figure>
+<h3 id="Step-2：修正-vue"><a href="#Step-2：修正-vue" class="headerlink" title="Step 2：修正 vue"></a>Step 2：修正 vue</h3><p>在 <code>bf4b504</code> 的位置新建 vue 分支，然后 cherry-pick 需要的提交：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b vue bf4b504</span><br><span class="line">git cherry-pick 7ccb119 fe05773 9e46704 8273e4e</span><br><span class="line">git push origin vue --force</span><br></pre></td></tr></table></figure>
+<p>这样 <code>vue</code> 分支就从正确的起点开始了。</p>
+<h3 id="Step-3：确认-feat-construction"><a href="#Step-3：确认-feat-construction" class="headerlink" title="Step 3：确认 feat-construction"></a>Step 3：确认 feat-construction</h3><p><code>feat-construction</code> 是从 <code>main</code> 分出来的，保持现状即可。如果之前它误跟了旧的 <code>main</code>，可以用 rebase 修正：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout feat-construction</span><br><span class="line">git rebase main</span><br><span class="line">git push origin feat-construction --force</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="4-vue-分支要不要重命名？"><a href="#4-vue-分支要不要重命名？" class="headerlink" title="4. vue 分支要不要重命名？"></a>4. vue 分支要不要重命名？</h2><p>这里有一个小问题：<strong>vue 分支的命名是否合适？</strong></p>
+<ul>
+<li>如果你打算长期维护 Vue 方向，<code>vue</code> 这个名字显得有点局限。未来换成 React 或别的框架，就不太合适了。</li>
+<li><p>建议改成更语义化的名字，比如：</p>
+<ul>
+<li><code>frontend</code></li>
+<li><code>web</code></li>
+<li><code>app</code></li>
+</ul>
+</li>
+</ul>
+<p>这样不绑定具体框架，分支命名会更通用。</p>
+<p>重命名方法：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在 vue 分支上</span></span><br><span class="line">git branch -m vue frontend</span><br><span class="line">git push origin :vue              <span class="comment"># 删除远程 vue</span></span><br><span class="line">git push origin frontend</span><br><span class="line">git push origin -u frontend</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="5-最终效果"><a href="#5-最终效果" class="headerlink" title="5. 最终效果"></a>5. 最终效果</h2><p>经过整理后，分支结构变得清晰可控：</p>
+<ul>
+<li><code>main</code>：核心与品牌方向</li>
+<li><code>feat-construction</code>：实验性的纯 HTML 方向</li>
+<li><code>frontend</code>（原来的 vue）：Vue 应用主线</li>
+</ul>
+<p>这样一来，每条分支都有明确的职责，历史也干净整洁，再也不会出现“乱七八糟”的情况了。</p>
+<hr>
+<h2 id="结语-✨"><a href="#结语-✨" class="headerlink" title="结语 ✨"></a>结语 ✨</h2><p>Git 的灵活性是一把双刃剑。随意开发时很爽，但后期维护就容易让人抓狂。<br>我的经验是：</p>
+<ul>
+<li><strong>一开始就想清楚分支的语义</strong>（main 是什么，frontend 是什么）。</li>
+<li><strong>不要怕重写历史</strong>，<code>reset</code> / <code>cherry-pick</code> / <code>rebase</code> 用好了，能让项目清爽无比。</li>
+<li><strong>命名要有前瞻性</strong>，避免未来改一次分支名牵一发而动全身。</li>
+</ul>
+<p>希望这篇文章能帮你少踩坑，也欢迎分享你的分支整理故事～ 🚀</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://xiaomai.tootaio.com">小麦 Andrew Xiaomai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://xiaomai.tootaio.com/2025/a3c435dc.html">https://xiaomai.tootaio.com/2025/a3c435dc.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://xiaomai.tootaio.com" target="_blank">麦甜怪圈 Xiaomai Circle</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/Gallery/covers/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E6%95%B4%E7%90%86%20Git%20%E5%88%86%E6%94%AF%E5%8E%86%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%B7%B7%E4%B9%B1%E5%88%B0%E6%B8%85%E6%99%B0.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>欢迎打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/Gallery/wallets/WechatPaySquare.jpg" target="_blank"><img class="post-qr-code-img" src="/Gallery/wallets/WechatPaySquare.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/Gallery/wallets/AlipaySquare.jpg" target="_blank"><img class="post-qr-code-img" src="/Gallery/wallets/AlipaySquare.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/5a564e54.html" title="使用 Cloudflare Tunnel 将家里服务器映射到公网"><img class="cover" src="/Gallery/covers/%E4%BD%BF%E7%94%A8%20Cloudflare%20Tunnel%20%E5%B0%86%E5%AE%B6%E9%87%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%A0%E5%B0%84%E5%88%B0%E5%85%AC%E7%BD%91%20%E5%8D%9A%E5%AE%A2%E5%B0%81%E9%9D%A2%E5%9B%BE.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">使用 Cloudflare Tunnel 将家里服务器映射到公网</div></div><div class="info-2"><div class="info-item-1">很多朋友买了域名之后，都希望能在公网安全访问自己家里的服务。传统做法需要公网 IP、端口转发、防火墙配置，甚至要考虑动态 IP 的问题。其实，借助 Cloudflare Tunnel（cloudflared），我们可以绕过这些繁琐的步骤，让 Cloudflare 作为中转，把外网请求安全转发到家里的内网服务。 下面我整理了一份完整的教程，帮助你从零开始配置 Cloudflare Tunnel，并绑定到你购买的域名。  1. 前置准备 一个 Cloudflare 账号，并将你购买的域名的 DNS 托管到 Cloudflare（即域名的 NS 指向 Cloudflare 提供的地址）。 家里的服务器一台，可以是 Linux / Windows / macOS。 服务器需要能访问外网（内网即可，不需要公网 IP）。   2. 安装 cloudflared以 Linux 为例，安装 cloudflared： # Debian/Ubuntusudo apt updatesudo apt install cloudflared 或使用 Cloudflare 官方安装包： curl -fsSL...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/Gallery/notion-avatar-1703138102056.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">小麦 Andrew Xiaomai</div><div class="author-info-description">一个喜欢肉鸽类游戏的程序员<br>分享日常生活，学习笔记，技术文章等。感兴趣想一起开发游戏的欢迎联系我哟！</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">125</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">69</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">49</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/kingsmai"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/kingsmai" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-GitHub" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/670118055" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><i class="iconfont icon-bilibili-fill" style="color: #ff6699;"></i></a><a class="social-icon" href="mailto:xsbugh@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-email-fill" style="color: #ff3e30;"></i></a><a class="social-icon" href="https://www.zhihu.com/people/creeper0924" rel="external nofollow noreferrer" target="_blank" title="Zhihu"><i class="iconfont icon-zhihu" style="color: #1772F6;"></i></a><a class="social-icon" href="https://blog.csdn.net/Xsbugh" rel="external nofollow noreferrer" target="_blank" title="CSDN"><i class="iconfont icon-csdn" style="color: #FC4144;"></i></a><a class="social-icon" href="https://www.linkedin.com/in/%E5%B0%8F%E9%BA%A6-xiaomai-0a672124b/" rel="external nofollow noreferrer" target="_blank" title="LinkedIn"><i class="iconfont icon-linkedin" style="color: #0A66C2;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-Atom" style="color: #6EA3E5;"></i></a><a class="social-icon" href="/rss2.xml" target="_blank" title="RSS 链接"><i class="iconfont icon-dingyue" style="color: #ee802f;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">1. 问题背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%9B%AE%E6%A0%87%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">2. 目标分支结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%95%B4%E7%90%86%E5%88%86%E6%94%AF%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">3.</span> <span class="toc-text">3. 整理分支的步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1%EF%BC%9A%E4%BF%AE%E6%AD%A3-main"><span class="toc-number">3.1.</span> <span class="toc-text">Step 1：修正 main</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2%EF%BC%9A%E4%BF%AE%E6%AD%A3-vue"><span class="toc-number">3.2.</span> <span class="toc-text">Step 2：修正 vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3%EF%BC%9A%E7%A1%AE%E8%AE%A4-feat-construction"><span class="toc-number">3.3.</span> <span class="toc-text">Step 3：确认 feat-construction</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-vue-%E5%88%86%E6%94%AF%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E5%91%BD%E5%90%8D%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">4. vue 分支要不要重命名？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C"><span class="toc-number">5.</span> <span class="toc-text">5. 最终效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD-%E2%9C%A8"><span class="toc-number">6.</span> <span class="toc-text">结语 ✨</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/a3c435dc.html" title="如何优雅地整理 Git 分支历史：从混乱到清晰"><img src="/Gallery/covers/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%9C%B0%E6%95%B4%E7%90%86%20Git%20%E5%88%86%E6%94%AF%E5%8E%86%E5%8F%B2%EF%BC%9A%E4%BB%8E%E6%B7%B7%E4%B9%B1%E5%88%B0%E6%B8%85%E6%99%B0.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何优雅地整理 Git 分支历史：从混乱到清晰"/></a><div class="content"><a class="title" href="/2025/a3c435dc.html" title="如何优雅地整理 Git 分支历史：从混乱到清晰">如何优雅地整理 Git 分支历史：从混乱到清晰</a><time datetime="2025-09-20T00:33:25.000Z" title="发表于 2025-09-20 08:33:25">2025-09-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/5a564e54.html" title="使用 Cloudflare Tunnel 将家里服务器映射到公网"><img src="/Gallery/covers/%E4%BD%BF%E7%94%A8%20Cloudflare%20Tunnel%20%E5%B0%86%E5%AE%B6%E9%87%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%A0%E5%B0%84%E5%88%B0%E5%85%AC%E7%BD%91%20%E5%8D%9A%E5%AE%A2%E5%B0%81%E9%9D%A2%E5%9B%BE.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用 Cloudflare Tunnel 将家里服务器映射到公网"/></a><div class="content"><a class="title" href="/2025/5a564e54.html" title="使用 Cloudflare Tunnel 将家里服务器映射到公网">使用 Cloudflare Tunnel 将家里服务器映射到公网</a><time datetime="2025-09-11T17:19:00.000Z" title="发表于 2025-09-12 01:19:00">2025-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/91b8a59.html" title="Springboot JavaEE @Resource 注解解释"><img src="/Gallery/covers/Explaination%20of%20@Resource%20annotation%20in%20JavaEE.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Springboot JavaEE @Resource 注解解释"/></a><div class="content"><a class="title" href="/2024/91b8a59.html" title="Springboot JavaEE @Resource 注解解释">Springboot JavaEE @Resource 注解解释</a><time datetime="2024-09-30T06:51:30.000Z" title="发表于 2024-09-30 14:51:30">2024-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/8aef8f58.html" title="Springboot Spring @Component 注解解释"><img src="/Gallery/covers/Explaination%20of%20@Component%20annotation%20in%20SpringBoot.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Springboot Spring @Component 注解解释"/></a><div class="content"><a class="title" href="/2024/8aef8f58.html" title="Springboot Spring @Component 注解解释">Springboot Spring @Component 注解解释</a><time datetime="2024-09-30T06:50:43.000Z" title="发表于 2024-09-30 14:50:43">2024-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/d207740e.html" title="Springboot Spring Security 的基础解释"><img src="/Gallery/covers/Basic%20Explaination%20of%20Spring%20Security%20Configuration.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Springboot Spring Security 的基础解释"/></a><div class="content"><a class="title" href="/2024/d207740e.html" title="Springboot Spring Security 的基础解释">Springboot Spring Security 的基础解释</a><time datetime="2024-09-30T06:47:09.000Z" title="发表于 2024-09-30 14:47:09">2024-09-30</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2025 By 小麦 Andrew Xiaomai</span></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20235160" rel="external nofollow noreferrer" target="_blank"><img class="icp-icon" src="/Gallery/moe-icons/icon120.png">备案号：✮萌ICP备20235160号✮</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
